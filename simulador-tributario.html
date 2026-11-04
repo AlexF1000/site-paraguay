@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador Tributário: Brasil vs. Paraguai | Paraguai Prime</title>
+  <meta name="description" content="Calcule exatamente quanto sua empresa economiza de impostos ao migrar para a carga de 10% do Paraguai. Baseado na Lei 6380/19.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .sim-page-header {
+      background: radial-gradient(circle at 80% 20%, #173B75 0%, #0D224A 50%, #071224 100%);
+      color: var(--py-white);
+      padding: 70px 0 80px 0;
+      text-align: center;
+    }
+    .calculator-container {
+      max-width: 1040px;
+      margin: -40px auto 60px auto;
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      box-shadow: var(--shadow-lg);
+      padding: 50px;
+      position: relative;
+      z-index: 10;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+    }
+    .result-box-premium {
+      background: var(--py-blue-deep);
+      color: var(--py-white);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .result-metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .result-metric-row:last-child {
+      border-bottom: none;
+    }
+    .tax-breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      font-size: 0.95rem;
+    }
+    .tax-breakdown-table th {
+      background: var(--py-surface);
+      color: var(--py-blue-deep);
+      padding: 14px;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid var(--py-border);
+    }
+    .tax-breakdown-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--py-border);
+    }
+    .tax-breakdown-table tr:hover {
+      background: #F8FAFC;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div>
+        <span style="color: #FBBF24; font-weight: 700;">★ Fundamentado na Lei 6380/19 (Reforma Fiscal do Paraguai)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link active" style="color: var(--py-red-primary);">Simulador de Impostos</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Guia de Residência</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
+          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="para-empresas.html" class="nav-link" style="color: #854D0E; font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Planejamento Tributário'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com Especialista
+            </button>
+            <a href="para-empresas.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Seja um Parceiro (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="abrirModalEspecialista('Planejamento Tributário')" class="btn btn-primary nav-cta-desktop">
+          Falar com Tributarista
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- CABEÇALHO -->
+  <section class="sim-page-header">
+    <div class="container">
+      <span class="badge-gold">Simulador Fiscal Avançado</span>
+      <h1 style="font-size: 2.8rem; font-weight: 800; margin: 16px 0;">
+        Simulador de Carga Tributária: Brasil vs. Paraguai
+      </h1>
+      <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 700px; margin: 0 auto;">
+        Compare sua estrutura tributária atual no Brasil com os benefícios legais do Sistema "Triplo 10" paraguaio.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULADORA INTERATIVA -->
+  <div class="container">
+    <div class="calculator-container">
+      <div class="calc-grid">
+        
+        <!-- Formulário de Parâmetros -->
+        <div>
+          <h3 style="font-size: 1.4rem; color: var(--py-blue-deep); font-weight: 800; margin-bottom: 20px;">
+            1. Parâmetros da sua Empresa
+          </h3>
+
+          <div class="form-group">
+            <div class="input-label-row">
+              <label for="calcRevenue">Faturamento Bruto Mensal:</label>
+              <span class="input-val-badge" id="calcRevenueBadge">R$ 50.000</span>
+            </div>
+            <input type="range" id="calcRevenue" class="custom-range" min="10000" max="500000" step="5000" value="50000">
+          </div>
+
+          <div class="form-group">
+            <label for="calcRegime">Regime Tributário no Brasil:</label>
+            <select id="calcRegime" class="form-control" onchange="recalcularSimuladorAvancado()">
+              <option value="lucro_presumido">Lucro Presumido (Serviços - ~16,5% a 19%)</option>
+              <option value="simples_alto">Simples Nacional (Anexo V / Faixas Superiores - ~19,5%)</option>
+              <option value="comercio">Comércio / Atacado (~12,5%)</option>
+              <option value="clt_executivo">Pessoa Física / Executivo CLT (Teto 27,5% + INSS)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calcSetor">Setor de Atividade:</label>
+            <select id="calcSetor" class="form-control" onchange="recalcularSimuladorAvancado()">
+              <option value="ti">Tecnologia, Software & Serviços Digitais</option>
+              <option value="consultoria">Consultoria, Engenharia ou Advocacia</option>
+              <option value="medicina">Medicina & Serviços de Saúde</option>
+              <option value="holding">Holding Patrimonial & Investimentos</option>
+              <option value="agro">Agronegócio & Maquila</option>
+            </select>
+          </div>
+
+          <div style="background: var(--py-blue-soft); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--py-blue-primary); margin-top: 24px;">
+            <h4 style="font-size: 0.95rem; color: var(--py-blue-primary); font-weight: 700;">
+              💡 Princípio da Territorialidade Estrita:
+            </h4>
+            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-top: 4px;">
+              No Paraguai, receitas geradas fora do território paraguaio (ex: clientes nos EUA, Europa ou Brasil contratando seu serviço remoto) possuem <strong>0% de imposto corporativo</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Resultados e Economia -->
+        <div>
+          <div class="result-box-premium">
+            <span class="badge-gold">Resultado Comparativo</span>
+            
+            <div style="margin: 20px 0;">
+              <span style="font-size: 0.85rem; color: #94A3B8; text-transform: uppercase;">Economia Líquida Anual Estimada:</span>
+              <div style="font-size: 2.5rem; font-weight: 900; color: #FBBF24; line-height: 1.1;" id="advSavingsAnnual">
+                R$ 48.000
+              </div>
+              <div style="font-size: 0.95rem; color: #E2E8F0; margin-top: 6px;" id="advSavingsUSD">
+                ≈ US$ 8.304 / ano a mais no seu bolso
+              </div>
+            </div>
+
+            <div class="result-metric-row">
+              <span style="color: #CBD5E1;">Imposto Mensal Brasil:</span>
+              <strong style="color: #F87171; font-size: 1.15rem;" id="advTaxBR">R$ 8.250</strong>
+            </div>
+
+            <div class="result-metric-row">
+              <span style="color: #CBD5E1;">Imposto Mensal Paraguai (EAS):</span>
+              <strong style="color: #34D399; font-size: 1.15rem;" id="advTaxPY">R$ 4.250</strong>
+            </div>
+
+            <div class="result-metric-row">
+              <span style="color: #CBD5E1;">Economia Mensal:</span>
+              <strong style="color: #FBBF24; font-size: 1.15rem;" id="advSavingsMonth">R$ 4.000/mês</strong>
+            </div>
+
+            <button onclick="abrirModalEspecialista('Estruturação EAS no Paraguai')" class="btn btn-primary" style="width: 100%; margin-top: 24px; padding: 15px;">
+              Estruturar Minha Empresa no Paraguai
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tabela Detalhada de Comparação de Tributos -->
+      <div style="margin-top: 50px;">
+        <h3 style="font-size: 1.4rem; color: var(--py-blue-deep); font-weight: 800; margin-bottom: 14px;">
+          Comparativo Direto de Impostos (Brasil vs. Paraguai)
+        </h3>
+        <div class="table-responsive-wrapper">
+          <table class="tax-breakdown-table">
+          <thead>
+            <tr>
+              <th>Tributo / Categoria</th>
+              <th>Brasil 🇧🇷</th>
+              <th>Paraguai 🇵🇾</th>
+              <th>Vantagem no Paraguai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Imposto sobre Lucro / Empresa</strong></td>
+              <td>IRPJ + CSLL (Até 34% no Lucro Real; ~15% a 20% no Presumido/Simples)</td>
+              <td><strong>IRE: 10% fixo</strong> sobre o lucro líquido</td>
+              <td><span style="color: #10B981; font-weight: 700;">Até 60% menor</span></td>
+            </tr>
+            <tr>
+              <td><strong>Imposto de Renda Pessoal (IRPF)</strong></td>
+              <td>Até 27,5% retido na fonte</td>
+              <td><strong>IRP: 8% a 10%</strong> (com deduções amplas de despesas)</td>
+              <td><span style="color: #10B981; font-weight: 700;">Alíquota máxima de 10%</span></td>
+            </tr>
+            <tr>
+              <td><strong>Imposto sobre Consumo (IVA)</strong></td>
+              <td>PIS, COFINS, ICMS, ISS (Média de 25% a 35% no novo IBS/CBS)</td>
+              <td><strong>IVA: 10%</strong> (5% para remédios e itens básicos)</td>
+              <td><span style="color: #10B981; font-weight: 700;">Simples e não-cumulativo</span></td>
+            </tr>
+            <tr>
+              <td><strong>Rendimentos do Exterior</strong></td>
+              <td>Tributação universal no Brasil (Lei 14.754 das Offshores - 15%)</td>
+              <td><strong>0% Isento</strong> (Princípio da Territorialidade estrita)</td>
+              <td><span style="color: #10B981; font-weight: 700;">Totalmente Isento</span></td>
+            </tr>
+            <tr>
+              <td><strong>Burocracia de Abertura</strong></td>
+              <td>Múltiplas juntas comerciais, alvarás e taxas municipais</td>
+              <td><strong>EAS (Empresa por Ações Simplificadas)</strong> 100% digital</td>
+              <td><span style="color: #10B981; font-weight: 700;">Rapidez e baixo custo</span></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE ATENDIMENTO -->
+  <div class="modal-overlay" id="modalEspecialista">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="fecharModalEspecialista()">✕</button>
+      <div class="modal-header">
+        <span class="badge-blue">Atendimento Tributário</span>
+        <h3>Estruture sua Operação no Paraguai</h3>
+        <p>Conectamos você aos tributaristas e contadores com maior experiência em empresas de brasileiros.</p>
+      </div>
+      <form onsubmit="enviarLeadForm(event)">
+        <input type="hidden" id="modalCategoria" value="Tributário">
+        <div class="form-group">
+          <label for="leadNome">Nome Completo:</label>
+          <input type="text" id="leadNome" class="form-control" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="leadWhatsapp">WhatsApp com DDD:</label>
+          <input type="tel" id="leadWhatsapp" class="form-control" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="leadEmail">Seu E-mail para Consulta:</label>
+          <input type="email" id="leadEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPerfil">Faturamento Médio Mensal:</label>
+          <select id="leadPerfil" class="form-control">
+            <option value="R$ 15k a 50k/mês">R$ 15.000 a R$ 50.000 / mês</option>
+            <option value="R$ 50k a 150k/mês">R$ 50.000 a R$ 150.000 / mês</option>
+            <option value="Acima de R$ 150k/mês">Acima de R$ 150.000 / mês</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="leadInteresse">Objetivo Principal:</label>
+          <select id="leadInteresse" class="form-control">
+            <option value="Abertura de Empresa EAS">Abertura de Empresa EAS no Paraguai</option>
+            <option value="Planejamento Tributário Internacional">Planejamento Tributário Internacional</option>
+            <option value="Saída Definitiva do Brasil">Saída Definitiva da Receita Federal</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+          Falar com Tributarista pelo WhatsApp
+        </button>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal oficial de e-mail para consultas:<br>
+          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
+      </p>
+            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/simulador.js"></script>
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function recalcularSimuladorAvancado() {
+      const slider = document.getElementById('calcRevenue');
+      const badge = document.getElementById('calcRevenueBadge');
+      const regime = document.getElementById('calcRegime').value;
+      
+      const faturamento = parseFloat(slider.value);
+      badge.textContent = formatarMoedaBRL(faturamento);
+
+      const res = calcularTributos(faturamento, regime);
+
+      document.getElementById('advTaxBR').textContent = formatarMoedaBRL(res.impostoMensalBrasil) + '/mês';
+      document.getElementById('advTaxPY').textContent = formatarMoedaBRL(res.impostoMensalParaguai) + '/mês';
+      document.getElementById('advSavingsMonth').textContent = formatarMoedaBRL(res.economiaMensal) + '/mês';
+      document.getElementById('advSavingsAnnual').textContent = formatarMoedaBRL(res.economiaAnual) + '/ano';
+      document.getElementById('advSavingsUSD').textContent = `≈ ${formatarMoedaUSD(res.economiaAnualUSD)} / ano livres de impostos`;
+    }
+
+    document.getElementById('calcRevenue').addEventListener('input', recalcularSimuladorAvancado);
+    recalcularSimuladorAvancado();
+  </script>
+</body>
+</html>
+
+
+

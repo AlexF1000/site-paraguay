@@ -1,0 +1,81 @@
+====================================================================
+KIT DE ONBOARDING - ALIADAS FUNDADORAS (PARAGUAY PRIME)
+Guia Pratico e Mensagens Prontas para Novos Parceiros
+====================================================================
+
+1. MENSAGEM PRONTA PARA WHATSAPP / E-MAIL (COPIAR E COLAR)
+Envie esta mensagem assim que a empresa paraguaia aceitar participar:
+--------------------------------------------------------------------
+
+¡Excelente [Nombre del Contacto]! 
+
+Para activar a [Nombre de la Empresa] como Aliada Fundadora en el portal Paraguay Prime (paraguayprime.online) y comenzar a derivarles los clientes brasileños interesados, solo necesitamos los siguientes datos básicos:
+
+1. Logotipo de la empresa:
+   Archivo en buena calidad (preferentemente PNG con fondo transparente o vector SVG).
+
+2. Canales para recibir los clientes:
+   - Número de WhatsApp comercial (con código +595) que atenderá a los clientes brasileños.
+   - Correo electrónico para recibir las notificaciones de nuevos interesados.
+   - Nombre y cargo de la persona de contacto (ej.: Lic. Carlos Gómez – Atención Comercial).
+
+3. Breve reseña institucional (1 o 2 párrafos):
+   Años de trayectoria en Paraguay, especialidad y principales zonas donde operan.
+
+4. Servicios destacados para brasileños (Top 3 o 4):
+   Los servicios o productos que desean priorizar (ej.: venta de departamentos en pozo, radicación legal Ley 6984, apertura de EAS en 72h, etc.).
+
+5. Fotos profesionales (opcional, 3 a 5 fotos):
+   Oficinas, equipo de trabajo o proyectos/propiedades destacadas para ilustrar su perfil.
+
+6. Beneficio o diferencial de bienvenida (opcional pero muy recomendado):
+   Una condición especial para quienes lleguen a través del portal (ej.: primera consulta de diagnóstico sin costo, visita personalizada, etc.).
+
+Con estos datos, en 24 horas habilitamos su presencia destacada en la plataforma y les enviamos el enlace para su revisión. ¡Mucho éxito en esta alianza!
+
+
+--------------------------------------------------------------------
+2. FICHA DE REGISTRO DO PARCEIRO (CONTROLE INTERNO)
+--------------------------------------------------------------------
+Empresa: 
+Nicho / Segmento: [Imobiliária / Advogado / Saúde / Contador / Colégio]
+Cidade / Bairro: 
+
+RESPONSÁVEL COMERCIAL:
+Nome: 
+Cargo: 
+Telefone / WhatsApp (+595): 
+E-mail de Notificações: 
+
+DADOS PARA O PORTAL:
+Título de Destaque: 
+Tempo de Mercado: 
+Serviços Principais:
+1. 
+2. 
+3. 
+Diferencial / Benefício: 
+
+LINK DO WHATSAPP GERADO:
+https://wa.me/595[NUMERO]?text=Hola,%20vi%20su%20empresa%20en%20Paraguay%20Prime%20y%20me%20gustar%C3%ADa%20recibir%20asesoramiento.
+
+DATA DE ATIVAÇÃO NO PORTAL: ___/___/2026
+TÉRMINO DOS 60 DIAS DE TESTE: ___/___/2026
+
+
+--------------------------------------------------------------------
+3. ONDE CADA PARCEIRO SOBE NO SITE
+--------------------------------------------------------------------
+- Imobiliárias: index.html, custo-de-vida.html, index-es.html
+- Despachantes & Advogados: guia-residencia.html
+- Contadores & Empresas: simulador-tributario.html, para-empresas.html
+- Planos de Saúde: custo-de-vida.html (seção Saúde)
+- Colégios: custo-de-vida.html (seção Educação)
+
+--------------------------------------------------------------------
+4. SUPORTE
+--------------------------------------------------------------------
+- E-mail: contato@paraguayprime.online
+- WhatsApp: +55 48 99840-4830
+- Portal: paraguayprime.online
+

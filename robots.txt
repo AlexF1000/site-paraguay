@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paraguayprime.online/sitemap.xml
+

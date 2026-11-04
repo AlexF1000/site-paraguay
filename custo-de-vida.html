@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custo de Vida & Guia Familiar no Paraguai | Paraguai Prime</title>
+  <meta name="description" content="Comparativo real de custo de vida para famílias brasileiras: moradia nobre, colégios internacionais, planos de saúde VIP e segurança no Paraguai.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .fam-header {
+      background: radial-gradient(circle at 20% 40%, #15366D 0%, #0D224A 55%, #071328 100%);
+      color: var(--py-white);
+      padding: 70px 0 80px 0;
+      text-align: center;
+    }
+    .budget-calc-wrapper {
+      max-width: 1040px;
+      margin: -40px auto 60px auto;
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      box-shadow: var(--shadow-lg);
+      padding: 50px;
+      position: relative;
+      z-index: 10;
+    }
+    .budget-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .cost-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--py-border);
+    }
+    .cost-bars-container {
+      margin-top: 25px;
+    }
+    .bar-group {
+      margin-bottom: 18px;
+    }
+    .bar-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .bar-track {
+      height: 12px;
+      background: #E2E8F0;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+    }
+    .bar-fill-br {
+      background: #EF4444;
+      height: 100%;
+      border-radius: 6px;
+    }
+    .bar-fill-py {
+      background: #10B981;
+      height: 100%;
+      border-radius: 6px;
+    }
+    .lifestyle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .lifestyle-card {
+      background: var(--py-white);
+      border: 1px solid var(--py-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .lifestyle-card h4 {
+      font-size: 1.2rem;
+      color: var(--py-blue-deep);
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div>
+        <span style="color: #FBBF24; font-weight: 700;">★ Guia de Qualidade de Vida & Famílias de Alto Padrão</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador de Impostos</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link active" style="color: var(--py-red-primary);">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Guia de Residência</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
+          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="para-empresas.html" class="nav-link" style="color: #854D0E; font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Planejamento Familiar'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com Especialista
+            </button>
+            <a href="para-empresas.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Seja um Parceiro (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="abrirModalEspecialista('Planejamento Familiar')" class="btn btn-primary nav-cta-desktop">
+          Assessoria Familiar
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- CABEÇALHO -->
+  <section class="fam-header">
+    <div class="container">
+      <span class="badge-gold">Calculadora de Custo de Vida Familiar</span>
+      <h1 style="font-size: 2.8rem; font-weight: 800; margin: 16px 0;">
+        Mesmo Padrão de Vida, Metade do Custo.
+      </h1>
+      <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 700px; margin: 0 auto;">
+        Descubra como proporcionar educação internacional, saúde de ponta e moradia nobre para sua família gastando até 60% menos do que nas principais capitais do Brasil.
+      </p>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE ORÇAMENTO FAMILIAR -->
+  <div class="container">
+    <div class="budget-calc-wrapper">
+      <div class="budget-grid">
+        
+        <!-- Configurações da Família -->
+        <div>
+          <h3 style="font-size: 1.4rem; color: var(--py-blue-deep); font-weight: 800; margin-bottom: 20px;">
+            1. Perfil da sua Família
+          </h3>
+
+          <div class="form-group">
+            <label for="calcFilhos">Número de Filhos em Idade Escolar:</label>
+            <select id="calcFilhos" class="form-control" onchange="atualizarOrcamentoFamiliar()">
+              <option value="0">Sem filhos (Apenas Casal)</option>
+              <option value="1" selected>1 Filho (Colégio Bilíngue/Internacional)</option>
+              <option value="2">2 Filhos</option>
+              <option value="3">3 Filhos ou mais</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calcCidadeBrasil">Sua Cidade de Referência no Brasil:</label>
+            <select id="calcCidadeBrasil" class="form-control" onchange="atualizarOrcamentoFamiliar()">
+              <option value="sp" selected>São Paulo (Bairros Nobres: Jardins, Moema, Itaim)</option>
+              <option value="curitiba">Curitiba (Batel, Ecoville, Cabral)</option>
+              <option value="poa">Porto Alegre (Moinhos de Vento, Bela Vista)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calcMoradiaPy">Onde Pretende Morar no Paraguai:</label>
+            <select id="calcMoradiaPy" class="form-control" onchange="atualizarOrcamentoFamiliar()">
+              <option value="villa_morra" selected>Assunção - Villa Morra (Apto 3 quartos alto padrão)</option>
+              <option value="santa_teresa">Assunção - Santa Teresa (Torre de luxo com vista panorâmica)</option>
+              <option value="luque">Luque / San Bernardino (Casa em condomínio fechado horizontal)</option>
+            </select>
+          </div>
+
+          <div style="background: var(--py-gold-light); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--py-gold); margin-top: 24px;">
+            <h4 style="font-size: 0.95rem; color: #854D0E; font-weight: 700;">
+              🥩 O Poder de Compra no Paraguai:
+            </h4>
+            <p style="font-size: 0.88rem; color: #713F12; margin-top: 4px;">
+              Carne bovina tipo exportação, energia elétrica sem bandeira tarifária e carros importados sem a cobrança de IPVA anual geram um alívio financeiro massivo no dia a dia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Box de Economia Mensal -->
+        <div>
+          <div class="result-box-premium" style="background: linear-gradient(135deg, #0D224A 0%, #071224 100%);">
+            <span class="badge-gold">Orçamento Mensal Estimado</span>
+            
+            <div style="margin: 20px 0;">
+              <span style="font-size: 0.85rem; color: #94A3B8; text-transform: uppercase;">Economia Mensal da Família:</span>
+              <div style="font-size: 2.4rem; font-weight: 900; color: #10B981; line-height: 1.1;" id="famSavingsMonth">
+                R$ 10.350 / mês
+              </div>
+              <div style="font-size: 0.95rem; color: #CBD5E1; margin-top: 6px;" id="famSavingsAnnual">
+                R$ 124.200 economizados a cada ano
+              </div>
+            </div>
+
+            <div class="cost-row" style="border-top: 1px solid rgba(255,255,255,0.1);">
+              <span style="color: #CBD5E1;">Custo Estimado no Brasil:</span>
+              <strong style="color: #F87171; font-size: 1.15rem;" id="famTotalBR">R$ 20.800</strong>
+            </div>
+
+            <div class="cost-row">
+              <span style="color: #CBD5E1;">Custo Estimado no Paraguai:</span>
+              <strong style="color: #34D399; font-size: 1.15rem;" id="famTotalPY">R$ 10.450</strong>
+            </div>
+
+            <div class="cost-bars-container">
+              <div class="bar-group">
+                <div class="bar-label-row">
+                  <span style="color: #F87171;">Brasil: 100% do Custo</span>
+                  <span style="color: #34D399;" id="famPercentSave">Economia de 50%</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill-py" id="barPyFill" style="width: 50%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="abrirModalEspecialista('Planejamento de Mudança')" class="btn btn-primary" style="width: 100%; margin-top: 20px; padding: 15px;">
+              Quero Encontrar um Imóvel para Minha Família
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comparativo Categoria por Categoria -->
+      <div style="margin-top: 50px;">
+        <h3 style="font-size: 1.4rem; color: var(--py-blue-deep); font-weight: 800; margin-bottom: 24px;">
+          Detalhamento por Categoria (Médias Reais Praticadas)
+        </h3>
+
+        <div class="lifestyle-grid">
+          
+          <div class="lifestyle-card">
+            <h4>🏠 Moradia & Aluguel</h4>
+            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-bottom: 12px;">Apartamento moderno em bairro nobre com portaria 24h, piscina e academia.</p>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0; border-top: 1px solid var(--py-border);">
+              <span>Brasil (SP/CWB):</span> <strong style="color: #EF4444;">R$ 7.500 - R$ 9.000</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0;">
+              <span>Paraguai (Assunção):</span> <strong style="color: #10B981;">R$ 4.000 - R$ 5.500</strong>
+            </div>
+          </div>
+
+          <div class="lifestyle-card">
+            <h4>🎓 Colégio Internacional</h4>
+            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-bottom: 12px;">Ensino bilíngue/trilíngue (Inglês, Espanhol, Português) com diploma IB ou americano.</p>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0; border-top: 1px solid var(--py-border);">
+              <span>Brasil:</span> <strong style="color: #EF4444;">R$ 3.500 a R$ 6.000 / filho</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0;">
+              <span>Paraguai:</span> <strong style="color: #10B981;">R$ 1.800 a R$ 2.500 / filho</strong>
+            </div>
+          </div>
+
+          <div class="lifestyle-card">
+            <h4>🏥 Saúde Privada VIP</h4>
+            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-bottom: 12px;">Planos hospitalares renomados (Asismed VIP, Santa Clara) sem carências abusivas.</p>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0; border-top: 1px solid var(--py-border);">
+              <span>Brasil (Família):</span> <strong style="color: #EF4444;">R$ 3.800 a R$ 5.500</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0;">
+              <span>Paraguai (Família):</span> <strong style="color: #10B981;">R$ 1.200 a R$ 1.600</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE ATENDIMENTO -->
+  <div class="modal-overlay" id="modalEspecialista">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="fecharModalEspecialista()">✕</button>
+      <div class="modal-header">
+        <span class="badge-blue">Assessoria de Família</span>
+        <h3>Planeje a Mudança da Sua Família</h3>
+        <p>Ajudamos você a encontrar os melhores bairros, colégios e imóveis de alto padrão.</p>
+      </div>
+      <form onsubmit="enviarLeadForm(event)">
+        <input type="hidden" id="modalCategoria" value="Família">
+        <div class="form-group">
+          <label for="leadNome">Nome Completo:</label>
+          <input type="text" id="leadNome" class="form-control" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="leadWhatsapp">WhatsApp com DDD:</label>
+          <input type="tel" id="leadWhatsapp" class="form-control" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="leadEmail">Seu E-mail para Consulta:</label>
+          <input type="email" id="leadEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPerfil">Quantas pessoas na família?</label>
+          <select id="leadPerfil" class="form-control">
+            <option value="Casal sem filhos">Casal sem filhos</option>
+            <option value="Casal com 1 ou 2 filhos">Casal com 1 ou 2 filhos</option>
+            <option value="Família com 3 ou mais filhos">Família com 3 ou mais filhos</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="leadInteresse">Previsão de Mudança:</label>
+          <select id="leadInteresse" class="form-control">
+            <option value="Imediato (em até 3 meses)">Imediato (em até 3 meses)</option>
+            <option value="Planejamento para o próximo ano">Planejamento para o próximo ano</option>
+            <option value="Apenas pesquisando">Apenas pesquisando valores</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+          Falar com Assessor de Mudança no WhatsApp
+        </button>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal oficial de e-mail para consultas:<br>
+          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
+      </p>
+            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/simulador.js"></script>
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function atualizarOrcamentoFamiliar() {
+      const filhos = parseInt(document.getElementById('calcFilhos').value);
+      const cidade = document.getElementById('calcCidadeBrasil').value;
+      const moradia = document.getElementById('calcMoradiaPy').value;
+
+      const res = calcularCustoVidaFamiliar(filhos, moradia, cidade);
+
+      document.getElementById('famTotalBR').textContent = formatarMoedaBRL(res.totalMensalBR);
+      document.getElementById('famTotalPY').textContent = formatarMoedaBRL(res.totalMensalPY);
+      document.getElementById('famSavingsMonth').textContent = formatarMoedaBRL(res.economiaMensal) + ' / mês';
+      document.getElementById('famSavingsAnnual').textContent = `${formatarMoedaBRL(res.economiaAnual)} economizados a cada ano`;
+      document.getElementById('famPercentSave').textContent = `Economia de ${res.percentualEconomia}%`;
+
+      const pyPercentage = ((res.totalMensalPY / res.totalMensalBR) * 100);
+      document.getElementById('barPyFill').style.width = `${pyPercentage}%`;
+    }
+
+    atualizarOrcamentoFamiliar();
+  </script>
+</body>
+</html>
+
+
+

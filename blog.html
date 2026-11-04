@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights | O Portal do Investidor e Morador no Paraguai</title>
+  <meta name="description" content="Artigos práticos e análises aprofundadas sobre economia, sistema tributário 10-10-10, custo de vida, moradia de luxo e residência legal no Paraguai.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+
+  <!-- SCHEMA.ORG BLOG JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Paraguai Prime",
+    "description": "Análises e guias sobre imigração, negócios, sistema tributário e moradia no Paraguai para brasileiros.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Paraguai Prime",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://paraguayprime.online/assets/images/logo.png"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Inteligência & Notícias Estratégicas para Brasileiros</span>
+        <div class="lang-switch-box">
+          <a href="blog.html" class="lang-pill active">🇧🇷 PT</a>
+          <a href="index-es.html" class="lang-pill">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Residência</a></li>
+          <li><a href="blog.html" class="nav-link active" style="color: var(--py-red-primary);">Blog & Notícias</a></li>
+          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="para-empresas.html" class="nav-link" style="color: #854D0E; font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Blog / Contato'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com Assessor
+            </button>
+            <a href="para-empresas.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Seja um Parceiro (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="abrirModalEspecialista('Blog / Contato')" class="btn btn-primary nav-cta-desktop">
+          Falar com Assessor
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- CABEÇALHO DO BLOG -->
+  <section class="section-padding-sm" style="background: radial-gradient(circle at 20% 40%, #15366D 0%, #0D224A 55%, #071328 100%); color: var(--py-white); text-align: center;">
+    <div class="container">
+      <span class="badge-gold">Portal de Conteúdo & SEO Estratégico</span>
+      <h1 style="font-size: 3rem; font-weight: 800; margin: 16px 0;">
+        Blog de Negócios, Vida & Investimentos no Paraguai
+      </h1>
+      <p style="font-size: 1.2rem; color: #CBD5E1; max-width: 750px; margin: 0 auto;">
+        Análises aprofundadas, dados do Banco Central do Paraguai, atualizações fiscais da SET e guias para quem busca liberdade e alto padrão de vida.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL DO BLOG -->
+  <section class="section-padding" style="background: var(--py-offwhite);">
+    <div class="container">
+      
+      <!-- ARTIGO EM DESTAQUE (HERO POST) -->
+      <article class="blog-featured-card">
+        <div class="blog-featured-body">
+          <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+            <span class="badge-gold">Guia Completo 2026</span>
+            <span style="font-size: 0.85rem; color: #CBD5E1; display: flex; align-items: center;">⏱ 8 min de leitura</span>
+          </div>
+
+          <h2 style="font-size: 2.2rem; font-weight: 800; line-height: 1.25; margin-bottom: 16px;">
+            <a href="guia-residencia.html" style="color: var(--py-white);">
+              Como Mudar para o Paraguai em 2026: Custos, Bairros Nobres e o Passo a Passo da Nova Lei de Migrações
+            </a>
+          </h2>
+
+          <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.65; margin-bottom: 24px;">
+            Um panorama minucioso para famílias e investidores que desejam realizar a transição com total segurança jurídica, comparando bairros nobres de Assunção, valores reais de aluguéis e as certidões necessárias perante a DNM.
+          </p>
+
+          <a href="guia-residencia.html" class="btn btn-primary" style="padding: 13px 28px;">
+            Ler Artigo Completo →
+          </a>
+        </div>
+
+        <div class="blog-featured-img" style="background: linear-gradient(rgba(13, 34, 74, 0.4), rgba(8, 20, 41, 0.85)), url('assets/images/foto-palacio.jpg'); background-size: cover; background-position: center;">
+          <div style="position: absolute; bottom: 24px; left: 24px; right: 24px;">
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 12px 18px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.2);">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #FBBF24;">📍 Assunção, Paraguai</span>
+              <p style="font-size: 0.8rem; color: #E2E8F0; margin-top: 4px;">Palacio de los López e Baía de Assunção</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- BARRA DE CATEGORIAS & FILTRO -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.88rem;" onclick="filtrarCategoria('todos')">Todos os Artigos</button>
+          <button class="btn btn-outline-blue" style="padding: 8px 18px; font-size: 0.88rem;" onclick="filtrarCategoria('tributos')">Impostos & Empresas</button>
+          <button class="btn btn-outline-blue" style="padding: 8px 18px; font-size: 0.88rem;" onclick="filtrarCategoria('familia')">Família & Moradia</button>
+          <button class="btn btn-outline-blue" style="padding: 8px 18px; font-size: 0.88rem;" onclick="filtrarCategoria('residencia')">Residência & Lei 6984</button>
+        </div>
+      </div>
+
+      <!-- GRID DE ARTIGOS OTIMIZADOS PARA SEO -->
+      <div class="blog-grid-3" id="blogGrid">
+
+        <!-- Artigo 1 -->
+        <article class="blog-card" data-category="residencia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-palacio.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 1 • Perspectiva</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/1-respire-fundo-paraguai-fica-logo-ali.html">
+                Respire Fundo: Mudar para o Paraguai Não É Ir para Marte (Fica Logo Ali ao Lado)
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Desmistificando o pânico da mudança: o país irmão fica a 1h40 de voo de SP, com cultura acolhedora, café, feijão e tranquilidade.
+            </p>
+            <a href="artigos/1-respire-fundo-paraguai-fica-logo-ali.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 2 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-parque.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-red">Capítulo 2 • Crianças & Colégios</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 6 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/2-e-os-meus-filhos-escola-espanhol.html">
+                "E os Meus Filhos?" O Pavor Materno de Trocar de Escola e o Fenômeno do Poliglota Mirim
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Como as crianças absorvem o espanhol em 90 dias e se adaptam com facilidade aos colégios internacionais de ponta em Assunção.
+            </p>
+            <a href="artigos/2-e-os-meus-filhos-escola-espanhol.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 3 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-galeria.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 3 • Economia Doméstica</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/3-a-terapia-do-supermercado-picanha-e-vinhos.html">
+                A Terapia do Carrinho Cheio: O Dia em que Você Compra Picanha pelo Preço de Frango
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              O choque prazeroso do custo de vida: carnes de exportação, vinhos sem cascata de tributos e energia de Itaipu barata.
+            </p>
+            <a href="artigos/3-a-terapia-do-supermercado-picanha-e-vinhos.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 4 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-wtc.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-blue">Capítulo 4 • Paz Mental</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 6 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/4-o-fantasma-do-medo-seguranca-real.html">
+                Desaprendendo a Olhar para Trás: A Cura Psicológica do Medo Urbano que Todo Brasileiro Carrega
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              A sensação inédita de caminhar à noite nas ruas arborizadas de Villa Morra sem a neurose de travar portas e esconder celular.
+            </p>
+            <a href="artigos/4-o-fantasma-do-medo-seguranca-real.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 5 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-costanera.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 5 • Cultura & Yuyos</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/5-o-sagrado-ritual-do-terere.html">
+                O Ritual do Tereré e a Garrafa Térmica: Como o Gelo e a Erva Vão Salvar Seu Humor
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              O que todo recém-chegado precisa saber sobre a ferramenta social mais acolhedora do Paraguai e as regras de etiqueta da cuia.
+            </p>
+            <a href="artigos/5-o-sagrado-ritual-do-terere.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 6 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-panteon.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-blue">Capítulo 6 • Comunicação</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/6-portunhol-com-elegancia.html">
+                O Portunhol com Classe: Como se Comunicar sem Medo de Pagar Mico (e as Palavras Perigosas!)
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Descubra por que 'embarazada' não é vergonha, o que significa dar 'propina' e como o paraguaio é paciente com o sotaque brasileiro.
+            </p>
+            <a href="artigos/6-portunhol-com-elegancia.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 7 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-encarnacion.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-red">Capítulo 7 • Saúde & Hospitais</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 6 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/7-saude-privada-sem-desespero.html">
+                "E se Alguém Ficar Doente?" A Verdade sobre Hospitais Privados e Planos VIP em Assunção
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Asismed, Santa Clara e Migone: como funciona a medicina particular sem carências abusivas e custando 1/3 do preço praticado no Brasil.
+            </p>
+            <a href="artigos/7-saude-privada-sem-desespero.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 8 -->
+        <article class="blog-card" data-category="residencia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-cancilleria.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 8 • Documentação</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/8-a-saga-das-certidoes-sem-loucura.html">
+                O Trio Calafrio dos Documentos no Brasil
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Apenas 3 documentos essenciais no Brasil: o checklist ordenado que transforma o pânico dos cartórios em um passeio tranquilo.
+            </p>
+            <a href="artigos/8-a-saga-das-certidoes-sem-loucura.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 9 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-shopping.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-blue">Capítulo 9 • Desapego & Logística</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 5 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/9-levar-os-moveis-ou-comecar-do-zero.html">
+                A Grande Mudança: Vale a Pena Levar os Móveis ou o Desapego É o Melhor Negócio da Vida?
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Por que vender a mobília pesada no Brasil e mobiliar um apartamento novo no Paraguai sai mais barato e é terapeuticamente libertador.
+            </p>
+            <a href="artigos/9-levar-os-moveis-ou-comecar-do-zero.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 10 -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-ypacarai.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 10 • Futuro & Família</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 6 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/10-vida-em-condominio-luque-san-bernardino.html">
+                Casa com Piscina, Gramado e Crianças sem Telas: O Sonho em Luque e San Bernardino
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Condomínios horizontais, clube de tênis, lago Ypacaraí e o retorno à infância segura dos anos 90 por valores surpreendentes.
+            </p>
+            <a href="artigos/10-vida-em-condominio-luque-san-bernardino.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artigo 11 (NOVO!) -->
+        <article class="blog-card" data-category="familia">
+          <div class="blog-thumb" style="background: linear-gradient(rgba(11,25,48,0.3), rgba(11,25,48,0.7)), url('assets/images/foto-saltos-monday.jpg'); background-size: cover; background-position: center;">
+            <span class="badge-gold">Capítulo 11 • Choque de Realidade</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-row">
+              <span>📅 Outubro 2026</span> • <span>⏱ 7 min leitura</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="artigos/11-o-choque-de-realidade-paraguai-tem-defeitos.html">
+                O Paraguai Não É a Suíça (e Tudo Bem!): Por Que, com Mente Aberta, a Troca Vale Muito a Pena
+              </a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Calor, asfalto secundário e ritmo mais calmo: entenda por que os pequenos incômodos não chegam aos pés do estresse e insegurança que você deixou no Brasil.
+            </p>
+            <a href="artigos/11-o-choque-de-realidade-paraguai-tem-defeitos.html" class="blog-read-more">
+              Ler Artigo Completo →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- BOX DE CAPTAÇÃO NEWSLETTER / E-BOOK VIP -->
+      <div class="newsletter-box">
+        <span class="badge-gold">Material Gratuito Exclusivo</span>
+        <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--py-blue-deep); margin: 12px 0;">
+          Baixe o Manual VIP do Morador & Investidor no Paraguai
+        </h3>
+        <p style="color: var(--py-text-muted); font-size: 1.05rem; max-width: 650px; margin: 0 auto 26px auto;">
+          Receba diretamente no seu WhatsApp o PDF completo com tabelas tributárias comparativas, checklist de certidões e contatos das melhores imobiliárias de Assunção.
+        </p>
+        
+        <form onsubmit="baixarManualVIP(event)" style="display: flex; gap: 12px; justify-content: center; max-width: 550px; margin: 0 auto; flex-wrap: wrap;">
+          <input type="text" id="manualNome" class="form-control" placeholder="Seu nome" style="flex: 1; min-width: 200px;" required>
+          <input type="email" id="manualEmail" class="form-control" placeholder="Seu e-mail" style="flex: 1; min-width: 180px;" required>
+          <input type="tel" id="manualWhats" class="form-control" placeholder="WhatsApp com DDD" style="flex: 1; min-width: 200px;" required>
+          <button type="submit" class="btn btn-primary" style="padding: 13px 26px;">
+            Receber Manual VIP
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL DE ATENDIMENTO -->
+  <div class="modal-overlay" id="modalEspecialista">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="fecharModalEspecialista()">✕</button>
+      <div class="modal-header">
+        <span class="badge-blue">Atendimento</span>
+        <h3>Fale com Nossos Especialistas</h3>
+        <p>Receba orientações personalizadas para sua mudança ou investimento.</p>
+      </div>
+      <form onsubmit="enviarLeadForm(event)">
+        <input type="hidden" id="modalCategoria" value="Blog">
+        <div class="form-group">
+          <label for="leadNome">Nome Completo:</label>
+          <input type="text" id="leadNome" class="form-control" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="leadWhatsapp">WhatsApp com DDD:</label>
+          <input type="tel" id="leadWhatsapp" class="form-control" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="leadEmail">Seu E-mail para Consulta:</label>
+          <input type="email" id="leadEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPerfil">Interesse:</label>
+          <select id="leadPerfil" class="form-control">
+            <option value="Empresas e Impostos">Empresas e Impostos (EAS)</option>
+            <option value="Família e Imóveis">Família e Imóveis em Assunção</option>
+            <option value="Residência e Documentos">Residência e Documentação</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+          Falar no WhatsApp
+        </button>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal oficial de e-mail para consultas:<br>
+          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
+      </p>
+            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function filtrarCategoria(cat) {
+      const cards = document.querySelectorAll('.blog-card');
+      cards.forEach(card => {
+        if (cat === 'todos' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function baixarManualVIP(event) {
+      event.preventDefault();
+      const nome = document.getElementById('manualNome').value;
+      const whats = document.getElementById('manualWhats').value;
+      const email = document.getElementById('manualEmail') ? document.getElementById('manualEmail').value : '';
+      abrirWhatsApp('Download do Manual VIP do Morador & Investidor', `Nome: ${nome} | E-mail: ${email} | WhatsApp: ${whats}`);
+    }
+  </script>
+</body>
+</html>
+
+
+

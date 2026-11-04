@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paraguay Prime | El Portal de Transición, Negocios y Vida</title>
+  <meta name="description" content="Guía definitiva para familias e inversores: costo de vida, barrios de lujo, apertura de empresas EAS, régimen tributario del 10% y radicación legal en Paraguay.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+</head>
+<body>
+
+  <!-- TOPBAR INSTITUCIONAL CON SELECTOR DE IDIOMA -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Portal de Conexión Empresarial y Residencial</span>
+        <div class="lang-switch-box">
+          <a href="index.html" class="lang-pill">🇧🇷 PT</a>
+          <a href="index-es.html" class="lang-pill active">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AVISO B2B PARA EMPRESAS PARAGUAYAS -->
+  <div class="notice-b2b-lang">
+    <div class="container">
+      💼 <strong>¿Es propietario de una empresa o profesional en Paraguay?</strong> Conecte su marca con clientes brasileños con alto poder de compra. 
+      <a href="para-empresas-es.html">Conozca nuestra propuesta B2B para Empresas →</a>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index-es.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white">
+            <div class="flag-seal-dot"></div>
+          </div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAY <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negocios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index-es.html" class="nav-link active">Inicio</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Inversores & Impuestos</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Familias & Costo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Radicación Legal</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Artículos</a></li>
+          <li><a href="faq.html" class="nav-link">Preguntas Frecuentes</a></li>
+          <li><a href="para-empresas-es.html" class="nav-link" style="color: var(--py-red-primary); font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Menu Mobile ES'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Contactar Asesor
+            </button>
+            <a href="para-empresas-es.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Afiliar Empresa (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="para-empresas-es.html" class="btn btn-b2b">
+          <span>Afiliar Empresa</span>
+        </a>
+        <button onclick="abrirModalEspecialista('Consulta en Español')" class="btn btn-primary nav-cta-desktop">
+          Contactar Asesor
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menú de Navegación" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENÚ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- HERO SECTION CINEMATOGRÁFICA -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Contenido Hero -->
+        <div class="hero-content">
+          <div class="badge-flag">
+            🇵🇾 El Nuevo Destino de Prosperidad y Libertad en América del Sur
+          </div>
+
+          <h1>
+            Viva con Seguridad y la Ventaja Tributaria del <mark>10%</mark> en Paraguay.
+          </h1>
+
+          <p class="hero-description">
+            El portal de referencia para <strong>familias que buscan tranquilidad y calidad de vida</strong> y <strong>empresarios que eligen proteger su patrimonio</strong> mediante el régimen fiscal más competitivo y seguro de la región.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="simulador-tributario.html" class="btn btn-primary">
+              Simular Ahorro Tributario
+            </a>
+            <a href="para-empresas-es.html" class="btn btn-outline-white">
+              Área de Empresas del Paraguay
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <h4>10% <span class="highlight-red">Flat</span></h4>
+              <p>Régimen Triple 10 (IRE, IRP, IVA)</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>Hasta 60% <span class="highlight-gold">Menor</span></h4>
+              <p>Costo de vida vs. metrópolis de Brasil</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>100% <span class="highlight-red">Legal</span></h4>
+              <p>Radicación Mercosur y EAS digital</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget Interactivo en Español -->
+        <div class="hero-widget-card" id="simulador-hero">
+          <div class="widget-header">
+            <span class="badge-gold">Simulador Interactivo</span>
+            <h3>Comparativo Fiscal: Brasil vs. Paraguay</h3>
+            <p>Ajuste el volumen de facturación mensual y compare en tiempo real:</p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label-row">
+              <label for="heroRevenueSlider">Facturación Mensual Estimada:</label>
+              <span class="input-val-badge" id="heroRevenueVal">R$ 50.000</span>
+            </div>
+            <input type="range" id="heroRevenueSlider" class="custom-range" min="10000" max="300000" step="5000" value="50000">
+          </div>
+
+          <div class="sim-comparison-box">
+            <div class="sim-country-col br">
+              <div class="sim-country-label">🇧🇷 Impuesto en Brasil</div>
+              <div class="sim-tax-value" id="heroTaxBR">R$ 8.250/mes</div>
+              <span style="font-size: 0.75rem; color: #94A3B8;">Lucro Presumido / Anexo V</span>
+            </div>
+            <div class="sim-country-col py">
+              <div class="sim-country-label">🇵🇾 Impuesto en Paraguay</div>
+              <div class="sim-tax-value" id="heroTaxPY">R$ 4.250/mes</div>
+              <span style="font-size: 0.75rem; color: #94A3B8;">Sistema EAS / IRE 10%</span>
+            </div>
+          </div>
+
+          <div class="sim-savings-banner">
+            <div class="sim-savings-title">Ahorro Anual Estimado</div>
+            <div class="sim-savings-amount" id="heroSavingsAmount">R$ 48.000/año</div>
+            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ USD 8.304 libres</div>
+          </div>
+
+          <button onclick="abrirModalEspecialista('Constitución EAS')" class="btn btn-primary" style="width: 100%;">
+            Constituir Empresa EAS en Paraguay
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PARA PROVEEDORES Y EMPRESAS PARAGUAYAS -->
+  <section class="section-padding" style="background: var(--py-white);">
+    <div class="container">
+      <div class="b2b-magnet-section">
+        <div class="b2b-grid">
+          
+          <div class="b2b-content">
+            <span class="badge-gold">★ Para Empresas y Profesionales del Paraguay</span>
+            <h2>Su Empresa ante los Brasileños más Calificados que Llegan al País.</h2>
+            <p>
+              Estudios jurídicos tributarios, inmobiliarias de primer nivel, sanatorios privados y colegios bilingües: posicione su marca ante miles de familias e inversores con alto poder adquisitivo que utilizan nuestra plataforma diariamente.
+            </p>
+
+            <div class="b2b-perks">
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Leads directos al WhatsApp corporativo de su firma
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Sello de Proveedor Verificado
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Posicionamiento en los primeros lugares de búsqueda
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Exclusividad de rubro en su zona geográfica
+              </div>
+            </div>
+
+            <a href="para-empresas-es.html" class="btn btn-primary btn-b2b-main">
+              Acreditar Mi Empresa en el Portal →
+            </a>
+          </div>
+
+          <div class="b2b-card-cta">
+            <div style="width: 50px; height: 50px; background: rgba(251, 191, 36, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #FBBF24;">
+              <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>Red de Confianza Verificada</h3>
+            <p>
+              Validamos la formalidad y el RUC de cada empresa socia para garantizar los más altos estándares de atención a los inversores.
+            </p>
+            <a href="para-empresas-es.html#registro" class="btn btn-outline-white" style="width: 100%;">
+              Postular Mi Empresa Hoy
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRIOS RESIDENCIALES Y CORPORATIVOS -->
+  <section class="section-padding" id="bairros" style="background: var(--py-surface);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-red">Ubicaciones de Prestigio</span>
+        <h2 class="section-title">Las Zonas más Demandadas del Paraguay</h2>
+        <p class="section-subtitle">
+          Condominios cerrados, alta gastronomía, seguridad y desarrollos edilicios de primer nivel.
+        </p>
+      </div>
+
+      <div class="neighborhood-grid">
+        
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(13, 34, 74, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-shopping.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Asunción Tradicional</span>
+              <h3>Villa Morra</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              El corazón gastronómico, comercial y financiero. Calles arboladas, embajadas y centros comerciales de lujo.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Alquiler Promedio:</span>
+              <span class="metric-val">USD 700 - USD 1.300</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Seguridad:</span>
+              <span class="metric-val" style="color: #10B981;">Excelente / Monitoreada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(197, 29, 42, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-wtc.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Eje Corporativo</span>
+              <h3>Santa Teresa</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              Torres residenciales y corporativas de alta gama, sedes multinacionales, helipuertos y vistas panorámicas.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Alquiler Torres Prime:</span>
+              <span class="metric-val">USD 900 - USD 2.000</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Seguridad:</span>
+              <span class="metric-val" style="color: #10B981;">Máxima / Portería 24h</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(212, 175, 55, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-ypacarai.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Condominios & Lago</span>
+              <h3>Luque & San Bernardino</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              Casas de campo con pileta en barrios cerrados horizontales, marinas sobre el lago Ypacaraí y campos de golf.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Casas en Condominio:</span>
+              <span class="metric-val">USD 600 - USD 1.500</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Seguridad:</span>
+              <span class="metric-val" style="color: #10B981;">Acceso Cerrado 24h</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="main-footer">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: #CBD5E1;">
+        Contacto & Consultas: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          © 2026 Paraguay Prime • Todos los derechos reservados.
+        </div>
+        <div class="footer-dev-credit">
+          Desarrollado por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+        </div>
+        <div style="color: #64748B;">
+          Información tributaria y societaria fundamentada en la Ley 6380/19 y en la Ley de Migraciones 6984/2022 de la República del Paraguay.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/simulador.js"></script>
+  <script src="assets/js/main.js?v=3.2"></script>
+</body>
+</html>
+
+
+

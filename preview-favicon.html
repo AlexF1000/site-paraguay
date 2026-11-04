@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Demonstração | Paraguai Prime</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #071224;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --gold: #FBBF24;
+      --gold-dark: #D4AF37;
+      --text: #F8FAFC;
+      --muted: #94A3B8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 30px 20px 60px 20px;
+      line-height: 1.5;
+    }
+    .header-wrap {
+      max-width: 1100px;
+      margin: 0 auto 36px auto;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(251, 191, 36, 0.15);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      color: var(--gold);
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #FBBF24 0%, #D4AF37 100%);
+      color: #071224;
+      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4); }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+    }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.12); }
+
+    .main-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* Showcase visual */
+    .icon-hero-box {
+      background: radial-gradient(circle, rgba(20, 49, 102, 0.4) 0%, rgba(3, 8, 20, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .icon-hero-box img {
+      width: 160px;
+      height: 160px;
+      filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
+    }
+
+    /* Scales row */
+    .scales-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 12px;
+      padding: 16px 12px;
+      margin-bottom: 16px;
+    }
+    .scale-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .scale-item span {
+      font-size: 0.75rem;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    /* Mock browser tab */
+    .mock-browser {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .mock-topbar-dark {
+      background: #1E293B;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-tab-dark {
+      background: #0F172A;
+      color: #F8FAFC;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px 6px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-top: 2px solid #38BDF8;
+    }
+    .mock-topbar-light {
+      background: #E2E8F0;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mock-tab-light {
+      background: #FFFFFF;
+      color: #0F172A;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px 6px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-top: 2px solid #2563EB;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    /* Mobile iOS Bookmark Simulation */
+    .ios-shelf {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 16px;
+    }
+    .ios-icon-wrap {
+      text-align: center;
+    }
+    .ios-icon-wrap img {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .ios-icon-label {
+      font-size: 0.72rem;
+      color: #F1F5F9;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .ios-info {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .ios-info strong { color: #FFFFFF; }
+
+    /* Interactive Site Switcher */
+    .pages-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .page-link-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #E2E8F0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+    }
+    .page-link-btn:hover {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: rgba(251, 191, 36, 0.4);
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .pages-links { grid-template-columns: 1fr; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-wrap">
+    <div class="badge">Ambiente de Demonstração Local</div>
+    <h1>Paraguai Prime • Pré-Visualização</h1>
+    <p class="subtitle">
+      Teste e inspecione o novo Favicon oficial em alta definição, confira como ele aparece nas abas do navegador (Dark & Light Mode) e navegue por todas as páginas antes de publicar na Hostinger.
+    </p>
+    <div class="nav-actions">
+      <a href="index.html" class="btn btn-gold">
+        <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        Abrir Site Principal (Home)
+      </a>
+      <a href="para-empresas.html" class="btn btn-outline">
+        Ver Área B2B Credenciamento
+      </a>
+      <a href="guia-residencia.html" class="btn btn-outline">
+        Ver Guia de Residência
+      </a>
+    </div>
+  </div>
+
+  <div class="main-grid">
+
+    <!-- Card 1: O Favicon Oficial em Alta Definição -->
+    <div class="card">
+      <div class="card-title">
+        <span>✨</span> Favicon Oficial • Identidade Prime
+      </div>
+      <div class="card-desc">
+        Monograma "P" em Ouro 24K, Estrela de Maio (★) e pedestal com o Tricolor Paraguaio em fundo Azul Marinho Real.
+      </div>
+      <div class="icon-hero-box">
+        <img src="assets/images/favicon.svg" alt="Favicon Oficial Paraguai Prime">
+      </div>
+      <div class="scales-row">
+        <div class="scale-item">
+          <img src="assets/images/favicon-512x512.png" width="48" height="48" alt="48px">
+          <span>48px</span>
+        </div>
+        <div class="scale-item">
+          <img src="assets/images/favicon-32x32.png" width="32" height="32" alt="32px">
+          <span>32px</span>
+        </div>
+        <div class="scale-item">
+          <img src="assets/images/favicon-16x16.png" width="16" height="16" alt="16px">
+          <span>16px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Simulação nas Abas de Navegador -->
+    <div class="card">
+      <div class="card-title">
+        <span>🌐</span> Simulação nas Abas do Navegador
+      </div>
+      <div class="card-desc">
+        O ícone foi otimizado para manter contraste perfeito e nitidez tanto em temas escuros quanto claros.
+      </div>
+
+      <!-- Dark Theme Mock -->
+      <div style="font-size: 0.75rem; color: #94A3B8; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Tema Escuro (Dark Mode):</div>
+      <div class="mock-browser">
+        <div class="mock-topbar-dark">
+          <div class="mock-tab-dark">
+            <img src="assets/images/favicon.svg" width="16" height="16" alt="icon">
+            <span>Paraguai Prime | Vida & Negócios</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light Theme Mock -->
+      <div style="font-size: 0.75rem; color: #94A3B8; font-weight: 700; text-transform: uppercase; margin: 16px 0 6px 0;">Tema Claro (Light Mode):</div>
+      <div class="mock-browser">
+        <div class="mock-topbar-light">
+          <div class="mock-tab-light">
+            <img src="assets/images/favicon.svg" width="16" height="16" alt="icon">
+            <span>Paraguai Prime | Vida & Negócios</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- iOS Home Screen -->
+      <div style="font-size: 0.75rem; color: #94A3B8; font-weight: 700; text-transform: uppercase; margin: 16px 0 6px 0;">Tela Inicial do Celular (Apple Touch Icon):</div>
+      <div class="ios-shelf">
+        <div class="ios-icon-wrap">
+          <img src="assets/images/apple-touch-icon.png" alt="Apple Touch Icon">
+          <div class="ios-icon-label">Paraguai Prime</div>
+        </div>
+        <div class="ios-info">
+          Ícone 180×180px com cantos arredondados nativos para salvar nos favoritos da tela do iPhone e Android.
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Navegação Rápida entre as Páginas -->
+    <div class="card" style="grid-column: 1 / -1;">
+      <div class="card-title">
+        <span>📄</span> Navegue e Teste as Páginas Atualizadas
+      </div>
+      <div class="card-desc">
+        Todas as páginas já contêm as correções de texto (remoção de "Oficial" e "Homologado", substituição de "Diretor" por "Gestor de Parcerias") e a responsividade corrigida.
+      </div>
+      <div class="pages-links">
+        <a href="index.html" class="page-link-btn" target="_blank">
+          <span>🏠 Página Inicial (Home PT)</span>
+          <span>→</span>
+        </a>
+        <a href="index-es.html" class="page-link-btn" target="_blank">
+          <span>🇵🇾 Página Inicial (Home ES)</span>
+          <span>→</span>
+        </a>
+        <a href="para-empresas.html" class="page-link-btn" target="_blank">
+          <span>💼 B2B & Credenciamento de Parceiros</span>
+          <span>→</span>
+        </a>
+        <a href="para-empresas-es.html" class="page-link-btn" target="_blank">
+          <span>🏢 B2B Acreditación (Espanhol)</span>
+          <span>→</span>
+        </a>
+        <a href="guia-residencia.html" class="page-link-btn" target="_blank">
+          <span>🪪 Guia de Residência e Migração</span>
+          <span>→</span>
+        </a>
+        <a href="simulador-tributario.html" class="page-link-btn" target="_blank">
+          <span>📊 Simulador Tributário (10-10-10)</span>
+          <span>→</span>
+        </a>
+        <a href="custo-de-vida.html" class="page-link-btn" target="_blank">
+          <span>🏷️ Comparador de Custo de Vida</span>
+          <span>→</span>
+        </a>
+        <a href="faq.html" class="page-link-btn" target="_blank">
+          <span>❓ Perguntas Frequentes (FAQ)</span>
+          <span>→</span>
+        </a>
+        <a href="blog.html" class="page-link-btn" target="_blank">
+          <span>📰 Blog Institucional & Guias</span>
+          <span>→</span>
+        </a>
+        <a href="artigos/1-respire-fundo-paraguai-fica-logo-ali.html" class="page-link-btn" target="_blank">
+          <span>📖 Artigo de Exemplo do Blog</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

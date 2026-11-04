@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paraguai Prime | O Portal de Transição, Negócios e Vida para Brasileiros</title>
+  <meta name="description" content="Guia definitivo para famílias e empresários brasileiros: custo de vida, moradia de luxo, abertura de empresas EAS, e o sistema tributário 10-10-10 no Paraguai.">
+  <meta name="google-site-verification" content="google49aa230d222fc2f7">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+</head>
+<body>
+
+  <!-- TOPBAR INSTITUCIONAL -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Portal de Assessoria e Conexão Brasil-Paraguai</span>
+        <div class="lang-switch-box">
+          <a href="index.html" class="lang-pill active">🇧🇷 PT</a>
+          <a href="index-es.html" class="lang-pill">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO PRINCIPAL -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white">
+            <div class="flag-seal-dot"></div>
+          </div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Investidores & Impostos</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Famílias & Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Residência Legal</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
+          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="para-empresas.html" class="nav-link" style="color: var(--py-red-primary); font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Menu Mobile'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com Especialista
+            </button>
+            <a href="para-empresas.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Seja um Parceiro (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="para-empresas.html" class="btn btn-b2b">
+          <span>Seja um Parceiro</span>
+        </a>
+        <button onclick="abrirModalEspecialista('Geral')" class="btn btn-primary nav-cta-desktop">
+          Falar com Especialista
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- HERO SECTION CINEMATOGRÁFICA -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Conteúdo do Hero -->
+        <div class="hero-content">
+          <div class="badge-flag">
+            🇵🇾 O Novo Destino de Prosperidade & Liberdade na América do Sul
+          </div>
+
+          <h1>
+            Viva com Segurança e a Carga Tributária de <mark>10%</mark> no Paraguai.
+          </h1>
+
+          <p class="hero-description">
+            O portal definitivo para <strong>famílias que buscam paz e qualidade de vida</strong> e <strong>empresários que desejam proteger seu patrimônio</strong> através do sistema legal mais inteligente e seguro da região.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#simulador-hero" class="btn btn-primary">
+              Simular Economia Tributária
+            </a>
+            <button onclick="abrirModalEspecialista('Mudança de Família')" class="btn btn-outline-white">
+              Planejar Mudança Familiar
+            </button>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <h4>10% <span class="highlight-red">Flat</span></h4>
+              <p>Sistema Triplo 10 (IRE, IRP, IVA)</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>Até 60% <span class="highlight-gold">Menor</span></h4>
+              <p>Custo de vida vs. SP e RJ</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4>100% <span class="highlight-red">Legal</span></h4>
+              <p>Residência Mercosul & EAS sem burocracia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget Interativo: Simulador em Tempo Real -->
+        <div class="hero-widget-card" id="simulador-hero">
+          <div class="widget-header">
+            <span class="badge-gold">Simulador Interativo</span>
+            <h3>Economia Fiscal: Brasil vs. Paraguai</h3>
+            <p>Arraste seu faturamento mensal e veja a diferença em tempo real:</p>
+          </div>
+
+          <div class="input-group">
+            <div class="input-label-row">
+              <label for="heroRevenueSlider">Faturamento Mensal da sua Empresa:</label>
+              <span class="input-val-badge" id="heroRevenueVal">R$ 50.000</span>
+            </div>
+            <input type="range" id="heroRevenueSlider" class="custom-range" min="10000" max="300000" step="5000" value="50000">
+          </div>
+
+          <div class="sim-comparison-box">
+            <div class="sim-country-col br">
+              <div class="sim-country-label">🇧🇷 Imposto Médio Brasil</div>
+              <div class="sim-tax-value" id="heroTaxBR">R$ 8.250/mês</div>
+              <span style="font-size: 0.75rem; color: #94A3B8;">Lucro Presumido / Anexo V</span>
+            </div>
+            <div class="sim-country-col py">
+              <div class="sim-country-label">🇵🇾 Imposto no Paraguai</div>
+              <div class="sim-tax-value" id="heroTaxPY">R$ 4.250/mês</div>
+              <span style="font-size: 0.75rem; color: #94A3B8;">Sistema EAS / IRE 10%</span>
+            </div>
+          </div>
+
+          <div class="sim-savings-banner">
+            <div class="sim-savings-title">Sua Economia Anual Estimada</div>
+            <div class="sim-savings-amount" id="heroSavingsAmount">R$ 48.000/ano</div>
+            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ US$ 8.304 livres</div>
+          </div>
+
+          <button onclick="abrirModalEspecialista('Planejamento Tributário')" class="btn btn-primary" style="width: 100%;">
+            Quero Abrir Minha Empresa no Paraguai
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PILARES ESTRATÉGICOS -->
+  <section class="section-padding" id="familias" style="background: var(--py-offwhite);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-blue">Pilares de Excelência</span>
+        <h2 class="section-title">Construído para Quem Exige o Melhor</h2>
+        <p class="section-subtitle">
+          Orientação prática e parcerias com as empresas mais renomadas do Paraguai para garantir uma transição sem riscos para sua família e seu patrimônio.
+        </p>
+      </div>
+
+      <div class="pillar-cards-grid">
+        
+        <!-- Pilar 1: Famílias -->
+        <div class="pillar-card card-blue">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <span class="badge-blue">Família & Vida</span>
+          <h3 class="pillar-title" style="margin-top: 10px;">Segurança & Educação Internacional</h3>
+          <p class="pillar-desc">
+            Viva em bairros arborizados de alto padrão com índices de criminalidade consideravelmente inferiores às capitais brasileiras.
+          </p>
+          <ul class="pillar-features-list">
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Escolas americanas e bilíngues de renome (ASA, San Andrés).
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Planos de saúde privados VIP (Asismed, Santa Clara) por uma fração do preço no Brasil.
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Energia elétrica mais barata do continente (Itaipu Binacional).
+            </li>
+          </ul>
+          <a href="custo-de-vida.html" class="btn btn-outline-blue" style="width: 100%;">
+            Ver Comparativo de Custo de Vida
+          </a>
+        </div>
+
+        <!-- Pilar 2: Negócios & Tributos -->
+        <div class="pillar-card card-red" id="tributos">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <span class="badge-red">Empresas & Negócios</span>
+          <h3 class="pillar-title" style="margin-top: 10px;">Sistema Tributário Inteligente (10-10-10)</h3>
+          <p class="pillar-desc">
+            Abra sua empresa com facilidade e usufrua de uma das regras tributárias mais vantajosas do mundo para prestadores de serviços, holdings e agro.
+          </p>
+          <ul class="pillar-features-list">
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              IRE de apenas 10% sobre o lucro real (sem bi-tributações em cascata).
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Princípio da Territorialidade: zero imposto sobre receitas de fora do país.
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Sociedade EAS constituída de forma ágil e digital.
+            </li>
+          </ul>
+          <a href="simulador-tributario.html" class="btn btn-primary" style="width: 100%;">
+            Aprofundar Simulação Fiscal
+          </a>
+        </div>
+
+        <!-- Pilar 3: Imigração & Documentação -->
+        <div class="pillar-card card-gold">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <span class="badge-gold">Residência Legal</span>
+          <h3 class="pillar-title" style="margin-top: 10px;">Residência & Cédula de Identidade</h3>
+          <p class="pillar-desc">
+            O processo de obtenção de Radicación (Residência) e Cédula paraguaia é amparado pelo acordo Mercosul e pela nova Lei de Migrações (Lei 6984/2022).
+          </p>
+          <ul class="pillar-features-list">
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Direito pleno de moradia, abertura de contas bancárias e trabalho.
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Assessoria com advogados e gestores credenciados no portal.
+            </li>
+            <li>
+              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Saída definitiva do Brasil planejada e 100% regularizada na Receita Federal.
+            </li>
+          </ul>
+          <a href="guia-residencia.html" class="btn btn-outline-blue" style="width: 100%;">
+            Acessar Checklist de Documentos
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO MAGNET B2B: PARA EMPRESAS E PRESTADORES DE SERVIÇO PARAGUAIOS -->
+  <section class="section-padding" style="background: var(--py-white);">
+    <div class="container">
+      <div class="b2b-magnet-section">
+        <div class="b2b-grid">
+          
+          <div class="b2b-content">
+            <span class="badge-gold">★ Área de Credenciamento</span>
+            <h2>Sua Empresa Diante dos Brasileiros Mais Qualificados que Chegam ao Paraguai.</h2>
+            <p>
+              Advogados tributaristas, imobiliárias de alto padrão, colégios internacionais e operadoras de saúde: conecte sua marca a milhares de famílias e investidores com alto poder aquisitivo que utilizam nosso portal diariamente.
+            </p>
+
+            <div class="b2b-perks">
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Leads diretos no WhatsApp da sua empresa
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Selo de Parceiro Verificado
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Posicionamento de elite em buscas no Brasil
+              </div>
+              <div class="b2b-perk-item">
+                <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Exclusividade de categoria na sua região
+              </div>
+            </div>
+
+            <a href="para-empresas.html" class="btn btn-primary btn-b2b-main">
+              Quero Credenciar Minha Empresa no Portal
+            </a>
+          </div>
+
+          <div class="b2b-card-cta">
+            <div style="width: 50px; height: 50px; background: rgba(251, 191, 36, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; color: #FBBF24;">
+              <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3>Faça Parte da Rede de Confiança</h3>
+            <p>
+              Avaliamos a regularidade e idoneidade de cada parceiro para manter o mais alto padrão de atendimento para os brasileiros.
+            </p>
+            <button onclick="abrirModalEspecialista('Parceria B2B')" class="btn btn-outline-white" style="width: 100%;">
+              Falar com o Gestor de Parcerias
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE BAIRROS NOBRES DE ASSUNÇÃO E REGIÃO -->
+  <section class="section-padding" id="bairros" style="background: var(--py-surface);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-red">Onde Viver com Excelência</span>
+        <h2 class="section-title">Os Bairros Mais Cobiçados do Paraguai</h2>
+        <p class="section-subtitle">
+          Condomínios fechados, alta gastronomia, segurança armada e infraestrutura de primeiro mundo.
+        </p>
+      </div>
+
+      <div class="neighborhood-grid">
+        
+        <!-- Bairro 1: Villa Morra -->
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(13, 34, 74, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-shopping.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Assunção Nobre</span>
+              <h3>Villa Morra</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              O coração financeiro e gastronômico da capital. Shoppings luxuosos, cafés requintados e excelente valorização imobiliária.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Aluguel Médio (2 a 3 quartos):</span>
+              <span class="metric-val">US$ 700 - US$ 1.300</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Perfil:</span>
+              <span class="metric-val">Executivos & Famílias</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Segurança:</span>
+              <span class="metric-val" style="color: #10B981;">Excelente / Monitorado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bairro 2: Santa Teresa / Ycuá Satí -->
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(197, 29, 42, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-wtc.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Eixo Corporativo & Luxo</span>
+              <h3>Santa Teresa</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              A "Faria Lima de Assunção". Edifícios residenciais de altíssimo luxo com vista panorâmica, helipontos e sedes multinacionais.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Aluguel Médio (Apartamentos Prime):</span>
+              <span class="metric-val">US$ 900 - US$ 2.000</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Perfil:</span>
+              <span class="metric-val">Empresários & Investidores</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Segurança:</span>
+              <span class="metric-val" style="color: #10B981;">Máxima / Portaria 24h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bairro 3: San Bernardino & Luque -->
+        <div class="neighborhood-card">
+          <div class="neighborhood-header-img" style="background-image: linear-gradient(rgba(212, 175, 55, 0.4), rgba(7, 18, 36, 0.85)), url('assets/images/foto-ypacarai.jpg');">
+            <div class="neighborhood-name-wrap">
+              <span>Condomínios Fechados & Natureza</span>
+              <h3>San Bernardino & Luque</h3>
+            </div>
+          </div>
+          <div class="neighborhood-body">
+            <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+              Casas térreas em condomínios fechados horizontais, clube de golfe, marina no lago Ypacaraí e máxima tranquilidade para crianças.
+            </p>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Aluguel de Casas em Condomínio:</span>
+              <span class="metric-val">US$ 600 - US$ 1.500</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Perfil:</span>
+              <span class="metric-val">Famílias com Crianças</span>
+            </div>
+            <div class="neighborhood-metric-row">
+              <span class="metric-label">Segurança:</span>
+              <span class="metric-val" style="color: #10B981;">Condomínio Fechado</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRETÓRIO DE SERVIÇOS CREDENCIADOS -->
+  <section class="section-padding" id="diretorio" style="background: var(--py-white);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-gold">Guia de Confiança</span>
+        <h2 class="section-title">Diretório de Profissionais e Serviços de Excelência</h2>
+        <p class="section-subtitle">
+          Empresas credenciadas pelo portal com atendimento especializado em português.
+        </p>
+      </div>
+
+      <div class="directory-grid">
+        
+        <div class="directory-category-card" onclick="abrirModalEspecialista('Advocacia e Residência')" style="cursor: pointer;">
+          <div class="dir-icon">
+            <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4 class="dir-title">Imigração & Cédula</h4>
+          <span class="dir-count">Assessoria Credenciada</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Radicación temporária e permanente sem intermediários ilegais.</p>
+        </div>
+
+        <div class="directory-category-card" onclick="abrirModalEspecialista('Abertura de Empresa EAS')" style="cursor: pointer;">
+          <div class="dir-icon">
+            <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h4 class="dir-title">Contabilidade & EAS</h4>
+          <span class="dir-count">Tributaristas Seniores</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Abertura societária, planejamento fiscal e contabilidade mensal.</p>
+        </div>
+
+        <div class="directory-category-card" onclick="abrirModalEspecialista('Imobiliárias e Aluguel')" style="cursor: pointer;">
+          <div class="dir-icon">
+            <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          </div>
+          <h4 class="dir-title">Imobiliárias Prime</h4>
+          <span class="dir-count">Locação & Compra</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Contratos transparentes, fiadores locais e imóveis mobiliados.</p>
+        </div>
+
+        <div class="directory-category-card" onclick="abrirModalEspecialista('Saúde e Planos')" style="cursor: pointer;">
+          <div class="dir-icon">
+            <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <h4 class="dir-title">Medicina & Saúde</h4>
+          <span class="dir-count">Hospitais & Planos VIP</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Asismed, Santa Clara e convênios com cobertura regional.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <div class="brand-flag-icon">
+              <div class="flag-stripe-red"></div>
+              <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+              <div class="flag-stripe-blue"></div>
+            </div>
+            <div class="brand-name" style="color: var(--py-white);">
+              <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+              <span class="sub" style="color: #FF5A65;">Vida & Negócios</span>
+            </div>
+          </div>
+          <p>
+            O portal de referência para brasileiros que buscam segurança jurídica, liberdade tributária e alto padrão de vida no Paraguai. Conectamos famílias e investidores às melhores oportunidades e prestadores de serviço certificados.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Para Você & Família</h4>
+          <ul class="footer-links">
+            <li><a href="custo-de-vida.html">Calculadora de Custo de Vida</a></li>
+            <li><a href="guia-residencia.html">Guia de Residência (Lei 6984)</a></li>
+            <li><a href="#bairros">Melhores Bairros de Assunção</a></li>
+            <li><a href="guia-residencia.html">Saúde Privada & Colégios</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Para Investidores</h4>
+          <ul class="footer-links">
+            <li><a href="simulador-tributario.html">Simulador de Impostos (10-10-10)</a></li>
+            <li><a href="simulador-tributario.html">Abertura de Empresa EAS</a></li>
+            <li><a href="simulador-tributario.html">Regime de Maquila & Agro</a></li>
+            <li><a href="para-empresas.html">Credenciamento de Parceiros (B2B)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento Central</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 14px;">
+            Dúvidas sobre o processo de transição ou interesse em ser um parceiro credenciado?
+          </p>
+          <button onclick="abrirModalEspecialista('Atendimento')" class="btn btn-primary" style="width: 100%;">
+            Falar pelo WhatsApp
+          </button>
+          <div style="margin-top: 12px; font-size: 0.85rem; color: #CBD5E1; text-align: center; line-height: 1.6;">
+            E-mail: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a><br>
+            WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Paraguai Prime. Todos os direitos reservados.
+        </div>
+        <div class="footer-dev-credit">
+          Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+        </div>
+        <div style="color: #64748B;">
+          As informações tributárias são fundamentadas na Lei 6380/19 e na Lei de Migrações 6984/2022 da República do Paraguai.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
+  <div class="floating-cta">
+    <button onclick="abrirModalEspecialista('WhatsApp Direto')" class="btn-floating-whatsapp">
+      <svg style="width:22px;height:22px;max-width:22px;max-height:22px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Falar no WhatsApp
+    </button>
+  </div>
+
+  <!-- MODAL DE ATENDIMENTO E LEAD GENERATION -->
+  <div class="modal-overlay" id="modalEspecialista">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="fecharModalEspecialista()">✕</button>
+      
+      <div class="modal-header">
+        <span class="badge-blue">Atendimento Exclusivo</span>
+        <h3>Conecte-se a um Especialista</h3>
+        <p>Receba orientações seguras sobre mudança, abertura de empresa ou investimento imobiliário.</p>
+      </div>
+
+      <form onsubmit="enviarLeadForm(event)">
+        <input type="hidden" id="modalCategoria" value="Geral">
+
+        <div class="form-group">
+          <label for="leadNome">Seu Nome Completo:</label>
+          <input type="text" id="leadNome" class="form-control" placeholder="Ex: Roberto Silveira" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leadWhatsapp">Seu WhatsApp (com DDD):</label>
+          <input type="tel" id="leadWhatsapp" class="form-control" placeholder="Ex: (11) 98765-4321" required>
+        </div>
+        <div class="form-group">
+          <label for="leadEmail">Seu E-mail para Consulta:</label>
+          <input type="email" id="leadEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leadPerfil">Seu Principal Perfil:</label>
+          <select id="leadPerfil" class="form-control">
+            <option value="Empresário buscando pagar menos impostos">Empresário (buscando economia tributária / EAS)</option>
+            <option value="Família buscando segurança e moradia">Família (buscando qualidade de vida e residência)</option>
+            <option value="Investidor imobiliário">Investidor (imóveis e rentabilidade em dólar)</option>
+            <option value="Prestador de serviço querendo ser parceiro">Prestador de Serviço (Quero me cadastrar como parceiro)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="leadInteresse">Em qual cidade você prefere?</label>
+          <select id="leadInteresse" class="form-control">
+            <option value="Assunção / Região Nobre">Assunção (Villa Morra, Santa Teresa)</option>
+            <option value="Luque / San Bernardino (Condomínios)">Luque / San Bernardino (Condomínios fechados)</option>
+            <option value="Ciudad del Este / Fronteira">Ciudad del Este / Fronteira com Foz</option>
+            <option value="Ainda estou avaliando">Ainda estou avaliando</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 14px;">
+          Iniciar Atendimento Gratuito no WhatsApp
+        </button>
+
+        <p style="font-size: 0.78rem; color: #94A3B8; text-align: center; margin-top: 14px;">
+          🔒 Seus dados são protegidos e direcionados apenas a profissionais credenciados.
+        </p>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal oficial de e-mail para consultas:<br>
+          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/simulador.js"></script>
+  <script src="assets/js/main.js?v=3.2"></script>
+</body>
+</html>
+
+
+

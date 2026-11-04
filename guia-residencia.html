@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Residência & Cédula Paraguaia | Paraguai Prime</title>
+  <meta name="description" content="Checklist completo e passo a passo atualizado para tirar a Residência e a Cédula de Identidade no Paraguai segundo a Lei 6984/2022.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .res-header {
+      background: radial-gradient(circle at 80% 30%, #173B75 0%, #0D224A 55%, #071224 100%);
+      color: var(--py-white);
+      padding: 70px 0 80px 0;
+      text-align: center;
+    }
+    .res-wrapper {
+      max-width: 960px;
+      margin: -40px auto 60px auto;
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      box-shadow: var(--shadow-lg);
+      padding: 50px;
+      position: relative;
+      z-index: 10;
+    }
+    .progress-bar-wrap {
+      background: var(--py-surface);
+      border-radius: var(--radius-full);
+      height: 16px;
+      overflow: hidden;
+      margin: 20px 0 35px 0;
+      border: 1px solid var(--py-border);
+    }
+    .progress-bar-fill {
+      background: linear-gradient(90deg, #C51D2A 0%, #10B981 100%);
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+    .timeline-step {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 35px;
+      position: relative;
+    }
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 18px;
+      bottom: 0;
+      width: 2px;
+      background: var(--py-border);
+    }
+    .timeline-step:last-child::before {
+      display: none;
+    }
+    .step-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--py-blue-primary);
+      color: var(--py-white);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 2;
+      box-shadow: 0 4px 10px rgba(13, 34, 74, 0.25);
+    }
+    .step-content {
+      flex-grow: 1;
+    }
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--py-blue-deep);
+      margin-bottom: 8px;
+    }
+    .checklist-item {
+      background: var(--py-offwhite);
+      border: 1px solid var(--py-border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+    .checklist-item:hover {
+      background: var(--py-white);
+      border-color: var(--py-blue-primary);
+    }
+    .checklist-item.checked {
+      background: #ECFDF5;
+      border-color: #A7F3D0;
+    }
+    .checklist-item.checked span {
+      text-decoration: line-through;
+      color: #065F46;
+    }
+    .checkbox-custom {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid var(--py-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--py-white);
+    }
+    .checklist-item.checked .checkbox-custom {
+      background: #10B981;
+      border-color: #10B981;
+      color: var(--py-white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div>
+        <span style="color: #FBBF24; font-weight: 700;">★ Amparado pela Nova Lei de Migrações (Ley 6984/2022)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador de Impostos</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link active" style="color: var(--py-red-primary);">Guia de Residência</a></li>
+          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
+          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
+          <li><a href="para-empresas.html" class="nav-link" style="color: #854D0E; font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li class="mobile-nav-cta">
+            <button onclick="abrirModalEspecialista('Despachante e Residência'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com Especialista
+            </button>
+            <a href="para-empresas.html" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
+              <span>Seja um Parceiro (B2B)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button onclick="abrirModalEspecialista('Despachante e Residência')" class="btn btn-primary nav-cta-desktop">
+          Assessoria de Imigração
+        </button>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- CABEÇALHO -->
+  <section class="res-header">
+    <div class="container">
+      <span class="badge-gold">Checklist Interativo de Documentação</span>
+      <h1 style="font-size: 2.8rem; font-weight: 800; margin: 16px 0;">
+        Como Obter sua Residência e Cédula no Paraguai
+      </h1>
+      <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 720px; margin: 0 auto;">
+        Siga o cronograma exato exigido pela Direção Nacional de Migraciones (DNM). Marque os documentos já providenciados e acompanhe seu progresso.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL & CHECKLIST -->
+  <div class="container">
+    <div class="res-wrapper">
+      
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 1.4rem; color: var(--py-blue-deep); font-weight: 800;">
+          Seu Progresso de Documentação
+        </h3>
+        <span id="progressText" style="font-weight: 800; color: var(--py-red-primary); font-size: 1.1rem;">0% Concluído</span>
+      </div>
+
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+
+      <!-- Passo 1: No Brasil -->
+      <div class="timeline-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4 class="step-title">Fase 1: Preparação Prévia no Brasil</h4>
+          <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            Estes documentos devem ser emitidos e apostilados no Brasil antes de cruzar a fronteira.
+          </p>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Certidão de Nascimento ou Casamento</strong> de inteiro teor, com Apostila de Haia em cartório brasileiro (validade de 90 dias).</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Certidão de Antecedentes Criminais da Polícia Federal</strong> emitida online e também apostilada com Haia.</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Passaporte Brasileiro</strong> válido (mínimo 6 meses) ou RG em excelente estado emitido há menos de 10 anos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 2: Ao Entrar no Paraguai -->
+      <div class="timeline-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4 class="step-title">Fase 2: Entrada Legal no Paraguai</h4>
+          <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            Obrigatório para registrar seu ingresso oficial no território nacional.
+          </p>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Comprovante de Entrada do Migraciones</strong> (carimbo no passaporte ou boleta migratória de entrada no posto de fronteira ou aeroporto).</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Certificado de Vacina de Febre Amarela</strong> Internacional da ANVISA.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 3: Em Assunção / Trâmites Locais -->
+      <div class="timeline-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4 class="step-title">Fase 3: Certificados Locais e Protocolo</h4>
+          <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            Emitidos na capital ou postos regionais com auxílio de despachantes credenciados.
+          </p>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Certificado de Antecedentes da Interpol</strong> em Assunção.</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Certificado de Vida e Residência</strong> emitido pela delegacia de polícia do bairro onde você está residindo.</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Protocolo formal na Direção Nacional de Migrações (DNM)</strong> para concessão do carnet de residência.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passo 4: Cédula e Regularização Fiscal -->
+      <div class="timeline-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4 class="step-title">Fase 4: Cédula de Identidade & Saída Fiscal</h4>
+          <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 16px;">
+            A etapa final que garante sua liberdade e tranquilidade total.
+          </p>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Emissão da Cédula de Identidade Civil Paraguaia</strong> no Departamento de Identificaciones.</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Inscrição no RUC</strong> (SET/DNIT do Paraguai) para abertura de contas bancárias e emissão de notas fiscais.</span>
+          </div>
+
+          <div class="checklist-item" onclick="toggleChecklist(this)">
+            <div class="checkbox-custom">✓</div>
+            <span><strong>Comunicação de Saída Definitiva do País (CSDP)</strong> protocolada na Receita Federal do Brasil para evitar bi-tributação.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--py-blue-soft); padding: 30px; border-radius: var(--radius-lg); text-align: center; margin-top: 30px;">
+        <h4 style="font-size: 1.3rem; color: var(--py-blue-deep); font-weight: 800; margin-bottom: 10px;">
+          Quer Fazer Todo o Processo com Segurança e Acompanhamento Presencial?
+        </h4>
+        <p style="color: var(--py-text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto 20px auto;">
+          Nossos advogados e gestores parceiros cuidam do agendamento, fila, protocolo e entrega dos documentos para que você não perca tempo nem caia em golpes de intermediários ilegais.
+        </p>
+        <button onclick="abrirModalEspecialista('Assessoria de Residência Completa')" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+          Falar com Gestor de Imigração
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE ATENDIMENTO -->
+  <div class="modal-overlay" id="modalEspecialista">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="fecharModalEspecialista()">✕</button>
+      <div class="modal-header">
+        <span class="badge-blue">Assessoria de Imigração</span>
+        <h3>Tire sua Residência com Segurança</h3>
+        <p>Preencha os dados abaixo e conecte-se a um assessor credenciado no WhatsApp.</p>
+      </div>
+      <form onsubmit="enviarLeadForm(event)">
+        <input type="hidden" id="modalCategoria" value="Residência">
+        <div class="form-group">
+          <label for="leadNome">Nome Completo:</label>
+          <input type="text" id="leadNome" class="form-control" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="leadWhatsapp">WhatsApp com DDD:</label>
+          <input type="tel" id="leadWhatsapp" class="form-control" placeholder="(11) 99999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="leadEmail">Seu E-mail para Consulta:</label>
+          <input type="email" id="leadEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="leadPerfil">Quantas pessoas vão requerer a residência?</label>
+          <select id="leadPerfil" class="form-control">
+            <option value="Apenas eu (Individual)">Apenas eu (Individual)</option>
+            <option value="Casal">Casal</option>
+            <option value="Família inteira (Casal + Filhos)">Família inteira (Casal + Filhos)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="leadInteresse">Em qual cidade você deseja dar entrada?</label>
+          <select id="leadInteresse" class="form-control">
+            <option value="Assunção (Sede Central DNM)">Assunção (Sede Central DNM)</option>
+            <option value="Ciudad del Este">Ciudad del Este</option>
+            <option value="Encarnación">Encarnación</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+          Falar com Assessor de Imigração no WhatsApp
+        </button>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal oficial de e-mail para consultas:<br>
+          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
+      </p>
+            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function toggleChecklist(element) {
+      element.classList.toggle('checked');
+      atualizarProgressoChecklist();
+    }
+
+    function atualizarProgressoChecklist() {
+      const items = document.querySelectorAll('.checklist-item');
+      const checked = document.querySelectorAll('.checklist-item.checked');
+      const percent = Math.round((checked.length / items.length) * 100);
+
+      document.getElementById('progressBar').style.width = `${percent}%`;
+      document.getElementById('progressText').textContent = `${percent}% Concluído (${checked.length} de ${items.length})`;
+    }
+  </script>
+</body>
+</html>
+
+
+

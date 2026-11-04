@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Temporary and Scratch files
+scratch/
+Nova pasta/
+
+# Archives and Backups
+*.zip
+*.tar.gz
+*.rar
+
+# Environment and Credentials
+.env
+.env.*
+smtp_config.json
+
+# System & Editor
+.DS_Store
+Thumbs.db
+*.log
+.vercel
