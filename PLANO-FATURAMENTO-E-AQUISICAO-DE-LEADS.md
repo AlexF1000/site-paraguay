@@ -100,3 +100,4 @@ Para gerar os cliques e contatos de brasileiros, a estratégia é dividida em **
   - Com R$ 4.000/mês em anúncios a um CPL médio de R$ 15, você gera **260 a 350 leads qualificados por mês**!
   - Isso dá de **13 a 20 leads exclusivos para cada uma das 20 empresas parceiras todo mês**.
   - **Resultado:** Os parceiros fecham vendas constantes, faturam muito alto e **nunca cancelam o contrato com você**.
+

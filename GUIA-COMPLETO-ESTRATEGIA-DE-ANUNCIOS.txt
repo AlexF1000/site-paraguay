@@ -1,0 +1,56 @@
+====================================================================
+PLAYBOOK COMPLETO DE ANUNCIOS & AQUISICAO DE TRAFEGO
+Portal Paraguai Prime (paraguayprime.online) & Vertice Social Media
+====================================================================
+
+1. ESTRATEGIA DE GOOGLE ADS (FUNDO DE FUNIL - ALTA INTENCAO)
+--------------------------------------------------------------------
+Palavras-Chave de Alta Conversao:
+- Grupo 1 (Empresas/Impostos): [abrir empresa no paraguai], [empresa eas paraguai], "impostos no paraguai", "sistema tributario 10 10 10", "holding no paraguai".
+- Grupo 2 (Residencia/Moradia): [como morar no paraguai], [residencia legal paraguai lei 6984], "cedula paraguaia como tirar", "morar no paraguai com a familia".
+- Grupo 3 (Imoveis): [imoveis em assuncao paraguai], [apartamento villa morra assuncao], "investir em imoveis no paraguai".
+
+Palavras Negativas Obrigatorias (Economiza Verba):
+compras, eletronicos, celular, iphone, shopping china, dolar hoje na fronteira, passaporte gratis, trabalho bracal, vagas de emprego, hotel barato.
+
+Anuncio 1 (Tributario/Empresas):
+- Titulo 1: Carga Tributaria de 10% no PY
+- Titulo 2: Abra sua Empresa EAS em 72h
+- Titulo 3: Simulador Tributario Gratuito
+- Descricao 1: Proteja seu patrimonio legalmente com o Sistema 10-10-10. Economia real de ate 60% vs Brasil.
+- Descricao 2: Conectamos voce aos maiores contadores e advogados tributaristas de Assuncao e CDE. Simule agora!
+
+
+2. ESTRATEGIA DE META ADS (INSTAGRAM & FACEBOOK)
+--------------------------------------------------------------------
+Segmentacao de Publico:
+- Interesses: Negocios, Investimento financeiro, Mercado imobiliario, Empreendedorismo, Pequenas e Medias Empresas, Holding patrimonial.
+- Cargos: Empresario, Socio, Diretor executivo, Advogado, Medico, Engenheiro.
+- Regioes Recomendadas:
+  * Sul: PR (Curitiba, Londrina, Maringa, Foz), SC (Florianopolis, Joinville, Blumenau, Balneario Camboriu, Chapeco), RS (Porto Alegre, Caxias do Sul, Passo Fundo).
+  * Sudeste: SP (Capital, Campinas, Ribeirao Preto, Sorocaba, SJC), RJ e BH.
+  * Centro-Oeste: Campo Grande, Dourados, Cuiaba, Goiania (Agro).
+
+Roteiro 1 (Empresarios / Tributario):
+"Voce sabia que a apenas 1h30 de voo de Sao Paulo existe um pais com estabilidade economica e uma carga tributaria maxima de 10% flat?
+Sem impostos cumulativos abusivos, sem burocracia sem fim. O Paraguai tornou-se o principal destino de empresarios brasileiros inteligentes que buscam proteger seu patrimonio atraves do Sistema Triplo 10 (10% IRE, 10% IRP, 10% IVA).
+Acesse o simulador oficial do portal Paraguai Prime e descubra quanto sua empresa pode economizar todos os meses.
+Toque em Saiba Mais e simule gratuitamente."
+Destino: https://paraguayprime.online/simulador-tributario
+
+
+3. RASTREAMENTO & METRICAS (ANALYTICS)
+--------------------------------------------------------------------
+1. Google Search Console: search.google.com/search-console (ja verificado).
+2. Google Analytics 4 (GA4): analytics.google.com (para ver visitantes em tempo real e cidades de origem).
+3. Meta Pixel: Instalacao no cabecalho para criar publicos de Remarketing.
+4. Eventos de Conversao: Disparar evento de Lead nos cliques de WhatsApp e envio de formularios.
+
+
+4. ORCAMENTO E CRONOGRAMA DE INVESTIMENTO
+--------------------------------------------------------------------
+- Fase 1 (Piloto de 60 dias): R$ 30 a R$ 40/dia (R$ 900 a R$ 1.200/mes) -> 60 a 100 leads gerados.
+- Fase 2 (Escala Comercial com 10 parceiros): R$ 80 a R$ 100/dia (R$ 2.400 a R$ 3.000/mes) -> 180 a 250 leads gerados.
+- Fase 3 (Pleno Potencial com 20 parceiros): R$ 130 a R$ 160/dia (R$ 4.000 a R$ 5.000/mes) -> 300 a 450 leads gerados.
+(Lembrando que a partir da Fase 2, o investimento e 100% financiado pelas proprias mensalidades recebidas dos parceiros).
+====================================================================
