@@ -3,6 +3,13 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/inmobiliarias", "destination": "/para-empresas-es.html" },
+    { "source": "/saude-prepaga", "destination": "/para-empresas-es.html" },
+    { "source": "/abertura-empresas", "destination": "/para-empresas-es.html" },
+    { "source": "/empresas", "destination": "/para-empresas-es.html" },
+    { "source": "/para-empresas", "destination": "/para-empresas-es.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

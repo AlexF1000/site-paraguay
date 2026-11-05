@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alianza para Estudios Contables y Jurídicos | Paraguay Prime</title>
+  <meta name="description" content="Conecte su estudio contable o bufete jurídico con empresarios e inversores brasileños que necesitan constituir sociedades EAS, RUC y radicación legal en Paraguay.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .b2b-hero {
+      background: radial-gradient(circle at 75% 30%, #15366D 0%, #0D224A 55%, #061122 100%);
+      color: var(--py-white);
+      padding: 90px 0 100px 0;
+      position: relative;
+    }
+    .form-box-b2b {
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      padding: 50px;
+      box-shadow: var(--shadow-lg);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .metric-card-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Portal Corporativo & Alianzas EAS / Tributarias</span>
+        <div class="lang-switch-box">
+          <a href="para-empresas.html" class="lang-pill">🇧🇷 PT</a>
+          <a href="abertura-empresas.html" class="lang-pill active">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index-es.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAY <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negocios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index-es.html" class="nav-link">Inicio</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Costo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Radicación Legal</a></li>
+          <li><a href="para-empresas-es.html" class="nav-link active" style="color: var(--py-red-primary); font-weight: 700;">Alianzas B2B</a></li>
+          <li class="mobile-nav-cta">
+            <a href="#registro" onclick="toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              <span>Acreditar Estudio</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#registro" class="btn btn-primary nav-cta-desktop">
+          Acreditar Estudio
+        </a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menú de Navegación" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENÚ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- HERO B2B CONTABLE / JURÍDICO -->
+  <section class="b2b-hero">
+    <div class="container">
+      <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+        <span class="badge-gold">⚖️ Alianza Contable, Tributaria & Migratoria • Paraguay Prime</span>
+        <h1 style="font-size: 3.2rem; font-weight: 800; margin: 20px 0; line-height: 1.18;">
+          Derivamos Empresarios Brasileños para Constitución de EAS y Radicación Legal.
+        </h1>
+        <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 36px;">
+          Empresarios del agronegocio, tecnología y servicios buscan constantemente orientación para acogerse al <strong>régimen tributario 10-10-10, abrir cuentas bancarias y tramitar su residencia legal</strong> con estudios paraguayos de máxima reputación.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#registro" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+            Acreditar Estudio Contable / Bufete
+          </a>
+          <button onclick="abrirWhatsApp('Alianza Contable y Legal Paraguay', 'Hola, represento un estudio y deseo conversar sobre derivación de clientes brasileños')" class="btn btn-outline-white">
+            Conversar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section-padding" style="background: var(--py-bg-light);" id="registro">
+    <div class="container">
+      <div class="form-box-b2b">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <span class="badge-blue">Acreditación Profesional</span>
+          <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--py-blue-deep); margin: 10px 0;">
+            Acreditar Estudio Contable o Jurídico
+          </h2>
+          <p style="color: var(--py-text-muted);">
+            Complete los datos institucionales para coordinar la derivación directa de empresarios e inversores.
+          </p>
+        </div>
+
+        <form onsubmit="enviarRegistroEstudio(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label for="estudioNombre">Nombre de la Firma / Estudio:</label>
+              <input type="text" id="estudioNombre" class="form-control" placeholder="Ej: Escalada / Ramos & Asoc." required>
+            </div>
+            <div class="form-group">
+              <label for="estudioRUC">RUC:</label>
+              <input type="text" id="estudioRUC" class="form-control" placeholder="Ej: 80012345-6" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label for="estudioContacto">Socio / Representante:</label>
+              <input type="text" id="estudioContacto" class="form-control" placeholder="Ej: Abog. / Cdor. Titular" required>
+            </div>
+            <div class="form-group">
+              <label for="estudioEmail">Correo Electrónico:</label>
+              <input type="email" id="estudioEmail" class="form-control" placeholder="Ej: contacto@estudio.com.py" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="estudioWhatsApp">WhatsApp Comercial (+595):</label>
+            <input type="tel" id="estudioWhatsApp" class="form-control" placeholder="Ej: +595 981 123456" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; margin-top: 10px;">
+            Solicitar Alianza Corporativa
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguay Prime • El Portal de Transición, Negocios y Vida para Familias e Inversores en la República del Paraguay.
+      </p>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Contacto: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function enviarRegistroEstudio(event) {
+      event.preventDefault();
+      const emp = document.getElementById('estudioNombre').value;
+      const ruc = document.getElementById('estudioRUC').value;
+      const contacto = document.getElementById('estudioContacto').value;
+      const whats = document.getElementById('estudioWhatsApp').value;
+      const detalhes = `Estudio: ${emp} | RUC: ${ruc} | Contacto: ${contacto} | WhatsApp: ${whats}`;
+      abrirWhatsApp(`Alianza Estudio Contable Paraguay - ${emp}`, detalhes);
+    }
+  </script>
+</body>
+</html>
+

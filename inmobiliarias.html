@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alianza Inmobiliaria: Compradores e Inversores Brasileños | Paraguay Prime</title>
+  <meta name="description" content="Conecte su inmobiliaria o desarrolladora con miles de familias e inversores brasileños con alto poder adquisitivo que buscan comprar inmuebles en Paraguay.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .b2b-hero {
+      background: radial-gradient(circle at 75% 30%, #15366D 0%, #0D224A 55%, #061122 100%);
+      color: var(--py-white);
+      padding: 90px 0 100px 0;
+      position: relative;
+    }
+    .form-box-b2b {
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      padding: 50px;
+      box-shadow: var(--shadow-lg);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .metric-card-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR INSTITUCIONAL CON SELECTOR DE IDIOMA -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Portal Inmobiliario & Alianzas Estratégicas</span>
+        <div class="lang-switch-box">
+          <a href="para-empresas.html" class="lang-pill">🇧🇷 PT</a>
+          <a href="inmobiliarias.html" class="lang-pill active">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index-es.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAY <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negocios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index-es.html" class="nav-link">Inicio</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Costo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Radicación Legal</a></li>
+          <li><a href="para-empresas-es.html" class="nav-link active" style="color: var(--py-red-primary); font-weight: 700;">Alianzas B2B</a></li>
+          <li class="mobile-nav-cta">
+            <a href="#registro" onclick="toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              <span>Acreditar Desarrolladora</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#registro" class="btn btn-primary nav-cta-desktop">
+          Acreditar Desarrolladora
+        </a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menú de Navegación" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENÚ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- HERO B2B INMOBILIARIO -->
+  <section class="b2b-hero">
+    <div class="container">
+      <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+        <span class="badge-gold">🏢 Alianza Estratégica Inmobiliaria • Paraguay Prime</span>
+        <h1 style="font-size: 3.2rem; font-weight: 800; margin: 20px 0; line-height: 1.18;">
+          Conecte sus Proyectos Inmobiliarios con Compradores e Inversores Brasileños.
+        </h1>
+        <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 36px;">
+          Familias, empresarios e inversores de alto patrimonio en Brasil consultan diariamente nuestro portal buscando <strong>departamentos premium en Asunción, lotes en barrios cerrados en San Bernardino y oficinas corporativas</strong>.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#registro" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+            Acreditar Inmobiliaria / Desarrolladora
+          </a>
+          <button onclick="abrirWhatsApp('Alianza Inmobiliaria Paraguay', 'Hola, soy del sector inmobiliario y me gustaría conocer la propuesta de alianza con Paraguay Prime')" class="btn btn-outline-white">
+            Conversar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIFRAS -->
+  <section class="section-padding-sm" style="background: var(--py-blue-deep); color: var(--py-white); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center;">
+        <div class="metric-card-box">
+          <h3 style="font-size: 2.5rem; font-weight: 900; color: #FBBF24;">USD 80k - 500k+</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 4px;">Ticket promedio de compra buscado por brasileños</p>
+        </div>
+        <div class="metric-card-box">
+          <h3 style="font-size: 2.5rem; font-weight: 900; color: #34D399;">San Bernardino & Asunción</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 4px;">Zonas de mayor demanda (Villa Morra, Sta. Teresa, Ycuá Satî)</p>
+        </div>
+        <div class="metric-card-box">
+          <h3 style="font-size: 2.5rem; font-weight: 900; color: #60A5FA;">Derivación Directa</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 4px;">Contacto inmediato al WhatsApp de su equipo comercial</p>
+        </div>
+        <div class="metric-card-box">
+          <h3 style="font-size: 2.5rem; font-weight: 900; color: #F87171;">60 Días de Prueba</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-top: 4px;">Comprobación de resultados sin costo inicial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section-padding" style="background: var(--py-white);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="badge-blue">Flujo de Alianza</span>
+        <h2 class="section-title">¿Cómo Funciona la Derivación de Clientes?</h2>
+        <p class="section-subtitle">
+          Un proceso transparente y ágil diseñado para abastecer el pipeline de sus asesores comerciales con compradores reales.
+        </p>
+      </div>
+
+      <div class="pillar-cards-grid">
+        <div class="pillar-card card-blue">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3 class="pillar-title">1. Exposición de Sus Desarrollos</h3>
+          <p class="pillar-desc">
+            Su marca y proyectos se posicionan en las secciones destacadas del portal y en nuestras campañas de captación segmentadas en Brasil.
+          </p>
+        </div>
+
+        <div class="pillar-card card-blue">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <h3 class="pillar-title">2. Derivación Directa a WhatsApp</h3>
+          <p class="pillar-desc">
+            Cuando un brasileño solicita asesoría sobre inmuebles, le derivamos el lead con nombre, teléfono y presupuesto directamente a su asesor comercial.
+          </p>
+        </div>
+
+        <div class="pillar-card card-blue">
+          <div class="pillar-icon-box">
+            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3 class="pillar-title">3. 100% de la Comisión es Suya</h3>
+          <p class="pillar-desc">
+            No cobramos porcentaje ni intermediamos transacciones. Todas las comisiones de venta o alquiler corresponden íntegramente a su inmobiliaria.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="section-padding" style="background: var(--py-bg-light);" id="registro">
+    <div class="container">
+      <div class="form-box-b2b">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <span class="badge-blue">Acreditación Inmobiliaria</span>
+          <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--py-blue-deep); margin: 10px 0;">
+            Registre su Inmobiliaria o Desarrolladora
+          </h2>
+          <p style="color: var(--py-text-muted);">
+            Complete los datos para coordinar una reunión de 10 minutos y comenzar la prueba de derivación.
+          </p>
+        </div>
+
+        <form onsubmit="enviarRegistroInmobiliaria(event)">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label for="inmoNombre">Razón Social / Nombre Comercial:</label>
+              <input type="text" id="inmoNombre" class="form-control" placeholder="Ej: Raíces / Petra / C21" required>
+            </div>
+            <div class="form-group">
+              <label for="inmoRUC">RUC:</label>
+              <input type="text" id="inmoRUC" class="form-control" placeholder="Ej: 80012345-6" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label for="inmoContacto">Persona de Contacto / Cargo:</label>
+              <input type="text" id="inmoContacto" class="form-control" placeholder="Ej: Lic. Rodrigo Benítez - Gerente Comercial" required>
+            </div>
+            <div class="form-group">
+              <label for="inmoEmail">Correo Electrónico:</label>
+              <input type="email" id="inmoEmail" class="form-control" placeholder="Ej: comercial@inmobiliaria.com.py" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inmoWhatsApp">WhatsApp Comercial (+595):</label>
+            <input type="tel" id="inmoWhatsApp" class="form-control" placeholder="Ej: +595 981 123456" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inmoEnfoque">Tipo de Inmuebles Principales:</label>
+            <select id="inmoEnfoque" class="form-control" required>
+              <option value="Torres Residenciales y Departamentos (Asunción)">Torres Residenciales y Departamentos (Asunción)</option>
+              <option value="Barrios Cerrados y Lotes (San Bernardino / Luque / Gran Asunción)">Barrios Cerrados y Lotes (San Bernardino / Luque / Gran Asunción)</option>
+              <option value="Oficinas Corporativas y Terrenos Comerciales">Oficinas Corporativas y Terrenos Comerciales</option>
+              <option value="Inversión / Rentabilidad en Pozo">Inversión / Rentabilidad en Pozo</option>
+              <option value="Portafolio Integral Completo">Portafolio Integral Completo</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; margin-top: 10px;">
+            Solicitar Alianza Inmobiliaria
+          </button>
+
+          <div style="margin-top: 14px; font-size: 0.88rem; color: #94A3B8; text-align: center;">
+            Consultas directas: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: +55 (48) 99840-4830
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguay Prime • El Portal de Transición, Negocios y Vida para Familias e Inversores en la República del Paraguay.
+      </p>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Contacto: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desarrollado por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function enviarRegistroInmobiliaria(event) {
+      event.preventDefault();
+      const inmo = document.getElementById('inmoNombre').value;
+      const ruc = document.getElementById('inmoRUC').value;
+      const contacto = document.getElementById('inmoContacto').value;
+      const whats = document.getElementById('inmoWhatsApp').value;
+      const enfoque = document.getElementById('inmoEnfoque').value;
+      const detalles = `Inmobiliaria: ${inmo} | RUC: ${ruc} | Contacto: ${contacto} | WhatsApp: ${whats} | Enfoque: ${enfoque}`;
+      abrirWhatsApp(`Alianza Inmobiliaria Paraguay - ${inmo}`, detalhes);
+    }
+  </script>
+</body>
+</html>
+
