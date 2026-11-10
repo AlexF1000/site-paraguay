@@ -4,7 +4,7 @@
  * NOTA LEGAL: Estimativas puramente ilustrativas. Não constituem consultoria tributária.
  */
 
-// Cotações base de referência estática (Data de referência: [PREENCHER DATA DO CÂMBIO BASE: 10/11/2026])
+// Cotações base de referência estática (Data de referência: novembro/2026)
 // Fonte: Banco Central do Brasil (BACEN) e Banco Central del Paraguay (BCP)
 const COTACAO = {
   BRL_TO_PYG: 1350,   // R$ 1 = ~1.350 Guaranis (Ref: Nov/2026)
