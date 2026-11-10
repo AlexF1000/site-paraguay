@@ -12,6 +12,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4]');
+  </script>
 </head>
 <body>
 
@@ -21,6 +29,7 @@
       <div class="topbar-rates">
         <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
         <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+        <span id="rateLegenda" style="font-size: 0.72rem; color: #94A3B8; margin-left: 8px;">Cotação de referência</span>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
         <span style="color: #FBBF24; font-weight: 700;">★ Portal de Assessoria e Conexão Brasil-Paraguai</span>
@@ -130,12 +139,12 @@
               <p>Sistema Triplo 10 (IRE, IRP, IVA)</p>
             </div>
             <div class="hero-stat-item">
-              <h4>Até 60% <span class="highlight-gold">Menor</span></h4>
-              <p>Custo de vida vs. SP e RJ</p>
+              <h4>Custo <span class="highlight-gold">Menor</span></h4>
+              <p>Custo de vida geralmente menor; a economia varia conforme o estilo de vida e a cidade.</p>
             </div>
             <div class="hero-stat-item">
-              <h4>100% <span class="highlight-red">Legal</span></h4>
-              <p>Residência Mercosul & EAS sem burocracia</p>
+              <h4>Base <span class="highlight-red">Legal</span></h4>
+              <p>Residência Mercosul e sociedade EAS com orientação profissional.</p>
             </div>
           </div>
         </div>
@@ -170,9 +179,9 @@
           </div>
 
           <div class="sim-savings-banner">
-            <div class="sim-savings-title">Sua Economia Anual Estimada</div>
+            <div class="sim-savings-title">Sua Economia Anual Estimada (Ilustrativa)</div>
             <div class="sim-savings-amount" id="heroSavingsAmount">R$ 48.000/ano</div>
-            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ US$ 8.304 livres</div>
+            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ US$ 8.304 / ano (estimativa ilustrativa)</div>
           </div>
 
           <button onclick="abrirModalEspecialista('Planejamento Tributário')" class="btn btn-primary" style="width: 100%;">
@@ -194,7 +203,7 @@
         <span class="badge-blue">Pilares de Excelência</span>
         <h2 class="section-title">Construído para Quem Exige o Melhor</h2>
         <p class="section-subtitle">
-          Orientação prática e parcerias com as empresas mais renomadas do Paraguai para garantir uma transição sem riscos para sua família e seu patrimônio.
+          Orientação prática. Estamos construindo parcerias com profissionais e empresas locais para apoiar sua transição.
         </p>
       </div>
 
@@ -246,11 +255,11 @@
             </li>
             <li>
               <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Princípio da Territorialidade: zero imposto sobre receitas de fora do país.
+              Princípio da Territorialidade: em geral, só a renda de fonte paraguaia é tributada. O que conta como fonte paraguaia depende do caso (por exemplo, onde o serviço é prestado). Consulte um contador.
             </li>
             <li>
               <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Sociedade EAS constituída de forma ágil e digital.
+              Sociedade EAS: modelo societário moderno com trâmite eletrônico simplificado.
             </li>
           </ul>
           <a href="simulador-tributario.html" class="btn btn-primary" style="width: 100%;">
@@ -275,11 +284,11 @@
             </li>
             <li>
               <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Assessoria com advogados e gestores credenciados no portal.
+              Orientação documental e conexão com profissionais locais.
             </li>
             <li>
               <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Saída definitiva do Brasil planejada e 100% regularizada na Receita Federal.
+              Orientação sobre as obrigações com a Receita Federal ao deixar de ser residente fiscal no Brasil, com profissional habilitado.
             </li>
           </ul>
           <a href="guia-residencia.html" class="btn btn-outline-blue" style="width: 100%;">
@@ -298,33 +307,33 @@
         <div class="b2b-grid">
           
           <div class="b2b-content">
-            <span class="badge-gold">★ Área de Credenciamento</span>
-            <h2>Sua Empresa Diante dos Brasileiros Mais Qualificados que Chegam ao Paraguai.</h2>
+            <span class="badge-gold">★ Programa de Parceiros Fundadores</span>
+            <h2>Sua Empresa Diante dos Brasileiros que Chegam ao Paraguai.</h2>
             <p>
-              Advogados tributaristas, imobiliárias de alto padrão, colégios internacionais e operadoras de saúde: conecte sua marca a milhares de famílias e investidores com alto poder aquisitivo que utilizam nosso portal diariamente.
+              Advogados tributaristas, imobiliárias de alto padrão, colégios internacionais e operadoras de saúde: conecte sua marca a brasileiros que estão planejando se mudar, abrir empresa ou investir no Paraguai.
             </p>
 
             <div class="b2b-perks">
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Leads diretos no WhatsApp da sua empresa
+                Canal direto com interessados no WhatsApp
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Selo de Parceiro Verificado
+                Parceiros fundadores terão selo de verificação (condições a definir)
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Posicionamento de elite em buscas no Brasil
+                Posicionamento no diretório em lançamento
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Exclusividade de categoria na sua região
+                Parceiros fundadores terão exclusividade de categoria na região (condições a definir)
               </div>
             </div>
 
             <a href="para-empresas.html" class="btn btn-primary btn-b2b-main">
-              Quero Credenciar Minha Empresa no Portal
+              Conhecer o Programa de Parceiros Fundadores →
             </a>
           </div>
 
@@ -334,7 +343,7 @@
             </div>
             <h3>Faça Parte da Rede de Confiança</h3>
             <p>
-              Avaliamos a regularidade e idoneidade de cada parceiro para manter o mais alto padrão de atendimento para os brasileiros.
+              Estamos montando a rede de parceiros e conferimos documentos e registro profissional antes de listar cada um. [CONFIRMAR]
             </p>
             <button onclick="abrirModalEspecialista('Parceria B2B')" class="btn btn-outline-white" style="width: 100%;">
               Falar com o Gestor de Parcerias
@@ -444,53 +453,57 @@
     </div>
   </section>
 
-  <!-- DIRETÓRIO DE SERVIÇOS CREDENCIADOS -->
+  <!-- DIRETÓRIO DE SERVIÇOS EM FORMAÇÃO -->
   <section class="section-padding" id="diretorio" style="background: var(--py-white);">
     <div class="container">
       <div class="section-title-wrap">
-        <span class="badge-gold">Guia de Confiança</span>
-        <h2 class="section-title">Diretório de Profissionais e Serviços de Excelência</h2>
+        <span class="badge-gold">Rede Local</span>
+        <h2 class="section-title">Rede de Parceiros em Formação</h2>
         <p class="section-subtitle">
-          Empresas credenciadas pelo portal com atendimento especializado em português.
+          Estamos selecionando profissionais e empresas locais com atendimento em português.
         </p>
       </div>
 
       <div class="directory-grid">
         
-        <div class="directory-category-card" onclick="abrirModalEspecialista('Advocacia e Residência')" style="cursor: pointer;">
+        <div class="directory-category-card" onclick="location.href='para-empresas.html'" style="cursor: pointer;">
           <div class="dir-icon">
             <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
           <h4 class="dir-title">Imigração & Cédula</h4>
-          <span class="dir-count">Assessoria Credenciada</span>
-          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Radicación temporária e permanente sem intermediários ilegais.</p>
+          <span class="dir-count" style="background: rgba(212,175,55,0.15); color: #B8860B; border: 1px solid rgba(212,175,55,0.4); padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 0.78rem;">Vaga aberta para parceiro</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Espaço reservado para advocacia migratória e assessoria documental.</p>
+          <div style="margin-top: 10px; font-size: 0.82rem; font-weight: 700; color: var(--py-blue-primary);">Quero ser parceiro →</div>
         </div>
 
-        <div class="directory-category-card" onclick="abrirModalEspecialista('Abertura de Empresa EAS')" style="cursor: pointer;">
+        <div class="directory-category-card" onclick="location.href='para-empresas.html'" style="cursor: pointer;">
           <div class="dir-icon">
             <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
           </div>
           <h4 class="dir-title">Contabilidade & EAS</h4>
-          <span class="dir-count">Tributaristas Seniores</span>
-          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Abertura societária, planejamento fiscal e contabilidade mensal.</p>
+          <span class="dir-count" style="background: rgba(212,175,55,0.15); color: #B8860B; border: 1px solid rgba(212,175,55,0.4); padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 0.78rem;">Vaga aberta para parceiro</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Espaço reservado para escritório contábil e abertura societária.</p>
+          <div style="margin-top: 10px; font-size: 0.82rem; font-weight: 700; color: var(--py-blue-primary);">Quero ser parceiro →</div>
         </div>
 
-        <div class="directory-category-card" onclick="abrirModalEspecialista('Imobiliárias e Aluguel')" style="cursor: pointer;">
+        <div class="directory-category-card" onclick="location.href='para-empresas.html'" style="cursor: pointer;">
           <div class="dir-icon">
             <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
           </div>
           <h4 class="dir-title">Imobiliárias Prime</h4>
-          <span class="dir-count">Locação & Compra</span>
-          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Contratos transparentes, fiadores locais e imóveis mobiliados.</p>
+          <span class="dir-count" style="background: rgba(212,175,55,0.15); color: #B8860B; border: 1px solid rgba(212,175,55,0.4); padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 0.78rem;">Vaga aberta para parceiro</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Espaço reservado para imobiliárias e corretores credenciados.</p>
+          <div style="margin-top: 10px; font-size: 0.82rem; font-weight: 700; color: var(--py-blue-primary);">Quero ser parceiro →</div>
         </div>
 
-        <div class="directory-category-card" onclick="abrirModalEspecialista('Saúde e Planos')" style="cursor: pointer;">
+        <div class="directory-category-card" onclick="location.href='para-empresas.html'" style="cursor: pointer;">
           <div class="dir-icon">
             <svg style="width:28px;height:28px;max-width:28px;max-height:28px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
           </div>
           <h4 class="dir-title">Medicina & Saúde</h4>
-          <span class="dir-count">Hospitais & Planos VIP</span>
-          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Asismed, Santa Clara e convênios com cobertura regional.</p>
+          <span class="dir-count" style="background: rgba(212,175,55,0.15); color: #B8860B; border: 1px solid rgba(212,175,55,0.4); padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 0.78rem;">Vaga aberta para parceiro</span>
+          <p style="font-size: 0.85rem; color: #64748B; margin-top: 8px;">Espaço reservado para operadoras de saúde e medicina privada.</p>
+          <div style="margin-top: 10px; font-size: 0.82rem; font-weight: 700; color: var(--py-blue-primary);">Quero ser parceiro →</div>
         </div>
 
       </div>
@@ -563,8 +576,13 @@
         <div class="footer-dev-credit">
           Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
         </div>
-        <div style="color: #64748B;">
-          As informações tributárias são fundamentadas na Lei 6380/19 e na Lei de Migrações 6984/2022 da República do Paraguai.
+        <div style="color: #94A3B8; font-size: 0.85rem; margin-top: 8px;">
+          Conteúdo informativo. Não substitui assessoria jurídica, contábil ou tributária. Fundamentado na Lei 6380/19 e Lei 6984/2022.
+        </div>
+        <div style="font-size: 0.82rem; color: #64748B; margin-top: 6px;">
+          <a href="termos.html" style="color: #CBD5E1; text-decoration: underline;">Termos de Uso</a> | 
+          <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline;">Política de Privacidade</a> | 
+          <a href="index-es.html" style="color: #CBD5E1; text-decoration: underline;">Versión en Español</a>
         </div>
       </div>
     </div>
@@ -585,7 +603,7 @@
       
       <div class="modal-header">
         <span class="badge-blue">Atendimento Exclusivo</span>
-        <h3>Conecte-se a um Especialista</h3>
+        <h3>Conecte-se com Nossa Equipe</h3>
         <p>Receba orientações seguras sobre mudança, abertura de empresa ou investimento imobiliário.</p>
       </div>
 
@@ -626,12 +644,17 @@
           </select>
         </div>
 
+        <div class="form-group" style="margin-top: 14px; font-size: 0.82rem; color: #CBD5E1; display: flex; align-items: flex-start; gap: 8px;">
+          <input type="checkbox" id="leadConsentimento" style="margin-top: 3px;" required>
+          <label for="leadConsentimento">Concordo em ser contatado por WhatsApp/e-mail e estou ciente da <a href="privacidade.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Política de Privacidade</a> e dos <a href="termos.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Termos de Uso</a>.</label>
+        </div>
+
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 14px;">
-          Iniciar Atendimento Gratuito no WhatsApp
+          Iniciar Atendimento no WhatsApp
         </button>
 
         <p style="font-size: 0.78rem; color: #94A3B8; text-align: center; margin-top: 14px;">
-          🔒 Seus dados são protegidos e direcionados apenas a profissionais credenciados.
+          🔒 Usamos seus dados somente para retornar seu contato.
         </p>
               <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
           Canal direto com o Diretor Executivo:<br>

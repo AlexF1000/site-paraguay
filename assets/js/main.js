@@ -1,18 +1,27 @@
 /**
  * PORTAL PARAGUAI PRIME - MAIN SCRIPTS
- * Navegação, Interatividade, Modais de Conversão e Lead Generation
+ * Navegação, Interatividade, Cotação Automática, Modais e GA4
  */
+
+// Helper para registro de eventos no Google Analytics 4
+function registrarEventoGA4(nomeEvento, parametros = {}) {
+  if (typeof gtag === 'function') {
+    gtag('event', nomeEvento, parametros);
+  }
+}
 
 // Configuração Oficial de Atendimento e Consultas
 const CONTATO_CONFIG = {
-  email: "contato@paraguayprime.online",
+  email: "afiuza@verticesm.com",
   phone: "5548998404830", 
   formatted: "+55 (48) 99840-4830",
-  defaultMessage: "Olá! Vim pelo Portal Paraguai Prime e gostaria de mais informações."
+  defaultMessage: "Olá! Vim pelo Portal Paraguai Prime e gostaria de mais orientações."
 };
 const WHATSAPP_CONFIG = CONTATO_CONFIG; // Retrocompatibilidade
 
 function abrirWhatsApp(motivo, detalhes = "") {
+  registrarEventoGA4('click_whatsapp', { motivo: motivo });
+
   let texto = `Olá! Encontrei o Portal Paraguai Prime e tenho interesse em:\n\n*Assunto:* ${motivo}`;
   if (detalhes) {
     texto += `\n*Detalhes:* ${detalhes}`;
@@ -25,7 +34,7 @@ function abrirWhatsApp(motivo, detalhes = "") {
 
 function enviarEmailConsulta(assunto, corpo = "") {
   const subject = encodeURIComponent(assunto || 'Consulta - Portal Paraguai Prime');
-  const body = encodeURIComponent(corpo || 'Olá! Gostaria de mais informações sobre os serviços do Paraguai Prime.');
+  const body = encodeURIComponent(corpo || 'Olá! Gostaria de mais informações sobre o portal.');
   window.location.href = `mailto:${CONTATO_CONFIG.email}?subject=${subject}&body=${body}`;
 }
 
@@ -50,9 +59,16 @@ function fecharModalEspecialista() {
   }
 }
 
-// Submissão do Formulário de Lead / Conexão com Parceiro
+// Submissão do Formulário de Lead com Validação LGPD
 function enviarLeadForm(event) {
   event.preventDefault();
+
+  const consentBox = document.getElementById('leadConsentimento');
+  if (consentBox && !consentBox.checked) {
+    alert('Por favor, confirme seu consentimento para contato e com a Política de Privacidade antes de prosseguir.');
+    return;
+  }
+
   const nome = document.getElementById('leadNome').value;
   const emailEl = document.getElementById('leadEmail');
   const email = emailEl ? emailEl.value : '';
@@ -62,10 +78,59 @@ function enviarLeadForm(event) {
   const perfilEl = document.getElementById('leadPerfil');
   const perfil = perfilEl ? perfilEl.value : '';
 
+  registrarEventoGA4('form_submit', {
+    form_name: 'lead_modal',
+    interesse: interesse,
+    perfil: perfil
+  });
+
   const detalhes = `Nome: ${nome} | E-mail: ${email} | WhatsApp: ${whatsapp} | Perfil: ${perfil}`;
-  abrirWhatsApp(`Atendimento Especializado - ${interesse}`, detalhes);
+  abrirWhatsApp(`Atendimento - ${interesse}`, detalhes);
   
   fecharModalEspecialista();
+}
+
+/**
+ * COTAÇÃO AUTOMÁTICA DE CÂMBIO VIA API GRATUITA (BRL, USD, PYG)
+ * Legenda obrigatória: "Cotação de referência, atualizada em [data/hora]"
+ * Se falhar, oculta o banner para evitar dados antigos.
+ */
+async function atualizarCotacaoTempoReal() {
+  const containerRates = document.querySelector('.topbar-rates');
+  const rateBrlEl = document.getElementById('rateBRL');
+  const rateUsdEl = document.getElementById('rateUSD');
+  const rateLegendEl = document.getElementById('rateLegenda');
+
+  if (!containerRates) return;
+
+  try {
+    const res = await fetch('https://open.er-api.com/v6/latest/USD', { cache: 'no-cache' });
+    if (!res.ok) throw new Error('Falha HTTP ao consultar API de câmbio');
+    const data = await res.json();
+
+    if (!data || !data.rates || !data.rates.PYG || !data.rates.BRL) {
+      throw new Error('Dados de câmbio incompletos');
+    }
+
+    const usdToPyg = Math.round(data.rates.PYG);
+    const brlToPyg = Math.round(data.rates.PYG / data.rates.BRL);
+
+    if (rateBrlEl) rateBrlEl.innerHTML = `<strong>1 BRL = ${brlToPyg.toLocaleString('pt-BR')} ₲</strong>`;
+    if (rateUsdEl) rateUsdEl.innerHTML = `<strong>1 USD = ${usdToPyg.toLocaleString('pt-BR')} ₲</strong>`;
+
+    const agora = new Date();
+    const dataFormatada = agora.toLocaleDateString('pt-BR') + ' às ' + agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    
+    if (rateLegendEl) {
+      rateLegendEl.textContent = `Cotação de referência, atualizada em ${dataFormatada}`;
+    }
+    containerRates.style.display = 'flex';
+  } catch (err) {
+    console.warn('API de câmbio indisponível. Ocultando banner de cotações para evitar valores desatualizados:', err);
+    if (containerRates) {
+      containerRates.style.display = 'none';
+    }
+  }
 }
 
 // Menu Mobile & Overlay
@@ -130,6 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 1024) {
       closeMobileMenu();
     }
+  });
+
+  // Atualiza cotação em tempo real via API
+  atualizarCotacaoTempoReal();
+
+  // Rastreamento GA4 de cliques em botões B2B / Seja Parceiro
+  document.querySelectorAll('.btn-b2b, a[href*="para-empresas"]').forEach(el => {
+    el.addEventListener('click', () => {
+      registrarEventoGA4('click_seja_parceiro', { link_text: el.innerText.trim() });
+    });
   });
 });
 

@@ -1,13 +1,15 @@
 /**
  * PORTAL PARAGUAI PRIME - SIMULADORES E INTERATIVIDADE
- * Cálculos fiscais e de custo de vida fundamentados na legislação paraguaia (Ley 6380/19)
+ * Cálculos fiscais e de custo de vida baseados em cenários médios genéricos.
+ * NOTA LEGAL: Estimativas puramente ilustrativas. Não constituem consultoria tributária.
  */
 
-// Cotações de referência atualizadas
+// Cotações base de referência estática (Data de referência: [PREENCHER DATA DO CÂMBIO BASE: 10/11/2026])
+// Fonte: Banco Central do Brasil (BACEN) e Banco Central del Paraguay (BCP)
 const COTACAO = {
-  BRL_TO_PYG: 1350,   // R$ 1 = ~1.350 Guaranis
-  USD_TO_PYG: 7800,   // US$ 1 = ~7.800 Guaranis
-  USD_TO_BRL: 5.78,   // US$ 1 = R$ 5,78
+  BRL_TO_PYG: 1350,   // R$ 1 = ~1.350 Guaranis (Ref: Nov/2026)
+  USD_TO_PYG: 7800,   // US$ 1 = ~7.800 Guaranis (Ref: Nov/2026)
+  USD_TO_BRL: 5.78,   // US$ 1 = R$ 5,78 (Ref: Nov/2026)
 };
 
 // Funções utilitárias de formatação
@@ -25,31 +27,34 @@ function formatarGuarani(valor) {
 
 /**
  * SIMULADOR TRIBUTÁRIO: BRASIL vs. PARAGUAI
+ * Fontes das alíquotas assumidas:
+ * - Lucro Presumido Serviços (Brasil): ~16,5% (IRPJ 4,8% + CSLL 2,88% + PIS 0,65% + COFINS 3% + ISS 5% - Leis 9.718/98 e LC 116/03)
+ * - Simples Nacional Anexo V (Brasil): ~19,5% (LC 123/2006, faixa intermediária Fator R < 28%)
+ * - CLT Executivo / IRPF (Brasil): 27,5% (Teto IRPF Lei 11.482/07 e Lei 14.663/23)
+ * - Comércio (Brasil): ~12,5% (Presumido comércio/Simples Anexo I)
+ * - Paraguai IRE (EAS): Alíquota nominal de 10% sobre lucro líquido (Lei 6380/19).
+ *   Assume-se dedutibilidade média operacional de despesas resultando em ~8,5% sobre faturamento bruto.
  */
 function calcularTributos(faturamentoMensal, regimeBrasil = 'lucro_presumido') {
   // Estimativa Brasil
-  let aliquotaEfetivaBrasil = 0.165; // Padrão Lucro Presumido Serviços (IRPJ + CSLL + PIS + COFINS + ISS)
+  let aliquotaEfetivaBrasil = 0.165;
   if (regimeBrasil === 'simples_alto') {
-    aliquotaEfetivaBrasil = 0.195; // Simples Nacional Anexo V / faixas superiores
+    aliquotaEfetivaBrasil = 0.195;
   } else if (regimeBrasil === 'clt_executivo') {
-    aliquotaEfetivaBrasil = 0.275; // IRPF + INSS teto
+    aliquotaEfetivaBrasil = 0.275;
   } else if (regimeBrasil === 'comercio') {
     aliquotaEfetivaBrasil = 0.125;
   }
 
-  // No Brasil, além do imposto, há custo de compliance contábil pesado e bi-tributações
   const impostoMensalBrasil = faturamentoMensal * aliquotaEfetivaBrasil;
   const impostoAnualBrasil = impostoMensalBrasil * 12;
 
-  // No Paraguai:
-  // Sistema "Triplo 10" (IRE 10% sobre lucro líquido).
-  // Com despesas operacionais legítimas (deduções amplas permitidas por lei), a alíquota efetiva média sobre faturamento bruto é de ~8.5% a 10%.
-  // Além disso, rendas geradas fora do território paraguaio são ISENTAS (Princípio da Territorialidade estrita).
+  // No Paraguai (IRE Lei 6380/19):
   const aliquotaEfetivaParaguai = 0.085;
   const impostoMensalParaguai = faturamentoMensal * aliquotaEfetivaParaguai;
   const impostoAnualParaguai = impostoMensalParaguai * 12;
 
-  // Economia
+  // Economia estimada
   const economiaMensal = Math.max(0, impostoMensalBrasil - impostoMensalParaguai);
   const economiaAnual = economiaMensal * 12;
   const economiaAnualUSD = economiaAnual / COTACAO.USD_TO_BRL;
@@ -87,7 +92,12 @@ function atualizarHeroSimulator() {
   if (impostoBrEl) impostoBrEl.textContent = formatarMoedaBRL(res.impostoMensalBrasil) + '/mês';
   if (impostoPyEl) impostoPyEl.textContent = formatarMoedaBRL(res.impostoMensalParaguai) + '/mês';
   if (economiaEl) economiaEl.textContent = formatarMoedaBRL(res.economiaAnual) + '/ano';
-  if (economiaUsdEl) economiaUsdEl.textContent = '≈ ' + formatarMoedaUSD(res.economiaAnualUSD) + ' livres de impostos';
+  if (economiaUsdEl) economiaUsdEl.textContent = '≈ ' + formatarMoedaUSD(res.economiaAnualUSD) + ' / ano (estimativa ilustrativa)';
+
+  // Disparar evento GA4 se disponível
+  if (typeof registrarEventoGA4 === 'function') {
+    registrarEventoGA4('simulator_used', { faturamento_simulado: faturamento });
+  }
 }
 
 /**

@@ -11,6 +11,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4: G-XXXXXXXXXX]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4: G-XXXXXXXXXX]');
+  </script>
   <style>
     .diag-hero {
       background: radial-gradient(circle at 75% 25%, #173B75 0%, #0D224A 55%, #061122 100%);
@@ -112,6 +121,7 @@
       <div class="topbar-rates">
         <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
         <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+        <span id="rateTimestamp" style="font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">(Cotação de referência)</span>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
         <span style="color: #FBBF24; font-weight: 700;">★ Consultoria Executiva de Transição</span>
@@ -204,7 +214,7 @@
           <ul class="feature-list-diag">
             <li>
               <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <div><strong>Estudo de Viabilidade Tributária:</strong> Comparamos a sua carga atual (Simples / Presumido / CLT) com a alíquota fixa de 10% (Lei 6380/19) e projetamos sua economia real anual em reais.</div>
+              <div><strong>Estudo de Viabilidade Tributária (Estimativa):</strong> Analisamos seu cenário brasileiro com os parâmetros do sistema 10-10-10 paraguaio (Lei 6380/19) e projetamos uma estimativa comparativa da estrutura fiscal.</div>
             </li>
             <li>
               <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -212,15 +222,15 @@
             </li>
             <li>
               <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <div><strong>Abertura de Empresa EAS & Contas Bancárias:</strong> Como constituir sua sociedade em 72h e os caminhos seguros para operar contas em Guaranis e Dólares.</div>
+              <div><strong>Abertura de Empresa EAS & Contas Bancárias:</strong> Os trâmites eletrônicos pelo SUACE e os caminhos seguros para operar contas em Guaranis e Dólares conforme exigências bancárias.</div>
             </li>
             <li>
               <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <div><strong>Vida Prática, Bairros & Família:</strong> Custos reais de moradia em Villa Morra, Santa Teresa ou San Bernardino, além de escolas internacionais bilíngues e medicina prepaga de referência.</div>
+              <div><strong>Vida Prática, Bairros & Família:</strong> Custos de moradia em Villa Morra, Santa Teresa ou San Bernardino, além de escolas internacionais e medicina prepaga de referência.</div>
             </li>
             <li>
               <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <div><strong>Conexão Direta com Parceiros Credenciados:</strong> Encaminhamento sem filas para o nosso time jurídico e contábil em Assunção (Escalada Consultora) e operadoras de saúde.</div>
+              <div><strong>Encaminhamento para Profissionais Locais:</strong> Conexão direta com contadores, advogados habilitados e operadoras de saúde em Assunção para tramitação formal do seu processo.</div>
             </li>
           </ul>
 
@@ -323,6 +333,13 @@
               <textarea id="diagDuvida" class="form-control" rows="2" placeholder="Ex: Tenho receio sobre a saída definitiva da Receita, ou abertura de conta em banco..." required></textarea>
             </div>
 
+            <div class="form-group" style="text-align: left; margin-bottom: 16px;">
+              <label style="font-size: 0.8rem; color: #475569; display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+                <input type="checkbox" id="diagConsentimento" required style="margin-top: 3px;">
+                <span>Concordo em ser contatado por WhatsApp/e-mail e com a <a href="privacidade.html" target="_blank" style="color: var(--py-red-primary); text-decoration: underline;">Política de Privacidade</a>. Usamos seus dados somente para retornar seu contato.</span>
+              </label>
+            </div>
+
             <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; font-weight: 800; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);">
               Reservar Minha Sessão com Alexandre Fiuza →
             </button>
@@ -393,6 +410,13 @@
       <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
         © 2026 Paraguay Prime • O Portal Oficial de Transição, Negócios e Vida na República do Paraguai.
       </p>
+      <p style="color: #F87171; font-size: 0.82rem; margin-bottom: 12px; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+        ⚠️ <strong>Aviso Legal:</strong> A sessão de diagnóstico tem caráter consultivo e de orientação estratégica de negócios. Não substitui assessoria jurídica, contábil ou fiscal individualizada. Obter residência no Paraguai não encerra automaticamente a residência fiscal no Brasil.
+      </p>
+      <p style="font-size: 0.85rem; margin-bottom: 12px;">
+        <a href="termos.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Termos de Uso</a> |
+        <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Política de Privacidade</a>
+      </p>
       <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
         Diretoria Executiva: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </p>
@@ -427,6 +451,10 @@
                     `_Olá Alexandre! Preenchi o formulário de pré-diagnóstico no portal. Já tenho os dados do Pix da Diretoria Financeira (Sonia Woebcken Fiuza) no valor de R$ 397,00 e gostaria de confirmar os melhores dias e horários para nossa sessão de 50 minutos._`;
 
       const whatsUrl = `https://wa.me/5548998404830?text=${texto}`;
+
+      if (typeof registrarEventoGA4 === 'function') {
+        registrarEventoGA4('form_submit', { form_id: 'formPreDiag', tipo: 'diagnostico' });
+      }
 
       // Configurar o botão do WhatsApp dentro do Box Pix
       const btnWhats = document.getElementById('btnWhatsConfirmacao');

@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credenciamento de Parceiros & Empresas | Paraguai Prime</title>
-  <meta name="description" content="Conecte sua empresa, escritório jurídico ou imobiliária paraguaia a milhares de investidores e famílias brasileiras com alto poder de investimento.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Programa de Parceiros Fundadores | Paraguai Prime</title>
+  <meta name="description" content="Participe do Programa de Parceiros Fundadores do Paraguai Prime. Conecte sua empresa ou escritório a brasileiros que planejam morar, investir e abrir negócios no Paraguai.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4: G-XXXXXXXXXX]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4: G-XXXXXXXXXX]');
+  </script>
+
   <style>
     .b2b-hero {
       background: radial-gradient(circle at 75% 30%, #15366D 0%, #0D224A 55%, #061122 100%);
@@ -18,95 +28,99 @@
       padding: 90px 0 100px 0;
       position: relative;
     }
-    .b2b-tier-grid {
+    .b2b-benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      margin-top: 50px;
+      margin-top: 40px;
     }
-    .tier-card {
+    @media (max-width: 850px) {
+      .b2b-benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .founder-card {
       background: var(--py-white);
       border-radius: var(--radius-xl);
       border: 1px solid var(--py-border);
-      padding: 40px 32px;
-      position: relative;
-      transition: var(--transition-smooth);
+      padding: 36px 28px;
       box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
+      position: relative;
     }
-    .tier-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-    }
-    .tier-card.featured {
+    .founder-card.featured {
       border: 2px solid var(--py-gold);
-      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.18);
+      box-shadow: 0 16px 36px rgba(212, 175, 55, 0.16);
     }
-    .tier-badge {
+    .founder-badge {
       position: absolute;
-      top: -15px;
+      top: -14px;
       left: 50%;
       transform: translateX(-50%);
       background: var(--py-gold-gradient);
       color: var(--py-white);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
       text-transform: uppercase;
-      padding: 6px 18px;
+      padding: 5px 16px;
       border-radius: var(--radius-full);
-      box-shadow: 0 4px 12px rgba(201, 151, 0, 0.4);
+      box-shadow: 0 4px 10px rgba(201, 151, 0, 0.4);
+      white-space: nowrap;
     }
-    .tier-name {
-      font-size: 1.5rem;
+    .founder-title {
+      font-size: 1.35rem;
       font-weight: 800;
       color: var(--py-blue-deep);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
-    .tier-desc {
-      font-size: 0.95rem;
+    .founder-desc {
+      font-size: 0.93rem;
       color: var(--py-text-muted);
-      margin-bottom: 24px;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
-    .tier-price {
-      font-size: 2.3rem;
-      font-weight: 900;
-      color: var(--py-blue-deep);
-      margin-bottom: 24px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--py-border);
-    }
-    .tier-price span {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--py-text-muted);
-    }
-    .tier-features {
+    .founder-points {
       list-style: none;
-      margin-bottom: 30px;
-      flex-grow: 1;
+      padding: 0;
+      margin: 0;
     }
-    .tier-features li {
-      font-size: 0.92rem;
+    .founder-points li {
+      font-size: 0.9rem;
       color: var(--py-text-main);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
+      line-height: 1.4;
     }
-    .tier-features li svg {
+    .founder-points li svg {
       color: #10B981;
       flex-shrink: 0;
+      margin-top: 2px;
     }
     .form-box-b2b {
       background: var(--py-white);
       border-radius: var(--radius-xl);
       border: 1px solid var(--py-border);
-      padding: 50px;
+      padding: 44px 36px;
       box-shadow: var(--shadow-lg);
-      max-width: 800px;
+      max-width: 680px;
       margin: 0 auto;
+    }
+    .notice-b2b-lang {
+      background: #0B192C;
+      color: #E2E8F0;
+      padding: 10px 0;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .notice-b2b-lang a {
+      color: #FBBF24;
+      font-weight: 700;
+      text-decoration: underline;
+      margin-left: 6px;
     }
   </style>
 </head>
@@ -118,9 +132,10 @@
       <div class="topbar-rates">
         <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
         <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+        <span id="rateTimestamp" style="font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">(Cotação de referência)</span>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
-        <span style="color: #FBBF24; font-weight: 700;">★ Portal B2B & Credenciamento de Parceiros</span>
+        <span style="color: #FBBF24; font-weight: 700;">★ Programa de Parceiros Fundadores</span>
         <div class="lang-switch-box">
           <a href="para-empresas.html" class="lang-pill active">🇧🇷 PT</a>
           <a href="para-empresas-es.html" class="lang-pill">🇵🇾 ES</a>
@@ -132,8 +147,8 @@
   <!-- AVISO EM ESPANHOL PARA EMPRESAS PARAGUAIAS -->
   <div class="notice-b2b-lang">
     <div class="container">
-      🇵🇾 <strong>¿Es una empresa, estudio jurídico o profesional en Paraguay?</strong> 
-      <a href="para-empresas-es.html">Haga clic aquí para ver la propuesta en Español y registrar su empresa →</a>
+      🇵🇾 <strong>¿Es una empresa o profesional en Paraguay?</strong> 
+      <a href="para-empresas-es.html">Haga clic aquí para ver el Programa de Socios Fundadores en Español →</a>
     </div>
   </div>
 
@@ -162,11 +177,11 @@
           <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
           <li><a href="para-empresas.html" class="nav-link active" style="color: var(--py-red-primary);">Para Empresas (B2B)</a></li>
           <li class="mobile-nav-cta">
-            <button onclick="abrirModalEspecialista('B2B Geral'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
-              Falar com Especialista
+            <button onclick="abrirModalEspecialista('Parceiro Fundador'); toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              Falar com a Diretoria
             </button>
             <a href="#cadastro" onclick="toggleMobileMenu();" class="btn btn-b2b" style="width: 100%; margin-top: 10px; justify-content: center; display: inline-flex;">
-              <span>Credenciar Minha Empresa</span>
+              <span>Quero Ser Parceiro Fundador</span>
             </a>
           </li>
         </ul>
@@ -174,7 +189,7 @@
 
       <div class="nav-actions">
         <a href="#cadastro" class="btn btn-primary nav-cta-desktop">
-          Credenciar Minha Empresa
+          Quero Ser Parceiro Fundador
         </a>
         <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
           <span class="hamburger-bars">
@@ -192,243 +207,156 @@
   <!-- HERO B2B -->
   <section class="b2b-hero">
     <div class="container">
-      <div style="max-width: 820px; margin: 0 auto; text-align: center;">
-        <span class="badge-gold">Rede de Parceiros Credenciados</span>
-        <h1 style="font-size: 3.2rem; font-weight: 800; margin: 20px 0; line-height: 1.18;">
-          Conecte sua Marca aos Brasileiros com Alto Poder de Investimento no Paraguai.
+      <div style="max-width: 840px; margin: 0 auto; text-align: center;">
+        <span class="badge-gold">Fase de Lançamento Oficial</span>
+        <h1 style="font-size: 3rem; font-weight: 800; margin: 18px 0; line-height: 1.2;">
+          Programa de Parceiros Fundadores
         </h1>
-        <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 36px;">
-          Milhares de famílias qualificadas e empresários brasileiros acessam o <strong>Paraguai Prime</strong> todos os meses em busca de escritórios de advocacia, imobiliárias, planos de saúde e assessoria contábil de confiança.
+        <p style="font-size: 1.2rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 30px;">
+          O portal Paraguai Prime está em fase de lançamento. Estamos construindo parcerias sólidas com profissionais e empresas locais para conectar serviços de confiança a brasileiros que estão planejando se mudar, abrir empresa ou investir no Paraguai.
         </p>
-        <div style="display: flex; justify-content: center; gap: 16px;">
-          <a href="#cadastro" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
-            Cadastrar Minha Empresa
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="#cadastro" class="btn btn-primary" style="padding: 15px 32px; font-size: 1rem;">
+            Candidatar Minha Empresa →
           </a>
-          <button onclick="abrirModalEspecialista('Parceria Corporativa')" class="btn btn-outline-white">
-            Falar com o Gestor de Parcerias
+          <button onclick="abrirModalEspecialista('Parceiro Fundador')" class="btn btn-outline-white">
+            Falar pelo WhatsApp
           </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- POR QUE AS EMPRESAS NOS PROCURAM -->
+  <!-- BENEFÍCIOS DOS PARCEIROS FUNDADORES -->
   <section class="section-padding" style="background: var(--py-white);">
     <div class="container">
       <div class="section-title-wrap">
-        <span class="badge-blue">Autoridade & Resultados</span>
-        <h2 class="section-title">Por que as Melhores Empresas do Paraguai Estão Aqui?</h2>
+        <span class="badge-blue">Vantagens Exclusivas</span>
+        <h2 class="section-title">Benefícios do Parceiro Fundador</h2>
         <p class="section-subtitle">
-          O investidor brasileiro não fecha contratos em sites amadores. Ele procura marcas sérias, chanceladas por um portal com autoridade e reputação inquestionável.
+          Profissionais e empresas que ingressarem durante a fase de lançamento terão condições e posicionamento privilegiados no portal.
         </p>
       </div>
 
-      <div class="pillar-cards-grid">
+      <div class="b2b-benefits-grid">
         
-        <div class="pillar-card card-blue">
-          <div class="pillar-icon-box">
-            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          </div>
-          <h3 class="pillar-title">Leads 100% Qualificados</h3>
-          <p class="pillar-desc">
-            Pessoas físicas e jurídicas com capital líquido pronto para alugar imóveis de luxo, constituir sociedades EAS e contratar planos de saúde VIP.
+        <!-- Benefício 1 -->
+        <div class="founder-card">
+          <h3 class="founder-title">Posicionamento Pioneiro</h3>
+          <p class="founder-desc">
+            Destaque inicial no Diretório de Profissionais, sendo apresentado diretamente aos leitores e usuários interessados em serviços na sua área.
           </p>
+          <ul class="founder-points">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Exibição de destaque no lançamento do diretório</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Link direto para seu WhatsApp comercial</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="pillar-card card-red">
-          <div class="pillar-icon-box">
-            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          </div>
-          <h3 class="pillar-title">Contato Direto via WhatsApp</h3>
-          <p class="pillar-desc">
-            Não há intermediários ou formulários engessados: o cliente clica no seu perfil verificado e vai direto para a mesa de atendimento comercial da sua empresa.
+        <!-- Benefício 2 -->
+        <div class="founder-card featured">
+          <div class="founder-badge">Benefício Futuro</div>
+          <h3 class="founder-title">Selo & Exclusividade</h3>
+          <p class="founder-desc">
+            Parceiros fundadores terão selo e exclusividade de categoria na região (condições a definir [PREENCHER condições]).
           </p>
+          <ul class="founder-points">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Distinção visual de Parceiro Fundador</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Prioridade de exclusividade no seu nicho [PREENCHER condições]</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="pillar-card card-gold">
-          <div class="pillar-icon-box">
-            <svg style="width:32px;height:32px;max-width:32px;max-height:32px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h3 class="pillar-title">Selo de Parceiro Credenciado</h3>
-          <p class="pillar-desc">
-            Sua empresa recebe o selo digital de <em>"Parceiro Credenciado Paraguai Prime"</em> para estampar no seu site, redes sociais e material de vendas.
+        <!-- Benefício 3 -->
+        <div class="founder-card">
+          <h3 class="founder-title">Canal Direto</h3>
+          <p class="founder-desc">
+            Conexão direta com brasileiros interessados em moradia, abertura de EAS, medicina privada e investimentos no Paraguai.
           </p>
+          <ul class="founder-points">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Conferência de documentos antes da listagem [CONFIRMAR]</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Contato direto sem intermediários</span>
+            </li>
+          </ul>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- PLANOS DE ADESÃO PARA PRESTADORES DE SERVIÇO -->
-  <section class="section-padding" style="background: var(--py-surface);">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="badge-gold">Formatos de Parceria</span>
-        <h2 class="section-title">Escolha o Nível de Destaque da Sua Empresa</h2>
-        <p class="section-subtitle">
-          Vagas limitadas por setor e região para garantir alto volume de negócios para cada parceiro.
-        </p>
-      </div>
-
-      <div class="b2b-tier-grid">
-        
-        <!-- Plano 1: Credenciado Standard -->
-        <div class="tier-card">
-          <h3 class="tier-name">Membro Credenciado</h3>
-          <p class="tier-desc">Ideal para profissionais autônomos e consultores em fase de expansão.</p>
-          <div class="tier-price">
-            US$ 60 <span>/mês</span>
-          </div>
-          <ul class="tier-features">
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Perfil completo no Diretório de Serviços
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Link direto para WhatsApp e Site
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Selo digital de Parceiro Credenciado
-            </li>
-          </ul>
-          <a href="#cadastro" class="btn btn-outline-blue" style="width: 100%;">
-            Candidatar Minha Empresa
-          </a>
-        </div>
-
-        <!-- Plano 2: Parceiro Prime (Destaque) -->
-        <div class="tier-card featured">
-          <div class="tier-badge">Mais Procurado</div>
-          <h3 class="tier-name">Parceiro Prime</h3>
-          <p class="tier-desc">Para imobiliárias consolidadas, escritórios contábeis e clínicas de saúde.</p>
-          <div class="tier-price">
-            US$ 150 <span>/mês</span>
-          </div>
-          <ul class="tier-features">
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Tudo do plano Credenciado
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <strong>Destaque no topo da categoria</strong>
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Recebimento de leads gerados pelos simuladores
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Publicação de 1 artigo institucional por trimestre
-            </li>
-          </ul>
-          <a href="#cadastro" class="btn btn-primary" style="width: 100%;">
-            Garantir Vaga Prime
-          </a>
-        </div>
-
-        <!-- Plano 3: Exclusividade Master -->
-        <div class="tier-card">
-          <h3 class="tier-name">Patrocinador Master</h3>
-          <p class="tier-desc">Para grandes bancos, construtoras de luxo e redes hospitalares de renome.</p>
-          <div class="tier-price">
-            US$ 450 <span>/mês</span>
-          </div>
-          <ul class="tier-features">
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Presença de marca na Página Inicial (Hero & Footer)
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Exclusividade total no seu nicho de atuação
-            </li>
-            <li>
-              <svg style="width:18px;height:18px;max-width:18px;max-height:18px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Distribuição prioritária de todos os leads de alto ticket
-            </li>
-          </ul>
-          <a href="#cadastro" class="btn btn-outline-blue" style="width: 100%;">
-            Consultar Disponibilidade
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FORMULÁRIO DE CADASTRO DE EMPRESA PARAGUAIA -->
-  <section class="section-padding" id="cadastro" style="background: var(--py-white);">
+  <!-- FORMULÁRIO CURTO DE INSCRIÇÃO -->
+  <section class="section-padding" id="cadastro" style="background: var(--py-surface);">
     <div class="container">
       <div class="form-box-b2b">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <span class="badge-blue">Formulário de Candidatura</span>
-          <h2 style="font-size: 2.2rem; font-weight: 800; color: var(--py-blue-deep); margin: 10px 0;">
-            Cadastre sua Empresa na Rede de Parceiros
+        <div style="text-align: center; margin-bottom: 26px;">
+          <span class="badge-blue">Inscrição de Fundador</span>
+          <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--py-blue-deep); margin: 10px 0;">
+            Candidatura ao Programa de Parceiros
           </h2>
-          <p style="color: var(--py-text-muted);">
-            Nossa equipe entrará em contato em até 24 horas úteis para validar seus dados e liberar seu perfil.
+          <p style="color: var(--py-text-muted); font-size: 0.95rem;">
+            Preencha os dados básicos da sua empresa ou atividade profissional para avaliarmos a inclusão na nossa rede.
           </p>
         </div>
 
-        <form onsubmit="enviarCadastroB2B(event)">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div class="form-group">
-              <label for="b2bEmpresa">Razão Social / Nome da Empresa:</label>
-              <input type="text" id="b2bEmpresa" class="form-control" placeholder="Ex: Asunción Prime Real Estate" required>
-            </div>
-            <div class="form-group">
-              <label for="b2bRUC">RUC / Registro Paraguaio:</label>
-              <input type="text" id="b2bRUC" class="form-control" placeholder="Ex: 80012345-6" required>
-            </div>
+        <form onsubmit="enviarInscricaoFundador(event)">
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label for="b2bEmpresa" style="font-size: 0.88rem; font-weight: 700;">Nome da Empresa ou Profissional:</label>
+            <input type="text" id="b2bEmpresa" class="form-control" placeholder="Ex: Silva & Associados / Asunción Real Estate" required>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div class="form-group">
-              <label for="b2bResponsavel">Nome do Gestor / Responsável:</label>
-              <input type="text" id="b2bResponsavel" class="form-control" placeholder="Ex: Lic. Carlos Gómez" required>
-            </div>
-            <div class="form-group">
-              <label for="b2bEmail">E-mail Corporativo para Contato:</label>
-              <input type="email" id="b2bEmail" class="form-control" placeholder="Ex: contato@empresa.com" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="b2bWhatsApp">WhatsApp Comercial (com código de país):</label>
-            <input type="tel" id="b2bWhatsApp" class="form-control" placeholder="Ex: +595 981 123456" required>
-          </div>
-
-          <div class="form-group">
-            <label for="b2bSetor">Setor Principal de Atuação:</label>
-            <select id="b2bSetor" class="form-control" required>
-              <option value="Imobiliária / Construtora">Imobiliária / Construtora de Alto Padrão</option>
-              <option value="Advocacia / Imigração e Radicación">Advocacia / Imigração & Radicación</option>
-              <option value="Assessoria Contábil / Abertura de EAS">Assessoria Contábil / Abertura de EAS e Empresas</option>
-              <option value="Medicina Privada / Hospital / Seguro">Medicina Privada / Seguro Saúde</option>
-              <option value="Colégio Internacional / Universidade">Colégio Internacional / Educação</option>
-              <option value="Câmbio / Finanças">Casa de Câmbio / Serviços Financeiros</option>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label for="b2bCategoria" style="font-size: 0.88rem; font-weight: 700;">Categoria / Setor de Atuação:</label>
+            <select id="b2bCategoria" class="form-control" required>
+              <option value="">Selecione seu setor...</option>
+              <option value="Advocacia / Migrações e Radicación">Advocacia / Migrações e Radicação</option>
+              <option value="Assessoria Contábil / Abertura de EAS">Assessoria Contábil / Abertura de EAS</option>
+              <option value="Imobiliária / Locação e Vendas">Imobiliária / Locação e Vendas</option>
+              <option value="Planos de Saúde / Medicina Prepaga">Planos de Saúde / Medicina Prepaga</option>
+              <option value="Câmbio / Operações Financeiras">Câmbio / Serviços Financeiros</option>
+              <option value="Colégios / Educação">Colégios / Educação</option>
+              <option value="Outro Setor">Outro Setor [PREENCHER]</option>
             </select>
           </div>
 
-          <div class="form-group">
-            <label for="b2bPlano">Plano de Interesse:</label>
-            <select id="b2bPlano" class="form-control">
-              <option value="Parceiro Prime (US$ 150/mês)">Parceiro Prime (Destaque + Leads Diretos - US$ 150/mês)</option>
-              <option value="Membro Credenciado (US$ 60/mês)">Membro Credenciado (US$ 60/mês)</option>
-              <option value="Patrocinador Master (US$ 450/mês)">Patrocinador Master (Exclusividade de Categoria - US$ 450/mês)</option>
-            </select>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label for="b2bCidade" style="font-size: 0.88rem; font-weight: 700;">Cidade / Região no Paraguai:</label>
+            <input type="text" id="b2bCidade" class="form-control" placeholder="Ex: Assunção / Luque / Ciudad del Este" required>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; margin-top: 10px;">
-            Enviar Solicitação de Credenciamento
+          <div class="form-group" style="margin-bottom: 18px;">
+            <label for="b2bWhatsApp" style="font-size: 0.88rem; font-weight: 700;">WhatsApp Comercial (com DDD ou código internacional):</label>
+            <input type="tel" id="b2bWhatsApp" class="form-control" placeholder="Ex: +595 981 123456 ou +55 11 99999-9999" required>
+          </div>
+
+          <div class="form-group" style="text-align: left; margin-bottom: 20px;">
+            <label style="font-size: 0.8rem; color: #475569; display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+              <input type="checkbox" id="b2bConsentimento" required style="margin-top: 3px;">
+              <span>Concordo em ser contatado por WhatsApp/e-mail e com a <a href="privacidade.html" target="_blank" style="color: var(--py-red-primary); text-decoration: underline;">Política de Privacidade</a>. Usamos seus dados somente para retornar seu contato.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.05rem; font-weight: 800;">
+            Enviar Candidatura de Parceiro Fundador →
           </button>
 
-          <div style="margin-top: 14px; font-size: 0.88rem; color: #94A3B8; text-align: center;">
-            Dúvidas sobre o credenciamento de parceiros? Escreva para:<br>
-            <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+          <div style="margin-top: 14px; font-size: 0.85rem; color: #64748B; text-align: center;">
+            Dúvidas sobre o programa? Escreva para:<br>
+            <a href="mailto:afiuza@verticesm.com" style="color: var(--py-blue-deep); font-weight: 700; text-decoration: none;">afiuza@verticesm.com</a>
           </div>
         </form>
       </div>
@@ -441,8 +369,15 @@
       <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
         © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
       </p>
-            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
-        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      <p style="color: #F87171; font-size: 0.82rem; margin-bottom: 12px; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+        ⚠️ <strong>Aviso Legal:</strong> Conteúdo informativo. Não substitui assessoria jurídica, contábil ou tributária. Estamos montando a rede de parceiros e conferimos documentos e registro profissional antes de listar cada um. [CONFIRMAR]
+      </p>
+      <p style="font-size: 0.85rem; margin-bottom: 12px;">
+        <a href="termos.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Termos de Uso</a> |
+        <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Política de Privacidade</a>
+      </p>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </p>
       <p class="footer-dev-credit">
         Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
@@ -452,22 +387,21 @@
 
   <script src="assets/js/main.js?v=3.2"></script>
   <script>
-    function enviarCadastroB2B(event) {
+    function enviarInscricaoFundador(event) {
       event.preventDefault();
       const empresa = document.getElementById('b2bEmpresa').value;
-      const responsavel = document.getElementById('b2bResponsavel').value;
-      const ruc = document.getElementById('b2bRUC').value;
-      const email = document.getElementById('b2bEmail') ? document.getElementById('b2bEmail').value : '';
+      const categoria = document.getElementById('b2bCategoria').value;
+      const cidade = document.getElementById('b2bCidade').value;
       const whats = document.getElementById('b2bWhatsApp').value;
-      const setor = document.getElementById('b2bSetor').value;
-      const plano = document.getElementById('b2bPlano').value;
 
-      const detalhes = `Empresa: ${empresa} | RUC: ${ruc} | Responsável: ${responsavel} | E-mail: ${email} | Setor: ${setor} | Plano: ${plano} | WhatsApp: ${whats}`;
-      abrirWhatsApp(`Candidatura de Parceiro B2B - ${empresa}`, detalhes);
+      if (typeof registrarEventoGA4 === 'function') {
+        registrarEventoGA4('click_seja_parceiro', { empresa: empresa, categoria: categoria, cidade: cidade });
+        registrarEventoGA4('form_submit', { form_id: 'cadastroFundador', tipo: 'b2b' });
+      }
+
+      const detalhes = `Empresa: ${empresa} | Categoria: ${categoria} | Cidade: ${cidade} | WhatsApp: ${whats}`;
+      abrirWhatsApp(`Candidatura Parceiro Fundador - ${empresa}`, detalhes);
     }
   </script>
 </body>
 </html>
-
-
-

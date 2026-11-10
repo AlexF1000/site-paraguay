@@ -140,3 +140,4 @@ Para medir exatamente cada centavo investido e cada lead gerado:
 | **Fase 3: Pleno Potencial (20 parceiros)** | **R$ 130 a R$ 160 / dia** | **R$ 4.000 a R$ 5.000** | **300 a 450 leads** | R$ 11 a R$ 15 |
 
 *(Lembrando que a partir da Fase 2, o investimento em tráfego é 100% financiado pelas próprias mensalidades dos clientes, com margem de lucro líquida de 85%+).*
+

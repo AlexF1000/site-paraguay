@@ -12,6 +12,15 @@
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
 
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4: G-XXXXXXXXXX]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4: G-XXXXXXXXXX]');
+  </script>
+
   <!-- SCHEMA.ORG JSON-LD (SEO GOOGLE RICH SNIPPETS) -->
   <script type="application/ld+json">
   {
@@ -31,7 +40,7 @@
         "name": "Quanto custa morar no Paraguai em comparação com o Brasil?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O custo de vida médio no Paraguai é entre 40% a 60% menor do que em capitais como São Paulo e Rio de Janeiro. Itens como aluguel em bairros nobres, energia elétrica (gerada por Itaipu), carnes nobres e planos de saúde de primeira linha custam significativamente menos."
+          "text": "O custo de vida no Paraguai é geralmente menor do que em grandes capitais brasileiras; a economia varia conforme o estilo de vida e a cidade."
         }
       },
       {
@@ -39,7 +48,7 @@
         "name": "Como funciona a regra dos 10% de impostos no Paraguai (Triplo 10)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O Paraguai adota o sistema 'Triplo 10' pela Lei 6380/19: 10% de Imposto de Renda Empresarial (IRE), 10% de Imposto de Renda Pessoal (IRP) e 10% de IVA. Além disso, o país adota o Princípio da Territorialidade estrita, onde rendimentos gerados fora do país possuem 0% de tributação."
+          "text": "O Paraguai adota o sistema 'Triplo 10' pela Lei 6380/19: 10% de Imposto de Renda Empresarial (IRE), 10% de Imposto de Renda Pessoal (IRP) e 10% de IVA. O Paraguai adota o princípio da territorialidade: em geral, só a renda de fonte paraguaia é tributada. O que conta como fonte paraguaia depende do caso (por exemplo, onde o serviço é prestado). Consulte um contador."
         }
       },
       {
@@ -47,7 +56,7 @@
         "name": "Como abrir uma empresa no Paraguai sendo brasileiro? O que é a EAS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A EAS (Empresa por Acciones Simplificadas) é o modelo societário mais moderno do Paraguai. Pode ser constituída 100% digitalmente por apenas um sócio estrangeiro, sem capital mínimo obrigatório e com emissão rápida de RUC."
+          "text": "A EAS (Empresa por Acciones Simplificadas) é o modelo societário mais moderno do Paraguai. Pode ser constituída com suporte eletrônico via SUACE por apenas um sócio estrangeiro, sem capital mínimo obrigatório e com emissão de RUC."
         }
       },
       {
@@ -70,6 +79,7 @@
       <div class="topbar-rates">
         <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
         <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+        <span id="rateTimestamp" style="font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">(Cotação de referência)</span>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
         <span style="color: #FBBF24; font-weight: 700;">★ As 10 Perguntas Mais Feitas no Google por Brasileiros</span>
@@ -185,15 +195,15 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              O custo de vida médio no Paraguai é <strong>entre 40% e 60% menor</strong> do que em cidades como São Paulo, Rio de Janeiro e Curitiba para o mesmo padrão de vida.
+              O custo de vida no Paraguai é <strong>geralmente menor</strong> do que em grandes cidades brasileiras como São Paulo e Rio de Janeiro; a economia real varia conforme o estilo de vida, hábitos de consumo e a cidade escolhida.
             </p>
             <p style="margin-top: 10px;">
               Os maiores alívios acontecem em:
             </p>
             <ul style="margin-left: 20px; margin-top: 6px;">
-              <li><strong>Energia Elétrica:</strong> Até 70% mais barata, devido à abundância de energia limpa gerada por Itaipu Binacional.</li>
-              <li><strong>Moradia Nobre:</strong> Apartamentos de alto padrão em bairros nobres de Assunção (Villa Morra e Santa Teresa) variam entre US$ 700 e US$ 1.300/mês.</li>
-              <li><strong>Alimentação:</strong> Carnes bovinas nobres tipo exportação custam menos da metade dos preços praticados nos açougues de luxo do Brasil.</li>
+              <li><strong>Energia Elétrica:</strong> Notavelmente mais barata, devido à abundância de energia gerada por Itaipu Binacional.</li>
+              <li><strong>Moradia:</strong> Apartamentos bem localizados em bairros de Assunção (Villa Morra e Santa Teresa) oferecem boa relação custo-benefício em comparação a bairros nobres de capitais brasileiras.</li>
+              <li><strong>Alimentação:</strong> Carnes bovinas de qualidade têm preços competitivos nos supermercados locais.</li>
             </ul>
           </div>
         </div>
@@ -206,15 +216,15 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              O sistema fiscal do Paraguai é um dos mais simples e competitivos do mundo, regido pela Lei 6380/19. Ele é conhecido como <strong>Triplo 10</strong> porque estabelece:
+              O sistema fiscal do Paraguai é regido pela Lei 6380/19. Ele é conhecido como <strong>Triplo 10</strong> porque estabelece:
             </p>
             <ul style="margin-left: 20px; margin-top: 6px;">
               <li><strong>10% IRE:</strong> Imposto de Renda Empresarial fixo sobre o lucro líquido.</li>
               <li><strong>10% IRP:</strong> Imposto de Renda Pessoal sobre rendimentos locais (com ampla dedução de gastos pessoais e familiares).</li>
-              <li><strong>10% IVA:</strong> Imposto sobre o Valor Agregado (com alíquota reduzida de 5% para remédios e itens da cesta básica).</li>
+              <li><strong>10% IVA:</strong> Imposto sobre o Valor Agregado (com alíquota reduzida de 5% para itens essenciais e cesta básica).</li>
             </ul>
             <p style="margin-top: 10px;">
-              <strong>O Grande Diferencial:</strong> O Paraguai segue o <em>Princípio da Territorialidade</em>. Isso significa que receitas obtidas fora do território paraguaio (ex: prestação de serviços para clientes nos EUA, Europa ou Brasil) têm <strong>alíquota zero (0%)</strong> de imposto de renda local.
+              <strong>Princípio da Territorialidade:</strong> O Paraguai adota o princípio da territorialidade: em geral, só a renda de fonte paraguaia é tributada. O que conta como fonte paraguaia depende do caso concreto (por exemplo, o local efetivo da prestação do serviço). Consulte sempre um contador habilitado para avaliar a sua estrutura.
             </p>
           </div>
         </div>
@@ -227,16 +237,16 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              A <strong>EAS (Empresa por Acciones Simplificadas)</strong> é o formato empresarial mais moderno do Paraguai (equivalente a uma LLC americana ou SLU brasileira).
+              A <strong>EAS (Empresa por Acciones Simplificadas)</strong> é o formato empresarial moderno do Paraguai (similar a uma sociedade unipessoal).
             </p>
             <p style="margin-top: 10px;">
-              <strong>Principais Vantagens da EAS:</strong>
+              <strong>Principais Características da EAS:</strong>
             </p>
             <ul style="margin-left: 20px; margin-top: 6px;">
-              <li>Pode ser aberta com apenas 1 único sócio (unipessoal), mesmo sendo estrangeiro.</li>
+              <li>Pode ser constituída com apenas 1 único sócio (unipessoal), mesmo sendo estrangeiro.</li>
               <li>Não exige capital social mínimo obrigatório.</li>
-              <li>Processo de abertura 100% digital e rápido através do sistema SUACE do governo paraguaio.</li>
-              <li>Permite emissão de notas fiscais eletrônicas e abertura de contas correntes bancárias em Guaranis e Dólares.</li>
+              <li>Processo com tramitação eletrônica via SUACE com assistência técnica profissional.</li>
+              <li>Permite emissão de faturas eletrônicas e abertura de contas bancárias em Guaranis e Dólares conforme exigências de compliance de cada instituição.</li>
             </ul>
           </div>
         </div>
@@ -298,11 +308,11 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              Existem métodos modernos e 100% regulamentados:
+              Existem métodos bancários e cambiais regulamentados pelo Banco Central:
             </p>
             <ul style="margin-left: 20px; margin-top: 6px;">
-              <li><strong>Remessas Internacionais (Wise / Corretoras Especializadas):</strong> Permitem transferir reais convertidos diretamente para contas em Guaranis ou Dólares nos bancos paraguaios com taxas transparentes e IOF reduzido.</li>
-              <li><strong>Contas Bancárias Multimoeda:</strong> Com a Cédula paraguaia e o RUC, você pode abrir conta corrente em bancos como Banco Continental, Itaú Paraguai, Banco Sudameris ou BNF, mantendo saldo em Dólares (USD) com total proteção jurídica.</li>
+              <li><strong>Remessas Internacionais (Corretoras de Câmbio / Plataformas Autorizadas):</strong> Permitem transferir reais convertidos diretamente para contas em Guaranis ou Dólares nos bancos paraguaios com taxas transparentes e contrato cambial regular.</li>
+              <li><strong>Contas Bancárias Internacionais:</strong> Com a Cédula paraguaia e o RUC, você pode abrir conta corrente em bancos como Banco Continental, Itaú Paraguai, Banco Sudameris ou BNF, mantendo saldo em Dólares (USD) dentro das normas do Banco Central do Paraguai.</li>
             </ul>
           </div>
         </div>
@@ -315,10 +325,10 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              <strong>Não é uma barreira.</strong> O Espanhol é a língua oficial dos negócios, repartições públicas, contratos e universidades.
+              <strong>Não é uma barreira intransponível.</strong> O Espanhol é a língua oficial dos negócios, repartições públicas, contratos e universidades.
             </p>
             <p style="margin-top: 10px;">
-              Devido à forte presença histórica de brasileiros (especialmente no agronegócio e nas cidades de fronteira), a maioria da população urbana compreende o português com enorme facilidade. Em poucas semanas de convívio, qualquer brasileiro já consegue se comunicar fluentemente no dia a dia. O Guarani é uma língua cultural respeitada e falada no interior, mas não é obrigatória para residentes estrangeiros.
+              Devido à forte presença histórica de brasileiros (especialmente no agronegócio e nas cidades de fronteira), a maioria da população urbana compreende o português com enorme facilidade. Em poucas semanas de convívio, qualquer brasileiro já consegue se comunicar no dia a dia. O Guarani é uma língua cultural respeitada e falada no interior, mas não é obrigatória para residentes estrangeiros.
             </p>
           </div>
         </div>
@@ -331,15 +341,15 @@
           </button>
           <div class="faq-answer-content">
             <p>
-              Para usufruir legalmente da carga tributária de 10% do Paraguai sem continuar obrigado a declarar imposto de renda sobre seus ganhos mundiais no Brasil, o cidadão deve formalizar sua <strong>Saída Definitiva do País</strong>:
+              Para alinhar sua situação fiscal ao mudar de residência e evitar surpresas tributárias, o cidadão deve formalizar sua <strong>Saída Definitiva do País</strong>:
             </p>
             <ol style="margin-left: 20px; margin-top: 6px;">
-              <li>Protocolar a <strong>Comunicação de Saída Definitiva do País (CSDP)</strong> junto à Receita Federal do Brasil até fevereiro do ano seguinte à mudança.</li>
-              <li>Entregar a <strong>Declaração de Saída Definitiva do País (DSDP)</strong> no prazo da DIRPF.</li>
+              <li>Protocolar a <strong>Comunicação de Saída Definitiva do País (CSDP)</strong> junto à Receita Federal do Brasil no prazo legal.</li>
+              <li>Entregar a <strong>Declaração de Saída Definitiva do País (DSDP)</strong> no exercício seguinte.</li>
               <li>Obter a <strong>Residência Fiscal no Paraguai</strong> com sua Cédula e inscrição no RUC.</li>
             </ol>
             <p style="margin-top: 10px;">
-              Dessa forma, você encerra seu vínculo fiscal com o Brasil de maneira 100% legal, evitando qualquer risco de bi-tributação ou autuação.
+              Orientação sobre as obrigações com a Receita Federal ao deixar de ser residente fiscal no Brasil deve ser realizada com profissional habilitado. <strong>Atenção: obter residência no Paraguai não encerra automaticamente a residência fiscal no Brasil.</strong>
             </p>
           </div>
         </div>
@@ -352,7 +362,7 @@
           Tem alguma dúvida específica sobre o seu caso?
         </h3>
         <p style="color: var(--py-text-muted); font-size: 0.95rem; margin-bottom: 24px;">
-          Nossa equipe e rede de advogados, contadores e corretores parceiros estão à disposição para orientar sua transição.
+          Estamos construindo parcerias com advogados, contadores e corretores locais para orientar sua transição com segurança.
         </p>
         <button onclick="abrirModalEspecialista('Dúvida Específica')" class="btn btn-primary" style="padding: 14px 32px;">
           Falar com um Especialista no WhatsApp
@@ -369,7 +379,7 @@
       <div class="modal-header">
         <span class="badge-blue">Tire suas Dúvidas</span>
         <h3>Atendimento Especializado</h3>
-        <p>Preencha os dados e fale com nossa equipe credenciada.</p>
+        <p>Preencha os dados e fale com nossa equipe.</p>
       </div>
       <form onsubmit="enviarLeadForm(event)">
         <input type="hidden" id="modalCategoria" value="Dúvida Geral">
@@ -403,12 +413,18 @@
             <option value="Ainda avaliando">Ainda avaliando</option>
           </select>
         </div>
+        <div class="form-group" style="text-align: left; margin-top: 10px;">
+          <label style="font-size: 0.8rem; color: #CBD5E1; display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+            <input type="checkbox" id="leadConsentimento" required style="margin-top: 3px;">
+            <span>Concordo em ser contatado por WhatsApp/e-mail e com a <a href="privacidade.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Política de Privacidade</a>. Usamos seus dados somente para retornar seu contato.</span>
+          </label>
+        </div>
         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
           Enviar Dúvida pelo WhatsApp
         </button>
-              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
           Canal oficial de e-mail para consultas:<br>
-          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+          <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 700; text-decoration: none;">afiuza@verticesm.com</a>
         </div>
       </form>
     </div>
@@ -420,8 +436,15 @@
       <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
         © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
       </p>
-            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
-        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      <p style="color: #F87171; font-size: 0.82rem; margin-bottom: 12px; max-width: 760px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+        ⚠️ <strong>Aviso Legal:</strong> Conteúdo puramente informativo. Não substitui assessoria jurídica, contábil ou tributária individualizada. Obter residência no Paraguai não encerra automaticamente a residência fiscal no Brasil.
+      </p>
+      <p style="font-size: 0.85rem; margin-bottom: 12px;">
+        <a href="termos.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Termos de Uso</a> |
+        <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline; margin: 0 10px;">Política de Privacidade</a>
+      </p>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </p>
       <p class="footer-dev-credit">
         Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>

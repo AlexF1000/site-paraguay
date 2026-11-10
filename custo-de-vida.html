@@ -11,6 +11,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4]');
+  </script>
   <style>
     .fam-header {
       background: radial-gradient(circle at 20% 40%, #15366D 0%, #0D224A 55%, #071328 100%);
@@ -163,10 +171,10 @@
     <div class="container">
       <span class="badge-gold">Calculadora de Custo de Vida Familiar</span>
       <h1 style="font-size: 2.8rem; font-weight: 800; margin: 16px 0;">
-        Mesmo Padrão de Vida, Metade do Custo.
+        Padrão de Vida e Custos no Paraguai.
       </h1>
       <p style="font-size: 1.15rem; color: #CBD5E1; max-width: 700px; margin: 0 auto;">
-        Descubra como proporcionar educação internacional, saúde de ponta e moradia nobre para sua família gastando até 60% menos do que nas principais capitais do Brasil.
+        Descubra opções de moradia, saúde privada e educação internacional. O custo de vida é geralmente menor; a economia varia conforme o estilo de vida e a cidade.
       </p>
     </div>
   </section>
@@ -296,8 +304,8 @@
           </div>
 
           <div class="lifestyle-card">
-            <h4>🏥 Saúde Privada VIP</h4>
-            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-bottom: 12px;">Planos hospitalares renomados (Asismed VIP, Santa Clara) sem carências abusivas.</p>
+            <h4>🏥 Saúde Privada</h4>
+            <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-bottom: 12px;">Opções de planos de saúde privados no Paraguai (como Asismed e Santa Clara), com coberturas e carências sob consulta.</p>
             <div style="display: flex; justify-content: space-between; font-size: 0.9rem; padding: 6px 0; border-top: 1px solid var(--py-border);">
               <span>Brasil (Família):</span> <strong style="color: #EF4444;">R$ 3.800 a R$ 5.500</strong>
             </div>
@@ -319,7 +327,7 @@
       <div class="modal-header">
         <span class="badge-blue">Assessoria de Família</span>
         <h3>Planeje a Mudança da Sua Família</h3>
-        <p>Ajudamos você a encontrar os melhores bairros, colégios e imóveis de alto padrão.</p>
+        <p>Ajudamos você a entender sobre bairros, colégios e moradia no Paraguai.</p>
       </div>
       <form onsubmit="enviarLeadForm(event)">
         <input type="hidden" id="modalCategoria" value="Família">
@@ -351,12 +359,23 @@
             <option value="Apenas pesquisando">Apenas pesquisando valores</option>
           </select>
         </div>
+
+        <div class="form-group" style="margin-top: 14px; font-size: 0.82rem; color: #CBD5E1; display: flex; align-items: flex-start; gap: 8px;">
+          <input type="checkbox" id="leadConsentimento" style="margin-top: 3px;" required>
+          <label for="leadConsentimento">Concordo em ser contatado por WhatsApp/e-mail e estou ciente da <a href="privacidade.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Política de Privacidade</a> e dos <a href="termos.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Termos de Uso</a>.</label>
+        </div>
+
         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
           Falar com Assessor de Mudança no WhatsApp
         </button>
-              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
-          Canal oficial de e-mail para consultas:<br>
-          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+
+        <p style="font-size: 0.78rem; color: #94A3B8; text-align: center; margin-top: 12px;">
+          🔒 Usamos seus dados somente para retornar seu contato.
+        </p>
+
+        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal direto com o Diretor Executivo:<br>
+          <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 700; text-decoration: none;">afiuza@verticesm.com</a>
         </div>
       </form>
     </div>
@@ -368,10 +387,18 @@
       <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
         © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
       </p>
-            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
-        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </p>
-      <p class="footer-dev-credit">
+      <p style="color: #94A3B8; font-size: 0.84rem; margin-bottom: 6px;">
+        Conteúdo informativo. Não substitui assessoria jurídica, contábil ou tributária.
+      </p>
+      <p style="font-size: 0.82rem; color: #64748B;">
+        <a href="termos.html" style="color: #CBD5E1; text-decoration: underline;">Termos de Uso</a> | 
+        <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline;">Política de Privacidade</a> | 
+        <a href="index-es.html" style="color: #CBD5E1; text-decoration: underline;">Versión en Español</a>
+      </p>
+      <p class="footer-dev-credit" style="margin-top: 10px;">
         Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
       </p>
     </div>

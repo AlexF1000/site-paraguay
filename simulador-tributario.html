@@ -11,6 +11,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4]');
+  </script>
   <style>
     .sim-page-header {
       background: radial-gradient(circle at 80% 20%, #173B75 0%, #0D224A 50%, #071224 100%);
@@ -158,6 +166,10 @@
 
   <!-- CALCULADORA INTERATIVA -->
   <div class="container">
+    <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid #F59E0B; border-radius: var(--radius-md); padding: 14px 20px; margin: 20px auto 0 auto; max-width: 1040px; text-align: center; color: #B45309; font-weight: 700; font-size: 0.92rem;">
+      ⚠️ AVISO IMPORTANTE: Obter residência no Paraguai não encerra automaticamente a residência fiscal no Brasil.
+    </div>
+
     <div class="calculator-container">
       <div class="calc-grid">
         
@@ -198,10 +210,10 @@
 
           <div style="background: var(--py-blue-soft); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--py-blue-primary); margin-top: 24px;">
             <h4 style="font-size: 0.95rem; color: var(--py-blue-primary); font-weight: 700;">
-              💡 Princípio da Territorialidade Estrita:
+              💡 Princípio da Territorialidade:
             </h4>
             <p style="font-size: 0.88rem; color: var(--py-text-muted); margin-top: 4px;">
-              No Paraguai, receitas geradas fora do território paraguaio (ex: clientes nos EUA, Europa ou Brasil contratando seu serviço remoto) possuem <strong>0% de imposto corporativo</strong>.
+              O Paraguai adota o princípio da territorialidade: em geral, só a renda de fonte paraguaia é tributada. O que conta como fonte paraguaia depende do caso (por exemplo, onde o serviço é prestado). Consulte um contador.
             </p>
           </div>
         </div>
@@ -209,7 +221,7 @@
         <!-- Resultados e Economia -->
         <div>
           <div class="result-box-premium">
-            <span class="badge-gold">Resultado Comparativo</span>
+            <span class="badge-gold">Estimativa Ilustrativa</span>
             
             <div style="margin: 20px 0;">
               <span style="font-size: 0.85rem; color: #94A3B8; text-transform: uppercase;">Economia Líquida Anual Estimada:</span>
@@ -217,7 +229,7 @@
                 R$ 48.000
               </div>
               <div style="font-size: 0.95rem; color: #E2E8F0; margin-top: 6px;" id="advSavingsUSD">
-                ≈ US$ 8.304 / ano a mais no seu bolso
+                ≈ US$ 8.304 / ano (estimativa ilustrativa)
               </div>
             </div>
 
@@ -267,7 +279,7 @@
               <td><strong>Imposto sobre Lucro / Empresa</strong></td>
               <td>IRPJ + CSLL (Até 34% no Lucro Real; ~15% a 20% no Presumido/Simples)</td>
               <td><strong>IRE: 10% fixo</strong> sobre o lucro líquido</td>
-              <td><span style="color: #10B981; font-weight: 700;">Até 60% menor</span></td>
+              <td><span style="color: #10B981; font-weight: 700;">Carga geralmente menor</span></td>
             </tr>
             <tr>
               <td><strong>Imposto de Renda Pessoal (IRPF)</strong></td>
@@ -284,17 +296,28 @@
             <tr>
               <td><strong>Rendimentos do Exterior</strong></td>
               <td>Tributação universal no Brasil (Lei 14.754 das Offshores - 15%)</td>
-              <td><strong>0% Isento</strong> (Princípio da Territorialidade estrita)</td>
-              <td><span style="color: #10B981; font-weight: 700;">Totalmente Isento</span></td>
+              <td><strong>Princípio da Territorialidade</strong> (Lei 6380/19)</td>
+              <td><span style="color: #10B981; font-weight: 700;">Sob consulta a contador</span></td>
             </tr>
             <tr>
               <td><strong>Burocracia de Abertura</strong></td>
               <td>Múltiplas juntas comerciais, alvarás e taxas municipais</td>
-              <td><strong>EAS (Empresa por Ações Simplificadas)</strong> 100% digital</td>
-              <td><span style="color: #10B981; font-weight: 700;">Rapidez e baixo custo</span></td>
+              <td><strong>EAS (Empresa por Ações Simplificadas)</strong> trâmite digital</td>
+              <td><span style="color: #10B981; font-weight: 700;">Processo simplificado</span></td>
             </tr>
           </tbody>
         </table>
+        </div>
+
+        <!-- Bloco Detalhado de Premissas e Aviso Legal -->
+        <div style="background: var(--py-bg-light); border: 1px solid var(--py-border); border-radius: var(--radius-md); padding: 22px; margin-top: 24px; font-size: 0.85rem; color: var(--py-text-muted); line-height: 1.6;">
+          <h4 style="color: var(--py-blue-deep); font-size: 0.95rem; margin-bottom: 6px;">📌 Premissas desta Simulação e Aviso Legal</h4>
+          <p style="margin-bottom: 6px;">
+            <strong>Regimes assumidos:</strong> Brasil estimado em Lucro Presumido (alíquota efetiva estimada de 16,5%, IRPJ/CSLL/PIS/COFINS/ISS - Leis 9.718/98 e LC 116/03) ou Simples Nacional Anexo V (~19,5% - LC 123/06); Paraguai estimado em IRE com alíquota nominal de 10% (Lei 6380/19) e dedutibilidade média operacional de despesas estimada em 8,5% sobre o faturamento. Câmbio de referência: US$ 1 = R$ 5,78 [PREENCHER data: 10/11/2026].
+          </p>
+          <p style="margin-bottom: 0;">
+            <strong>Aviso de responsabilidade:</strong> Esta ferramenta fornece apenas uma estimativa ilustrativa. Não considera custos de abertura e manutenção da empresa, honorários, contribuições, dupla tributação nem a situação fiscal individual. Não é consultoria tributária.
+          </p>
         </div>
       </div>
 
@@ -340,12 +363,23 @@
             <option value="Saída Definitiva do Brasil">Saída Definitiva da Receita Federal</option>
           </select>
         </div>
+
+        <div class="form-group" style="margin-top: 14px; font-size: 0.82rem; color: #CBD5E1; display: flex; align-items: flex-start; gap: 8px;">
+          <input type="checkbox" id="leadConsentimento" style="margin-top: 3px;" required>
+          <label for="leadConsentimento">Concordo em ser contatado por WhatsApp/e-mail e estou ciente da <a href="privacidade.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Política de Privacidade</a> e dos <a href="termos.html" target="_blank" style="color: #FBBF24; text-decoration: underline;">Termos de Uso</a>.</label>
+        </div>
+
         <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
           Falar com Tributarista pelo WhatsApp
         </button>
-              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
-          Canal oficial de e-mail para consultas:<br>
-          <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 700; text-decoration: none;">contato@paraguayprime.online</a>
+
+        <p style="font-size: 0.78rem; color: #94A3B8; text-align: center; margin-top: 12px;">
+          🔒 Usamos seus dados somente para retornar seu contato.
+        </p>
+
+        <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.84rem; color: #94A3B8; text-align: center;">
+          Canal direto com o Diretor Executivo:<br>
+          <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 700; text-decoration: none;">afiuza@verticesm.com</a>
         </div>
       </form>
     </div>
@@ -357,10 +391,18 @@
       <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
         © 2026 Paraguai Prime - O Portal de Transição, Negócios e Vida para Brasileiros.
       </p>
-            <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
-        Consultas & Atendimento: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Consultas & Atendimento: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </p>
-      <p class="footer-dev-credit">
+      <p style="color: #94A3B8; font-size: 0.84rem; margin-bottom: 6px;">
+        Conteúdo informativo. Não substitui assessoria jurídica, contábil ou tributária.
+      </p>
+      <p style="font-size: 0.82rem; color: #64748B;">
+        <a href="termos.html" style="color: #CBD5E1; text-decoration: underline;">Termos de Uso</a> | 
+        <a href="privacidade.html" style="color: #CBD5E1; text-decoration: underline;">Política de Privacidade</a> | 
+        <a href="index-es.html" style="color: #CBD5E1; text-decoration: underline;">Versión en Español</a>
+      </p>
+      <p class="footer-dev-credit" style="margin-top: 10px;">
         Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
       </p>
     </div>
@@ -383,7 +425,7 @@
       document.getElementById('advTaxPY').textContent = formatarMoedaBRL(res.impostoMensalParaguai) + '/mês';
       document.getElementById('advSavingsMonth').textContent = formatarMoedaBRL(res.economiaMensal) + '/mês';
       document.getElementById('advSavingsAnnual').textContent = formatarMoedaBRL(res.economiaAnual) + '/ano';
-      document.getElementById('advSavingsUSD').textContent = `≈ ${formatarMoedaUSD(res.economiaAnualUSD)} / ano livres de impostos`;
+      document.getElementById('advSavingsUSD').textContent = `≈ ${formatarMoedaUSD(res.economiaAnualUSD)} / ano (estimativa ilustrativa)`;
     }
 
     document.getElementById('calcRevenue').addEventListener('input', recalcularSimuladorAvancado);

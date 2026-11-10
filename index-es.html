@@ -11,6 +11,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
   <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=[PREENCHER ID GA4]"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '[PREENCHER ID GA4]');
+  </script>
 </head>
 <body>
 
@@ -20,6 +28,7 @@
       <div class="topbar-rates">
         <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
         <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+        <span id="rateLegenda" style="font-size: 0.72rem; color: #94A3B8; margin-left: 8px;">Cotización de referencia</span>
       </div>
       <div style="display: flex; align-items: center; gap: 16px;">
         <span style="color: #FBBF24; font-weight: 700;">★ Portal de Conexión Empresarial y Residencial</span>
@@ -130,12 +139,12 @@
               <p>Régimen Triple 10 (IRE, IRP, IVA)</p>
             </div>
             <div class="hero-stat-item">
-              <h4>Hasta 60% <span class="highlight-gold">Menor</span></h4>
-              <p>Costo de vida vs. metrópolis de Brasil</p>
+              <h4>Costo <span class="highlight-gold">Menor</span></h4>
+              <p>Costo de vida generalmente menor; el ahorro varía según el estilo de vida y la ciudad.</p>
             </div>
             <div class="hero-stat-item">
-              <h4>100% <span class="highlight-red">Legal</span></h4>
-              <p>Radicación Mercosur y EAS digital</p>
+              <h4>Marco <span class="highlight-red">Legal</span></h4>
+              <p>Radicación Mercosur y constitución de EAS con orientación profesional.</p>
             </div>
           </div>
         </div>
@@ -170,9 +179,9 @@
           </div>
 
           <div class="sim-savings-banner">
-            <div class="sim-savings-title">Ahorro Anual Estimado</div>
+            <div class="sim-savings-title">Ahorro Anual Estimado (Ilustrativo)</div>
             <div class="sim-savings-amount" id="heroSavingsAmount">R$ 48.000/año</div>
-            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ USD 8.304 libres</div>
+            <div style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;" id="heroSavingsUSD">≈ USD 8.304 / año (estimación ilustrativa)</div>
           </div>
 
           <button onclick="abrirModalEspecialista('Constitución EAS')" class="btn btn-primary" style="width: 100%;">
@@ -191,33 +200,33 @@
         <div class="b2b-grid">
           
           <div class="b2b-content">
-            <span class="badge-gold">★ Para Empresas y Profesionales del Paraguay</span>
-            <h2>Su Empresa ante los Brasileños más Calificados que Llegan al País.</h2>
+            <span class="badge-gold">★ Programa de Socios Fundadores</span>
+            <h2>Su Empresa ante los Brasileños que Llegan al País.</h2>
             <p>
-              Estudios jurídicos tributarios, inmobiliarias de primer nivel, sanatorios privados y colegios bilingües: posicione su marca ante miles de familias e inversores con alto poder adquisitivo que utilizan nuestra plataforma diariamente.
+              Estudios jurídicos tributarios, inmobiliarias de primer nivel, sanatorios privados y colegios bilingües: posicione su marca ante brasileños que están planificando radicarse, constituir empresas o invertir en Paraguay.
             </p>
 
             <div class="b2b-perks">
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Leads directos al WhatsApp corporativo de su firma
+                Contacto directo al WhatsApp corporativo de su firma
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Sello de Proveedor Verificado
+                Socios fundadores contarán con sello de verificación (condiciones a definir)
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Posicionamiento en los primeros lugares de búsqueda
+                Posicionamiento en el directorio en fase de lanzamiento
               </div>
               <div class="b2b-perk-item">
                 <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Exclusividad de rubro en su zona geográfica
+                Socios fundadores contarán con exclusividad de rubro en su zona (condiciones a definir)
               </div>
             </div>
 
             <a href="para-empresas-es.html" class="btn btn-primary btn-b2b-main">
-              Acreditar Mi Empresa en el Portal →
+              Conocer el Programa de Socios Fundadores →
             </a>
           </div>
 
@@ -227,7 +236,7 @@
             </div>
             <h3>Red de Confianza Verificada</h3>
             <p>
-              Validamos la formalidad y el RUC de cada empresa socia para garantizar los más altos estándares de atención a los inversores.
+              Estamos construyendo la red de socios y verificamos documentación y registro profesional antes de listar a cada profesional. [CONFIRMAR]
             </p>
             <a href="para-empresas-es.html#registro" class="btn btn-outline-white" style="width: 100%;">
               Postular Mi Empresa Hoy
@@ -326,7 +335,7 @@
   <footer class="main-footer">
     <div class="container">
       <div style="text-align: center; margin-bottom: 20px; font-size: 0.9rem; color: #CBD5E1;">
-        Contacto & Consultas: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+        Contacto & Consultas: <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 600; text-decoration: none;">afiuza@verticesm.com</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
       </div>
       <div class="footer-bottom">
         <div>
@@ -335,8 +344,13 @@
         <div class="footer-dev-credit">
           Desarrollado por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
         </div>
-        <div style="color: #64748B;">
-          Información tributaria y societaria fundamentada en la Ley 6380/19 y en la Ley de Migraciones 6984/2022 de la República del Paraguay.
+        <div style="color: #94A3B8; font-size: 0.85rem; margin-top: 8px;">
+          Contenido informativo. No reemplaza el asesoramiento jurídico, contable ni tributario. Fundamentado en la Ley 6380/19 y en la Ley de Migraciones 6984/2022 de la República del Paraguay.
+        </div>
+        <div style="font-size: 0.82rem; color: #64748B; margin-top: 6px;">
+          <a href="termos-es.html" style="color: #CBD5E1; text-decoration: underline;">Términos de Uso</a> | 
+          <a href="privacidade-es.html" style="color: #CBD5E1; text-decoration: underline;">Política de Privacidad</a> | 
+          <a href="index.html" style="color: #CBD5E1; text-decoration: underline;">Versão em Português</a>
         </div>
       </div>
     </div>
