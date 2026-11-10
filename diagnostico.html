@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sessão Estratégica de Diagnóstico: Brasil vs. Paraguai | Paraguay Prime</title>
+  <meta name="description" content="Agende uma sessão individual de diagnóstico com Alexandre Fiuza, Diretor da Paraguay Prime. Valide a viabilidade fiscal, abertura de EAS e radicação legal da sua família.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.0">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+  <style>
+    .diag-hero {
+      background: radial-gradient(circle at 75% 25%, #173B75 0%, #0D224A 55%, #061122 100%);
+      color: var(--py-white);
+      padding: 85px 0 95px 0;
+      position: relative;
+      text-align: center;
+    }
+    .diag-container {
+      max-width: 960px;
+      margin: -50px auto 70px auto;
+      background: var(--py-white);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--py-border);
+      box-shadow: var(--shadow-lg);
+      padding: 50px 40px;
+      position: relative;
+      z-index: 10;
+    }
+    .diag-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+    }
+    @media (max-width: 850px) {
+      .diag-grid {
+        grid-template-columns: 1fr;
+      }
+      .diag-container {
+        padding: 30px 20px;
+        margin-top: -30px;
+      }
+    }
+    .feature-list-diag {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+    }
+    .feature-list-diag li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      color: var(--py-text-main);
+      line-height: 1.5;
+    }
+    .feature-list-diag li svg {
+      color: #10B981;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .card-profile-box {
+      background: var(--py-bg-light);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--py-border);
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .price-tag-box {
+      background: linear-gradient(135deg, #0D224A 0%, #15366D 100%);
+      color: var(--py-white);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      border: 2px solid var(--py-gold);
+    }
+    .price-original {
+      text-decoration: line-through;
+      color: #94A3B8;
+      font-size: 1rem;
+    }
+    .price-current {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #FBBF24;
+      line-height: 1.1;
+      margin: 6px 0;
+    }
+    .badge-rebate {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34D399;
+      border: 1px solid #10B981;
+      border-radius: var(--radius-full);
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="header-topbar">
+    <div class="container">
+      <div class="topbar-rates">
+        <span class="rate-item">🇧🇷/🇵🇾 <strong id="rateBRL">1 BRL = 1.350 ₲</strong></span>
+        <span class="rate-item">🇺🇸/🇵🇾 <strong id="rateUSD">1 USD = 7.800 ₲</strong></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <span style="color: #FBBF24; font-weight: 700;">★ Consultoria Executiva de Transição</span>
+        <div class="lang-switch-box">
+          <a href="diagnostico.html" class="lang-pill active">🇧🇷 PT</a>
+          <a href="para-empresas-es.html" class="lang-pill">🇵🇾 ES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-flag-icon">
+          <div class="flag-stripe-red"></div>
+          <div class="flag-stripe-white"><div class="flag-seal-dot"></div></div>
+          <div class="flag-stripe-blue"></div>
+        </div>
+        <div class="brand-name">
+          <span>PARAGUAI <span class="brand-prime">PRIME</span></span>
+          <span class="sub">Vida & Negócios</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Guia de Residência</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="blog.html" class="nav-link">Artigos</a></li>
+          <li><a href="diagnostico.html" class="nav-link active" style="color: var(--py-red-primary); font-weight: 700;">Sessão de Diagnóstico</a></li>
+          <li class="mobile-nav-cta">
+            <a href="#formulario-diagnostico" onclick="toggleMobileMenu();" class="btn btn-primary" style="width: 100%;">
+              <span>Agendar Minha Sessão</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#formulario-diagnostico" class="btn btn-primary nav-cta-desktop">
+          Agendar Minha Sessão
+        </a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
+
+  <!-- HERO -->
+  <section class="diag-hero">
+    <div class="container">
+      <div style="max-width: 820px; margin: 0 auto;">
+        <span class="badge-gold">⚡ Atendimento Individual e Exclusivo</span>
+        <h1 style="font-size: 3rem; font-weight: 800; margin: 18px 0; line-height: 1.18;">
+          Diagnóstico de Viabilidade Fiscal e Residencial no Paraguai
+        </h1>
+        <p style="font-size: 1.2rem; color: #CBD5E1; line-height: 1.6; margin-bottom: 24px;">
+          Uma sessão executiva individual de 50 minutos diretamente com <strong>Alexandre Fiuza</strong>, Diretor da Paraguay Prime, para analisar a estrutura do seu negócio, sua economia real no regime 10-10-10 e o passo a passo seguro para sua transição.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="container">
+    <div class="diag-container">
+      <div class="diag-grid">
+        
+        <!-- COLUNA 1: O QUE VOCÊ VAI DESCOBRIR -->
+        <div>
+          <span class="badge-blue">O que está incluído na sua sessão</span>
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--py-blue-deep); margin: 12px 0 16px 0;">
+            Tudo o que você precisa saber antes de dar qualquer passo
+          </h2>
+          <p style="color: var(--py-text-muted); font-size: 0.95rem; line-height: 1.6;">
+            Não tome decisões com base em vídeos soltos da internet ou conselhos informais de fronteira. Tenha um diagnóstico claro e personalizado para o seu patrimônio:
+          </p>
+
+          <ul class="feature-list-diag">
+            <li>
+              <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div><strong>Estudo de Viabilidade Tributária:</strong> Comparamos a sua carga atual (Simples / Presumido / CLT) com a alíquota fixa de 10% (Lei 6380/19) e projetamos sua economia real anual em reais.</div>
+            </li>
+            <li>
+              <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div><strong>Checklist de Documentos da Nova Lei 6984/2022:</strong> A lista exata do que emitir no Brasil (Apostilamento de Haia, certidões da PF) para não perder viagens nem cair em exigências.</div>
+            </li>
+            <li>
+              <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div><strong>Abertura de Empresa EAS & Contas Bancárias:</strong> Como constituir sua sociedade em 72h e os caminhos seguros para operar contas em Guaranis e Dólares.</div>
+            </li>
+            <li>
+              <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div><strong>Vida Prática, Bairros & Família:</strong> Custos reais de moradia em Villa Morra, Santa Teresa ou San Bernardino, além de escolas internacionais bilíngues e medicina prepaga de referência.</div>
+            </li>
+            <li>
+              <svg style="width:20px;height:20px;max-width:20px;max-height:20px;display:inline-block;vertical-align:middle;flex-shrink:0;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div><strong>Conexão Direta com Parceiros Credenciados:</strong> Encaminhamento sem filas para o nosso time jurídico e contábil em Assunção (Escalada Consultora) e operadoras de saúde.</div>
+            </li>
+          </ul>
+
+          <div class="card-profile-box">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--py-blue-deep); color: #FBBF24; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; flex-shrink: 0;">
+                AF
+              </div>
+              <div>
+                <h4 style="margin: 0; color: var(--py-blue-deep); font-size: 1.05rem;">Conduzido por Alexandre Fiuza</h4>
+                <p style="margin: 4px 0 0 0; color: var(--py-text-muted); font-size: 0.85rem;">
+                  Fundador da Paraguay Prime e Diretor da Vértice Social Media. Fluente em espanhol com trânsito direto junto a órgãos e desenvolvedores no Paraguai.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUNA 2: FORMULÁRIO DE PRÉ-DIAGNÓSTICO -->
+        <div id="formulario-diagnostico">
+          <div class="price-tag-box">
+            <div class="price-original">De R$ 850,00</div>
+            <div style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: #E2E8F0;">Investimento na Sessão Individual:</div>
+            <div class="price-current">R$ 397<span style="font-size: 1.2rem; font-weight: 600;">,00</span></div>
+            <div style="font-size: 0.82rem; color: #CBD5E1;">Sessão individual de 50 minutos por videochamada privada</div>
+            <div class="badge-rebate">
+              ★ 100% do valor é abatido se contratar o Concierge VIP
+            </div>
+          </div>
+
+          <form id="formPreDiag" onsubmit="enviarPreDiagnostico(event)" style="background: var(--py-white); border: 1px solid var(--py-border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm);">
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--py-blue-deep); margin-bottom: 6px;">
+              Questionário de Pré-Diagnóstico
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--py-text-muted); margin-bottom: 20px;">
+              Preencha para já irmos preparados para a reunião com as respostas exatas para o seu caso.
+            </p>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label for="diagNome" style="font-size: 0.85rem; font-weight: 700;">Seu Nome Completo:</label>
+              <input type="text" id="diagNome" class="form-control" placeholder="Ex: Roberto Silva" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+              <div class="form-group">
+                <label for="diagWhats" style="font-size: 0.85rem; font-weight: 700;">WhatsApp (com DDD):</label>
+                <input type="tel" id="diagWhats" class="form-control" placeholder="(11) 98765-4321" required>
+              </div>
+              <div class="form-group">
+                <label for="diagEmail" style="font-size: 0.85rem; font-weight: 700;">Seu Melhor E-mail:</label>
+                <input type="email" id="diagEmail" class="form-control" placeholder="roberto@empresa.com" required>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label for="diagRamo" style="font-size: 0.85rem; font-weight: 700;">1. Qual o ramo da sua empresa ou profissão no Brasil?</label>
+              <input type="text" id="diagRamo" class="form-control" placeholder="Ex: TI / Agro / Comércio / Médico / Consultoria" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label for="diagFaturamento" style="font-size: 0.85rem; font-weight: 700;">2. Faturamento médio mensal aproximado:</label>
+              <select id="diagFaturamento" class="form-control" required>
+                <option value="">Selecione a faixa aproximada...</option>
+                <option value="Até R$ 30.000 / mês">Até R$ 30.000 / mês</option>
+                <option value="De R$ 30.000 a R$ 80.000 / mês">De R$ 30.000 a R$ 80.000 / mês</option>
+                <option value="De R$ 80.000 a R$ 200.000 / mês">De R$ 80.000 a R$ 200.000 / mês</option>
+                <option value="Acima de R$ 200.000 / mês">Acima de R$ 200.000 / mês</option>
+                <option value="Investimentos / Patrimônio Líquido">Investimentos / Patrimônio Líquido</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label for="diagObjetivo" style="font-size: 0.85rem; font-weight: 700;">3. Qual o seu objetivo principal?</label>
+              <select id="diagObjetivo" class="form-control" required>
+                <option value="">Selecione seu foco principal...</option>
+                <option value="Redução de Impostos (Abertura de EAS 10%)">Redução de Impostos (Abertura de EAS 10%)</option>
+                <option value="Mudança de Vida Física com a Família">Mudança de Vida Física com a Família</option>
+                <option value="Aquisição de Imóveis / Lotes / Terrenos">Aquisição de Imóveis / Lotes / Terrenos</option>
+                <option value="Residência Permanente & Cédula Paraguaia">Residência Permanente & Cédula Paraguaia</option>
+                <option value="Pacote Completo (EAS + Mudança + Família)">Pacote Completo (EAS + Mudança + Família)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label for="diagFamilia" style="font-size: 0.85rem; font-weight: 700;">4. Quem vai se mudar com você?</label>
+              <select id="diagFamilia" class="form-control" required>
+                <option value="Apenas eu (Solteiro/Individual)">Apenas eu (Solteiro / Individual)</option>
+                <option value="Casal sem filhos">Casal sem filhos</option>
+                <option value="Casal com filhos pequenos (até 12 anos)">Casal com filhos pequenos (até 12 anos)</option>
+                <option value="Casal com filhos adolescentes (colegial)">Casal com filhos adolescentes (colegial)</option>
+                <option value="Apenas empresa (sem mudança física imediata)">Apenas empresa (sem mudança física imediata)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 18px;">
+              <label for="diagDuvida" style="font-size: 0.85rem; font-weight: 700;">5. Qual sua maior dúvida ou receio hoje sobre o Paraguai?</label>
+              <textarea id="diagDuvida" class="form-control" rows="2" placeholder="Ex: Tenho receio sobre a saída definitiva da Receita, ou abertura de conta em banco..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; font-weight: 800; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);">
+              Reservar Minha Sessão com Alexandre Fiuza →
+            </button>
+
+            <div style="margin-top: 12px; font-size: 0.78rem; color: #64748B; text-align: center;">
+              🔒 Seus dados fiscais e patrimoniais são 100% confidenciais e protegidos.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container" style="text-align: center;">
+      <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 8px;">
+        © 2026 Paraguay Prime • O Portal Oficial de Transição, Negócios e Vida na República do Paraguai.
+      </p>
+      <p style="color: #CBD5E1; font-size: 0.88rem; margin-bottom: 8px;">
+        Atendimento Executivo: <a href="mailto:contato@paraguayprime.online" style="color: #FBBF24; font-weight: 600; text-decoration: none;">contato@paraguayprime.online</a> | WhatsApp: <a href="https://wa.me/5548998404830" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; font-weight: 600; text-decoration: none;">+55 (48) 99840-4830</a>
+      </p>
+      <p class="footer-dev-credit">
+        Desenvolvido por: <a href="https://verticesm.com/" target="_blank" rel="noopener noreferrer">Vértice Social Mídia</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.2"></script>
+  <script>
+    function enviarPreDiagnostico(event) {
+      event.preventDefault();
+      const nome = document.getElementById('diagNome').value;
+      const whats = document.getElementById('diagWhats').value;
+      const email = document.getElementById('diagEmail').value;
+      const ramo = document.getElementById('diagRamo').value;
+      const faturamento = document.getElementById('diagFaturamento').value;
+      const objetivo = document.getElementById('diagObjetivo').value;
+      const familia = document.getElementById('diagFamilia').value;
+      const duvida = document.getElementById('diagDuvida').value;
+
+      const texto = `*SOLICITAÇÃO DE SESSÃO ESTRATÉGICA (R$ 397)*%0A%0A` +
+                    `*Nome:* ${encodeURIComponent(nome)}%0A` +
+                    `*WhatsApp:* ${encodeURIComponent(whats)}%0A` +
+                    `*E-mail:* ${encodeURIComponent(email)}%0A` +
+                    `*Ramo:* ${encodeURIComponent(ramo)}%0A` +
+                    `*Faturamento:* ${encodeURIComponent(faturamento)}%0A` +
+                    `*Objetivo:* ${encodeURIComponent(objetivo)}%0A` +
+                    `*Família:* ${encodeURIComponent(familia)}%0A` +
+                    `*Maior dúvida:* ${encodeURIComponent(duvida)}%0A%0A` +
+                    `_Olá Alexandre! Preenchi o formulário de pré-diagnóstico no portal e gostaria de agendar a minha sessão de 50 minutos. Como faço o pagamento da taxa de reserva de R$ 397?_`;
+
+      window.open(`https://wa.me/5548998404830?text=${texto}`, '_blank');
+    }
+  </script>
+</body>
+</html>
