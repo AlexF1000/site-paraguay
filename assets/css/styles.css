@@ -121,6 +121,7 @@ img, video, iframe {
 .badge-gold {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: var(--py-gold-light);
   color: #854D0E;
@@ -131,6 +132,10 @@ img, video, iframe {
   padding: 6px 16px;
   border-radius: var(--radius-full);
   border: 1px solid rgba(201, 151, 0, 0.25);
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .badge-flag {
@@ -570,6 +575,20 @@ body.menu-open {
   align-items: center;
   position: relative;
   z-index: 2;
+}
+
+.hero-grid > *,
+.b2b-grid > *,
+.calc-grid > *,
+.budget-grid > *,
+.diag-grid > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-content {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .hero-content h1 {
@@ -1788,11 +1807,12 @@ body.menu-open {
   .b2b-content .badge-gold {
     font-size: 0.78rem !important;
     padding: 6px 14px !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
     line-height: 1.35 !important;
     display: inline-flex !important;
     max-width: 100% !important;
     text-align: left !important;
+    box-sizing: border-box !important;
   }
 
   .b2b-content h2 {
@@ -1994,6 +2014,47 @@ body.menu-open {
     font-size: 1.22rem !important;
     line-height: 1.32 !important;
   }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-buttons .btn {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+
+  .sim-page-header h1,
+  .fam-header h1,
+  .diag-hero h1,
+  .b2b-hero h1,
+  section h1[style*="font-size"] {
+    font-size: clamp(1.65rem, 6.2vw, 2.15rem) !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* Grades de Formulário 2 Colunas Responsivas */
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid-2col--compact {
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-2col,
+  .form-grid-2col--compact {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
 }
 
 
@@ -2102,6 +2163,8 @@ body.menu-open {
 
 .form-control {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 44px;
   padding: 12px 16px;
   border-radius: var(--radius-md);
@@ -2385,7 +2448,8 @@ body.menu-open {
 .article-meta-bar {
   display: flex;
   align-items: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 8px 14px;
   padding: 16px 0;
   border-top: 1px solid var(--py-border);
   border-bottom: 1px solid var(--py-border);
