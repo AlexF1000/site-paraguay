@@ -8,7 +8,77 @@
   <link rel="canonical" href="https://paraguayprime.online/ebook.html">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5.0">
+  <style>
+  .ebook-sales-section {
+    background: linear-gradient(135deg, #060F20 0%, #0D224A 55%, #15366D 100%) !important;
+    color: #FFFFFF !important;
+    padding: 65px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .ebook-sales-grid {
+    display: grid !important;
+    grid-template-columns: 360px 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+  .ebook-mockup-wrapper {
+    text-align: center !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  .ebook-cover-card {
+    position: relative !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: -12px 18px 40px rgba(0, 0, 0, 0.7), 0 0 45px rgba(212, 175, 55, 0.3) !important;
+    border: 2px solid rgba(212, 175, 55, 0.5) !important;
+    transform: perspective(1000px) rotateY(-3deg) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    background: #081225 !important;
+  }
+  .ebook-cover-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+  .ebook-mobile-cta-btn {
+    display: none;
+  }
+  @media (max-width: 991px) {
+    .ebook-sales-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+    .ebook-mockup-wrapper {
+      max-width: 240px !important;
+      margin: 0 auto !important;
+    }
+    .ebook-cover-card {
+      max-width: 200px !important;
+      transform: none !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+    }
+    .ebook-mobile-cta-btn {
+      display: block !important;
+      margin-top: 14px !important;
+    }
+    .ebook-pricing-box {
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: 18px 16px !important;
+    }
+    .ebook-cta-group {
+      width: 100% !important;
+      min-width: 100% !important;
+    }
+  }
+  </style>
 </head>
 <body style="background: #081225; color: #FFFFFF;">
 
@@ -77,6 +147,12 @@
               <span class="ebook-feat-pill">📱 Formato A4 Digital & Mobile</span>
               <span class="ebook-feat-pill">📄 Leitura Rápida e Direta</span>
               <span class="ebook-feat-pill">📋 Checklist Executivo Incluso</span>
+            </div>
+
+            <div class="ebook-mobile-cta-btn">
+              <button type="button" onclick="abrirModalCompraEbook()" class="btn-buy-ebook">
+                <span>⚡ Comprar E-book por R$ 35</span>
+              </button>
             </div>
           </div>
 

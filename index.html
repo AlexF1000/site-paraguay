@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4.2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5.0">
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P5JRPGMZ"></script>
   <script>
@@ -200,6 +200,274 @@
   <!-- =====================================================================
        SEÇÃO DE LANÇAMENTO DO E-BOOK: O ÚLTIMO A SAIR APAGUE A LUZ (R$ 35,00)
        ===================================================================== -->
+  <style id="ebook-custom-styles">
+  .ebook-sales-section {
+    background: linear-gradient(135deg, #060F20 0%, #0D224A 55%, #15366D 100%) !important;
+    color: #FFFFFF !important;
+    padding: 65px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-top: 3px solid #D4AF37 !important;
+    border-bottom: 3px solid #D4AF37 !important;
+    box-sizing: border-box !important;
+  }
+  .ebook-sales-grid {
+    display: grid !important;
+    grid-template-columns: 360px 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+  .ebook-mockup-wrapper {
+    text-align: center !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+  .ebook-cover-card {
+    position: relative !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: -12px 18px 40px rgba(0, 0, 0, 0.7), 0 0 45px rgba(212, 175, 55, 0.3) !important;
+    border: 2px solid rgba(212, 175, 55, 0.5) !important;
+    transform: perspective(1000px) rotateY(-3deg) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    background: #081225 !important;
+  }
+  .ebook-cover-card:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 55px rgba(212, 175, 55, 0.5) !important;
+  }
+  .ebook-cover-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover !important;
+  }
+  .ebook-features-row {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+    flex-wrap: wrap !important;
+  }
+  .ebook-feat-pill {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #E2E8F0 !important;
+    font-size: 0.74rem !important;
+    padding: 5px 10px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+  .ebook-mobile-cta-btn {
+    display: none;
+  }
+  .ebook-tagline-pre {
+    color: #F87171 !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+  .ebook-title-main {
+    font-family: 'Cinzel', serif, Georgia !important;
+    font-size: clamp(1.8rem, 3.5vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    color: #FFFFFF !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .ebook-title-main span.gold-highlight {
+    color: #FBBF24 !important;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.45) !important;
+  }
+  .ebook-desc-main {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+    color: #CBD5E1 !important;
+    margin-bottom: 20px !important;
+  }
+  .ebook-bullets-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin-bottom: 22px !important;
+  }
+  .ebook-bullet-card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(212, 175, 55, 0.25) !important;
+    border-radius: 10px !important;
+    padding: 12px 14px !important;
+    transition: transform 0.2s, background 0.2s !important;
+  }
+  .ebook-bullet-card:hover {
+    background: rgba(255, 255, 255, 0.09) !important;
+    border-color: rgba(212, 175, 55, 0.5) !important;
+  }
+  .ebook-bullet-card h4 {
+    font-size: 0.92rem !important;
+    color: #FBBF24 !important;
+    font-weight: 700 !important;
+    margin: 0 0 4px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+  }
+  .ebook-bullet-card p {
+    font-size: 0.8rem !important;
+    color: #E2E8F0 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+  .ebook-pricing-box {
+    background: rgba(0, 0, 0, 0.55) !important;
+    border: 2px solid #D4AF37 !important;
+    border-radius: 14px !important;
+    padding: 18px 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+    box-sizing: border-box !important;
+  }
+  .ebook-price-left {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .ebook-old-price {
+    font-size: 0.82rem !important;
+    color: #94A3B8 !important;
+    text-decoration: line-through !important;
+  }
+  .ebook-current-price {
+    font-size: 2.2rem !important;
+    font-weight: 900 !important;
+    color: #FBBF24 !important;
+    line-height: 1 !important;
+    margin: 3px 0 !important;
+  }
+  .ebook-current-price small {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+  }
+  .ebook-price-sub {
+    font-size: 0.76rem !important;
+    color: #10B981 !important;
+    font-weight: 700 !important;
+  }
+  .ebook-cta-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    min-width: 240px !important;
+  }
+  .btn-buy-ebook {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%) !important;
+    color: #081225 !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    padding: 14px 20px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45) !important;
+    text-decoration: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+  }
+  .btn-buy-ebook:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.65) !important;
+    background: linear-gradient(135deg, #FBBF24 0%, #D4AF37 100%) !important;
+  }
+  .btn-preview-ebook {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding: 9px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: background 0.2s !important;
+  }
+  .btn-preview-ebook:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #FFFFFF !important;
+  }
+  @media (max-width: 991px) {
+    .ebook-sales-section {
+      padding: 40px 0 !important;
+    }
+    .ebook-sales-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+    .ebook-mockup-wrapper {
+      max-width: 240px !important;
+      margin: 0 auto !important;
+    }
+    .ebook-cover-card {
+      max-width: 200px !important;
+      transform: none !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+    }
+    .ebook-mobile-cta-btn {
+      display: block !important;
+      margin-top: 14px !important;
+    }
+    .ebook-title-main {
+      font-size: 1.65rem !important;
+      text-align: center !important;
+    }
+    .ebook-tagline-pre {
+      justify-content: center !important;
+    }
+    .ebook-desc-main {
+      text-align: center !important;
+      font-size: 0.92rem !important;
+    }
+    .ebook-bullets-grid {
+      grid-template-columns: 1fr !important;
+      gap: 10px !important;
+    }
+    .ebook-pricing-box {
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: 18px 16px !important;
+    }
+    .ebook-price-left {
+      align-items: center !important;
+    }
+    .ebook-cta-group {
+      width: 100% !important;
+      min-width: 100% !important;
+    }
+    .btn-buy-ebook {
+      padding: 15px 18px !important;
+      font-size: 1.05rem !important;
+    }
+  }
+  </style>
+
   <section class="ebook-sales-section" id="ebook-destaque">
     <div class="container">
       <div class="ebook-sales-grid">
@@ -226,6 +494,12 @@
             <span class="ebook-feat-pill">📱 Leitura no Celular e PC</span>
             <span class="ebook-feat-pill">📄 11 Páginas A4 Diretas</span>
             <span class="ebook-feat-pill">📋 Checklist Prático Incluso</span>
+          </div>
+
+          <div class="ebook-mobile-cta-btn">
+            <button type="button" onclick="abrirModalCompraEbook()" class="btn-buy-ebook">
+              <span>⚡ Comprar E-book por R$ 35</span>
+            </button>
           </div>
         </div>
 
