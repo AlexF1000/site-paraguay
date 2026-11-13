@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4.1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.2">
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P5JRPGMZ"></script>
   <script>
@@ -39,21 +39,35 @@
       <nav>
         <ul class="nav-links" id="navMenu">
           <li><a href="index.html" class="nav-link">Início</a></li>
-          <li><a href="simulador-tributario.html" class="nav-link">Investidores & Impostos</a></li>
-          <li><a href="custo-de-vida.html" class="nav-link">Famílias & Custo de Vida</a></li>
-          <li><a href="guia-residencia.html" class="nav-link">Residência Legal</a></li>
-          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Residência</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="para-empresas.html" class="nav-link" style="color: var(--py-red-primary); font-weight: 700;">Para Empresas</a></li>
+          <li class="mobile-nav-cta">
+            <a href="index.html" onclick="toggleMobileMenu();" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Voltar ao Portal
+            </a>
+          </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a href="index.html" class="btn btn-outline-white" style="font-size: 0.85rem;">
+        <a href="index.html" class="btn btn-primary nav-cta-desktop">
           Voltar ao Portal
         </a>
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" onclick="toggleMobileMenu()">
+          <span class="hamburger-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="hamburger-label">MENU</span>
+        </button>
       </div>
     </div>
   </header>
+  <div id="navOverlay" class="nav-overlay" onclick="toggleMobileMenu()"></div>
 
   <!-- HERO INSTITUCIONAL -->
   <section class="section-padding-sm" style="background: radial-gradient(circle at 75% 30%, #15366D 0%, #0D224A 55%, #061122 100%); color: var(--py-white); text-align: center;">

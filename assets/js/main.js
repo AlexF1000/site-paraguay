@@ -177,6 +177,8 @@ window.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     fecharModalEspecialista();
+    fecharModalCompraEbook();
+    fecharModalPreviaEbook();
     closeMobileMenu();
   }
 });
@@ -208,3 +210,94 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+// ==========================================================================
+// CONTROLE DO E-BOOK: "O �LTIMO A SAIR APAGUE A LUZ" (R$ 35,00)
+// ==========================================================================
+function abrirModalCompraEbook() {
+  registrarEventoGA4('open_modal_ebook_compra', { item: 'ebook_35' });
+  const modal = document.getElementById('modalCompraEbook');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function fecharModalCompraEbook() {
+  const modal = document.getElementById('modalCompraEbook');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function abrirModalPreviaEbook() {
+  registrarEventoGA4('open_modal_ebook_previa', { item: 'ebook_previa' });
+  const modal = document.getElementById('modalPreviaEbook');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function fecharModalPreviaEbook() {
+  const modal = document.getElementById('modalPreviaEbook');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function copiarPixEbook() {
+  const chavePix = '+5548984294229';
+  navigator.clipboard.writeText(chavePix).then(() => {
+    const btn = document.getElementById('btnCopiarPixEbook');
+    if (btn) {
+      const original = btn.innerText;
+      btn.innerText = '? Chave Copiada!';
+      btn.style.background = '#10B981';
+      btn.style.color = '#FFFFFF';
+      setTimeout(() => {
+        btn.innerText = original;
+        btn.style.background = '#D4AF37';
+        btn.style.color = '#0B192C';
+      }, 3500);
+    }
+  }).catch(() => {
+    alert('Chave Pix: +5548984294229 (Telefone Celular)');
+  });
+}
+
+function processarCompraEbook(e) {
+  e.preventDefault();
+  const nome = document.getElementById('ebookNome')?.value.trim() || '';
+  const whats = document.getElementById('ebookWhats')?.value.trim() || '';
+  const email = document.getElementById('ebookEmail')?.value.trim() || '';
+
+  registrarEventoGA4('purchase_ebook_intent', { nome: nome, email: email, price: 35.00 });
+
+  // Exibir a caixa de Pix e confirmação dentro do modal
+  const formBox = document.getElementById('formCompraEbookArea');
+  const pixBox = document.getElementById('pixConfirmacaoEbookArea');
+  if (formBox && pixBox) {
+    formBox.style.display = 'none';
+    pixBox.style.display = 'block';
+  }
+
+  // Montar link direto de WhatsApp com dados
+  const textoWhats = '*PEDIDO DO E-BOOK: O ÚLTIMO A SAIR APAGUE A LUZ (R$ 35,00)*%0A%0A' +
+                     '*Nome:* ' + encodeURIComponent(nome) + '%0A' +
+                     '*WhatsApp:* ' + encodeURIComponent(whats) + '%0A' +
+                     '*E-mail para Envio:* ' + encodeURIComponent(email) + '%0A%0A' +
+                     '_Olá Alex! Acabei de solicitar o e-book no portal Paraguay Prime. Já anotei os dados do Pix no valor de R$ 35,00 e gostaria de confirmar a liberação do meu exemplar em PDF._';
+  
+  const whatsUrl = 'https://wa.me/5548998404830?text=' + textoWhats;
+  
+  const btnWhats = document.getElementById('btnWhatsLiberarEbook');
+  if (btnWhats) {
+    btnWhats.href = whatsUrl;
+  }
+
+  // Abre o WhatsApp em nova aba
+  window.open(whatsUrl, '_blank');
+}

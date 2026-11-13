@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4.1">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4.2">
   <!-- Google Analytics 4 (GA4) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P5JRPGMZ"></script>
   <script>
@@ -60,14 +60,16 @@
       <nav>
         <ul class="nav-links" id="navMenu">
           <li><a href="index.html" class="nav-link active">Início</a></li>
-          <li><a href="diagnostico.html" class="nav-link" style="color: #D4AF37; font-weight: 700;">⚡ Diagnóstico VIP</a></li>
-          <li><a href="simulador-tributario.html" class="nav-link">Investidores & Impostos</a></li>
-          <li><a href="custo-de-vida.html" class="nav-link">Famílias & Custo de Vida</a></li>
-          <li><a href="guia-residencia.html" class="nav-link">Residência Legal</a></li>
-          <li><a href="blog.html" class="nav-link">Blog & Notícias</a></li>
-          <li><a href="faq.html" class="nav-link">Perguntas Frequentes</a></li>
-          <li><a href="para-empresas.html" class="nav-link" style="color: var(--py-red-primary); font-weight: 700;">Para Empresas (B2B)</a></li>
+          <li><a href="simulador-tributario.html" class="nav-link">Simulador Fiscal</a></li>
+          <li><a href="custo-de-vida.html" class="nav-link">Custo de Vida</a></li>
+          <li><a href="guia-residencia.html" class="nav-link">Residência</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="#ebook-destaque" class="nav-link" style="color: #FBBF24; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;"><span>📘</span> E-book (R$ 35)</a></li>
           <li class="mobile-nav-cta">
+            <a href="#ebook-destaque" onclick="toggleMobileMenu();" class="btn" style="width: 100%; margin-bottom: 8px; justify-content: center; display: inline-flex; background: rgba(212,175,55,0.18); color: #FBBF24; font-weight: 800; border: 1px solid #D4AF37;">
+              📘 E-book O Último a Sair (R$ 35)
+            </a>
             <a href="diagnostico.html" onclick="toggleMobileMenu();" class="btn btn-primary" style="width: 100%; margin-bottom: 8px; justify-content: center; display: inline-flex; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #0B192C; font-weight: 800; border: none;">
               ⚡ Agendar Diagnóstico (R$ 397)
             </a>
@@ -82,7 +84,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="diagnostico.html" class="btn btn-primary" style="background: linear-gradient(135deg, #D4AF37, #B8860B); color: #0B192C; font-weight: 800; border: none; padding: 9px 16px; font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+        <a href="diagnostico.html" class="btn btn-vip-nav">
           <span>⚡ Diagnóstico VIP</span>
         </a>
         <a href="para-empresas.html" class="btn btn-b2b">
@@ -189,6 +191,106 @@
           <a href="diagnostico.html" class="btn btn-outline-gold" style="width: 100%; margin-top: 10px; display: inline-flex; justify-content: center; align-items: center; gap: 8px; border: 1px solid #D4AF37; color: #D4AF37; font-weight: 700; text-decoration: none; padding: 12px; border-radius: 6px; font-size: 0.92rem; background: rgba(212,175,55,0.08);">
             ⚡ Agendar Diagnóstico Individual com Diretor (R$ 397) →
           </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SEÇÃO DE LANÇAMENTO DO E-BOOK: O ÚLTIMO A SAIR APAGUE A LUZ (R$ 35,00)
+       ===================================================================== -->
+  <section class="ebook-sales-section" id="ebook-destaque">
+    <div class="container">
+      <div class="ebook-sales-grid">
+        
+        <!-- Mockup do Livro com Badges Flutuantes -->
+        <div class="ebook-mockup-wrapper">
+          <div style="margin-bottom: 14px;">
+            <span class="badge-gold" style="display: inline-block; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.05em; padding: 6px 14px; text-transform: uppercase;">
+              ★ LANÇAMENTO OFICIAL 2026
+            </span>
+          </div>
+          
+          <div class="ebook-cover-card">
+            <img src="assets/images/ebook-capa.jpg" alt="Capa do E-book O Último a Sair Apague a Luz - Alex Fiuza" loading="lazy">
+          </div>
+
+          <div style="margin-top: 18px;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(212, 175, 55, 0.15); border: 1px solid #D4AF37; color: #FBBF24; font-weight: 800; font-size: 0.82rem; padding: 7px 16px; border-radius: 999px;">
+              ⚡ 11 Capítulos • Download Imediato em PDF
+            </span>
+          </div>
+
+          <div class="ebook-features-row">
+            <span class="ebook-feat-pill">📱 Leitura no Celular e PC</span>
+            <span class="ebook-feat-pill">📄 11 Páginas A4 Diretas</span>
+            <span class="ebook-feat-pill">📋 Checklist Prático Incluso</span>
+          </div>
+        </div>
+
+        <!-- Conteúdo Persuasivo e Oferta -->
+        <div class="ebook-content-col">
+          <div class="ebook-tagline-pre">
+            <span>🔥</span> MANUAL DE SOBREVIVÊNCIA TRIBUTÁRIA E MIGRATÓRIA
+          </div>
+
+          <h2 class="ebook-title-main">
+            O ÚLTIMO A SAIR <span class="gold-highlight">APAGUE A LUZ</span>
+          </h2>
+
+          <p class="ebook-desc-main">
+            O guia sem filtro e bem-humorado para empresários e famílias brasileiras que cansaram do manicômio fiscal e decidiram prosperar no Paraguai com <strong>10% de imposto flat</strong> — sem cair em armadilhas de despachantes amadores.
+          </p>
+
+          <!-- Grade de Destaques dos Capítulos -->
+          <div class="ebook-bullets-grid">
+            <div class="ebook-bullet-card">
+              <h4><span>🏛️</span> O Choque Fiscal Real</h4>
+              <p>IRE 10%, IVA 10%, IDU 8% vs. o emaranhado do Brasil. Como fazer a Comunicação de Saída Definitiva da RFB com segurança e sem multas.</p>
+            </div>
+
+            <div class="ebook-bullet-card">
+              <h4><span>🏢</span> Empresa EAS em 2026</h4>
+              <p>O passo a passo da Lei 6480/2020: emissão de RUC, capital social desburocratizado e compliance para aprovar conta em bancos locais.</p>
+            </div>
+
+            <div class="ebook-bullet-card">
+              <h4><span>🪪</span> Nova Lei de Migração (6984/2022)</h4>
+              <p>Adeus depósito de US$ 5.000 no BNF. Entenda a Residência Temporária de 2 anos, a Cédula Paraguaia e o Investor Pass SUACE.</p>
+            </div>
+
+            <div class="ebook-bullet-card">
+              <h4><span>🎒</span> Manual "Eu Me Viro" (Sobrevivência)</h4>
+              <p>Kit para repartições: água congelada para o calor de 42°C, bolachas para a fila, notas trocadas para cartório e o <em>dress code</em> para não ser barrado na porta!</p>
+            </div>
+          </div>
+
+          <!-- Caixa de Preço e Ação -->
+          <div class="ebook-pricing-box">
+            <div class="ebook-price-left">
+              <span class="ebook-old-price">De R$ 97,00</span>
+              <div class="ebook-current-price">
+                <small>R$</small> 35<small>,00</small>
+              </div>
+              <span class="ebook-price-sub">✔ Pagamento Único via Pix • Acesso Vitalício</span>
+            </div>
+
+            <div class="ebook-cta-group">
+              <button type="button" onclick="abrirModalCompraEbook()" class="btn-buy-ebook">
+                <span>⚡ Comprar E-book por R$ 35</span>
+              </button>
+              <button type="button" onclick="abrirModalPreviaEbook()" class="btn-preview-ebook">
+                📖 Ver Sumário dos 11 Capítulos
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; font-size: 0.82rem; color: #94A3B8; display: flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Autoria de <strong>Alex Fiuza</strong> (Diretor Vértice Social Mídia | Fundador Paraguai Prime). Liberação instantânea no WhatsApp.</span>
+          </div>
+
         </div>
 
       </div>
@@ -660,6 +762,153 @@
           <a href="mailto:afiuza@verticesm.com" style="color: #FBBF24; font-weight: 700; text-decoration: none;">afiuza@verticesm.com</a>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL DE COMPRA DO E-BOOK (R$ 35,00) -->
+  <div class="modal-overlay" id="modalCompraEbook">
+    <div class="modal-card modal-dark" style="max-width: 540px;">
+      <button class="modal-close-btn" onclick="fecharModalCompraEbook()">✕</button>
+      
+      <div class="modal-header" style="text-align: center; border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 16px; margin-bottom: 18px;">
+        <span class="badge-gold" style="margin-bottom: 8px;">🔥 Download Imediato em PDF</span>
+        <h3 style="font-size: 1.45rem; color: #FFFFFF; font-weight: 800; margin: 4px 0;">O Último a Sair <span style="color: #FBBF24;">Apague a Luz</span></h3>
+        <p style="color: #CBD5E1; font-size: 0.88rem; margin: 0;">Preencha seus dados para liberação imediata do seu exemplar digital por apenas <strong>R$ 35,00</strong>.</p>
+      </div>
+
+      <!-- ÁREA 1: FORMULÁRIO DE DADOS DO CLIENTE -->
+      <div id="formCompraEbookArea">
+        <form onsubmit="processarCompraEbook(event)">
+          <div class="form-group">
+            <label for="ebookNome" style="font-weight: 700; font-size: 0.88rem;">Seu Nome Completo:</label>
+            <input type="text" id="ebookNome" class="form-control" placeholder="Ex: Rodrigo Silveira" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ebookWhats" style="font-weight: 700; font-size: 0.88rem;">Seu WhatsApp (com DDD):</label>
+            <input type="tel" id="ebookWhats" class="form-control" placeholder="Ex: (11) 98765-4321" required>
+            <small style="color: #94A3B8; font-size: 0.76rem;">Enviaremos a confirmação diretamente no seu número.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="ebookEmail" style="font-weight: 700; font-size: 0.88rem;">Seu Melhor E-mail:</label>
+            <input type="email" id="ebookEmail" class="form-control" placeholder="Ex: seuemail@exemplo.com" required>
+            <small style="color: #94A3B8; font-size: 0.76rem;">Para receber o arquivo em PDF com backup permanente.</small>
+          </div>
+
+          <!-- Resumo do Pedido -->
+          <div style="background: rgba(0,0,0,0.35); border: 1px solid rgba(212,175,55,0.3); border-radius: 8px; padding: 12px 16px; margin: 16px 0; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-weight: 800; color: #FFFFFF; font-size: 0.95rem;">E-book Completo (11 Capítulos A4)</div>
+              <div style="font-size: 0.78rem; color: #10B981;">✔ Acesso vitalício + Checklist incluso</div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 0.78rem; color: #94A3B8; text-decoration: line-through;">R$ 97,00</span>
+              <div style="font-size: 1.4rem; font-weight: 900; color: #FBBF24;">R$ 35,00</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 800; font-size: 1rem; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #081225; border: none; box-shadow: 0 4px 15px rgba(212,175,55,0.4);">
+            Gerar Pagamento Pix de R$ 35,00 →
+          </button>
+        </form>
+      </div>
+
+      <!-- ÁREA 2: BOX DE PAGAMENTO PIX E CONFIRMAÇÃO (EXIBIDA APÓS O FORMULÁRIO) -->
+      <div id="pixConfirmacaoEbookArea" style="display: none; text-align: center;">
+        <div style="width: 54px; height: 54px; margin: 0 auto 12px auto; border-radius: 50%; background: rgba(16, 185, 129, 0.2); border: 2px solid #10B981; display: flex; align-items: center; justify-content: center; color: #10B981;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+
+        <h4 style="color: #FFFFFF; font-size: 1.15rem; font-weight: 800; margin-bottom: 4px;">Quase lá! Realize seu Pix de R$ 35,00</h4>
+        <p style="color: #CBD5E1; font-size: 0.85rem; line-height: 1.45; margin-bottom: 16px;">
+          Pague com a chave abaixo e clique no botão para nos avisar no WhatsApp e liberar o download imediato:
+        </p>
+
+        <!-- Chave Pix Oficial -->
+        <div style="background: rgba(0,0,0,0.5); border: 1px dashed rgba(212,175,55,0.6); border-radius: 10px; padding: 14px; margin-bottom: 16px; text-align: left;">
+          <div style="font-size: 0.74rem; text-transform: uppercase; color: #94A3B8; font-weight: 700; margin-bottom: 6px;">Chave Pix Oficial (Telefone Celular):</div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; background: rgba(255,255,255,0.06); padding: 8px 12px; border-radius: 6px;">
+            <span style="font-size: 1.1rem; font-weight: 800; color: #FBBF24; letter-spacing: 0.05em;">+5548984294229</span>
+            <button type="button" onclick="copiarPixEbook()" id="btnCopiarPixEbook" style="background: #D4AF37; color: #081225; font-weight: 800; border: none; border-radius: 6px; padding: 7px 14px; font-size: 0.82rem; cursor: pointer; transition: background 0.2s;">
+              Copiar Chave
+            </button>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.76rem; color: #CBD5E1; display: grid; gap: 4px;">
+            <div>👤 <strong>Beneficiária:</strong> Sonia Woebcken Fiuza</div>
+            <div>🏢 <strong>Setor:</strong> Diretoria Financeira & Administrativa (Vértice Social Mídia)</div>
+            <div>💰 <strong>Valor Exato:</strong> R$ 35,00</div>
+          </div>
+        </div>
+
+        <!-- Botão WhatsApp Direto com Alex Fiuza -->
+        <a id="btnWhatsLiberarEbook" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; justify-content: center; align-items: center; gap: 10px; width: 100%; padding: 14px; font-size: 0.98rem; font-weight: 800; background: #25D366; color: #FFFFFF; border: none; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); margin-bottom: 10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Confirmar Pix no WhatsApp de Alex Fiuza →</span>
+        </a>
+
+        <!-- Opção de Download Imediato -->
+        <a href="ebook/Ebook_O_Ultimo_a_Sair_Apague_a_Luz_Paraguay_Prime.pdf" download="Ebook_O_Ultimo_a_Sair_Apague_a_Luz_Paraguay_Prime.pdf" target="_blank" class="btn" style="display: inline-flex; justify-content: center; align-items: center; gap: 8px; width: 100%; padding: 12px; font-size: 0.88rem; font-weight: 700; background: rgba(255,255,255,0.08); color: #FBBF24; border: 1px solid rgba(212,175,55,0.4); border-radius: 8px; text-decoration: none;">
+          📥 Baixar Arquivo PDF Diretamente (Após Pagar)
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE PRÉVIA E SUMÁRIO COMPLETO DO E-BOOK -->
+  <div class="modal-overlay" id="modalPreviaEbook">
+    <div class="modal-card modal-dark" style="max-width: 620px; max-height: 90vh; overflow-y: auto;">
+      <button class="modal-close-btn" onclick="fecharModalPreviaEbook()">✕</button>
+      
+      <div class="modal-header" style="border-bottom: 1px solid rgba(212,175,55,0.3); padding-bottom: 14px; margin-bottom: 18px;">
+        <span class="badge-blue">Sumário Oficial</span>
+        <h3 style="color: #FFFFFF; font-size: 1.4rem; font-weight: 800; margin-top: 4px;">O Que Você Vai Encontrar no Livro:</h3>
+        <p style="color: #CBD5E1; font-size: 0.86rem; margin: 0;">11 páginas densas, diagramadas em formato A4 editorial, sem rodeios ou juridiquês inútil.</p>
+      </div>
+
+      <div style="display: grid; gap: 12px; font-size: 0.88rem; color: #E2E8F0;">
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 1:</strong> Capa Oficial com Charge Exclusiva e Selos de Autenticidade da Lei 6984/2022.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 2:</strong> Prefácio & Manifesto — <em>"Se você é empresário no Brasil, você já é um gladiador sobrevivente."</em>
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 3 (Cap. 1):</strong> O Choque Fiscal Real — Comparativo tributário IRPJ/CSLL/PIS/COFINS vs. Sistema Triplo 10 (IRE 10%, IVA 10%, IDU 8%) e o passo a passo da Saída Definitiva da RFB.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 4 (Cap. 2):</strong> Abrindo sua Empresa EAS Sem Ilusões — Lei 6480/2020, capital social flexível, RUC na DNIT e compliance de conta bancária.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 5 (Cap. 3):</strong> Residência Legal Decodificada — O fim do depósito de US$ 5k no BNF, Residência Temporária de 2 anos + Cédula e Investor Pass SUACE.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 6 (Cap. 4 - Parte 1):</strong> Manual "Eu Me Viro" — O Kit de Sobrevivência na Mochila (água congelada para os 42°C, bolachas para a fila, notas trocadas para cartórios, power bank) e a advertência de <strong>Dress Code</strong> nas repartições!
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 7 (Cap. 4 - Parte 2):</strong> As 5 Armadilhas Mortais — Validade de 90 dias, Apostila de Haia, divergências de nome e carimbo de fronteira.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 8 (Cap. 5):</strong> Modo Assessoria VIP — Quando o tempo vale mais que a paciência; como fazer tudo em 48 a 72 horas em Assunção.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 9 (Cap. 6):</strong> O Choque de Realidade — A Vida Nobre em Assunção (Villa Morra, Santa Teresa, Luque, custos de vida, colégios e o ritual do Tereré).
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 10:</strong> Checklist Executivo de Embarque com caixas de marcação para conferência prévia.
+        </div>
+        <div style="background: rgba(255,255,255,0.05); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #D4AF37;">
+          <strong style="color: #FBBF24;">Página 11:</strong> Contracapa com canais oficiais de Alex Fiuza e compromisso institucional Paraguay Prime.
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; text-align: center;">
+        <button type="button" onclick="fecharModalPreviaEbook(); abrirModalCompraEbook();" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 800; font-size: 1rem; background: linear-gradient(135deg, #D4AF37, #B8860B); color: #081225; border: none; box-shadow: 0 4px 15px rgba(212,175,55,0.4);">
+          ⚡ Quero Garantir Meu Exemplar por R$ 35,00 →
+        </button>
+      </div>
+
     </div>
   </div>
 
