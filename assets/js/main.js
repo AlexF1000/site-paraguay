@@ -216,6 +216,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 function abrirModalCompraEbook() {
   registrarEventoGA4('open_modal_ebook_compra', { item: 'ebook_35' });
+  if (typeof fbq === 'function') {
+    fbq('track', 'InitiateCheckout', {
+      content_name: 'E-book O Último a Sair Apague a Luz',
+      value: 35.00,
+      currency: 'BRL'
+    });
+  }
   const modal = document.getElementById('modalCompraEbook');
   if (modal) {
     modal.classList.add('active');
@@ -233,6 +240,12 @@ function fecharModalCompraEbook() {
 
 function abrirModalPreviaEbook() {
   registrarEventoGA4('open_modal_ebook_previa', { item: 'ebook_previa' });
+  if (typeof fbq === 'function') {
+    fbq('track', 'ViewContent', {
+      content_name: 'Sumário E-book O Último a Sair Apague a Luz',
+      content_category: 'E-book Preview'
+    });
+  }
   const modal = document.getElementById('modalPreviaEbook');
   if (modal) {
     modal.classList.add('active');
@@ -250,6 +263,13 @@ function fecharModalPreviaEbook() {
 
 function copiarPixEbook() {
   const chavePix = '+5548984294229';
+  if (typeof fbq === 'function') {
+    fbq('track', 'AddPaymentInfo', {
+      content_name: 'E-book O Último a Sair Apague a Luz',
+      value: 35.00,
+      currency: 'BRL'
+    });
+  }
   navigator.clipboard.writeText(chavePix).then(() => {
     const btn = document.getElementById('btnCopiarPixEbook');
     if (btn) {
@@ -275,6 +295,13 @@ function processarCompraEbook(e) {
   const email = document.getElementById('ebookEmail')?.value.trim() || '';
 
   registrarEventoGA4('purchase_ebook_intent', { nome: nome, email: email, price: 35.00 });
+  if (typeof fbq === 'function') {
+    fbq('track', 'Purchase', {
+      content_name: 'E-book O Último a Sair Apague a Luz',
+      value: 35.00,
+      currency: 'BRL'
+    });
+  }
 
   // Exibir a caixa de Pix e confirmação dentro do modal
   const formBox = document.getElementById('formCompraEbookArea');
