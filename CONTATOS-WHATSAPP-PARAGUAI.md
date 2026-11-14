@@ -102,13 +102,48 @@ Se você manda um texto longo com links, a pessoa se assusta, acha que é robô/
 * **WhatsApp:** `+595 995 628 862`
 * **Abrir no WhatsApp:** [https://wa.me/595995628862](https://wa.me/595995628862)
 
-### 3.4 VF Paraguay Gestiones (Assessoria migratória e cédula paraguaia)
+### 3.4 VF Paraguay Gestiones (Assessoria migratória e cédula paraguaia) - [INTERESSADO / EM NEGOCIAÇÃO]
 * **WhatsApp:** `+595 982 633 144`
 * **Abrir no WhatsApp:** [https://wa.me/595982633144](https://wa.me/595982633144)
+* **Status:** Viviana confirmou envio de documentação e tabelas de honorários.
 
-### 3.5 Paraguay Expert (gestoriaparaguay.com)
+### 3.5 Paraguay Expert (gestoriaparaguay.com) - [INTERESSADO / EM NEGOCIAÇÃO]
 * **WhatsApp:** `+595 992 933 238`
 * **Abrir no WhatsApp:** [https://wa.me/595992933238](https://wa.me/595992933238)
+* **Status:** Solicitou e-mail para envio de proposta e requisitos de parceiro.
+
+---
+
+## 🇵🇾 3.B. CIUDAD DEL ESTE (CDE) — Contabilidade, EAS & Assessoria Jurídica
+
+> **Vantagem Estratégica de CDE:** Cidade de fronteira com Foz do Iguaçu (PR). Ideal para clientes brasileiros que preferem ir de carro ou voar até Foz para abrir EAS e fazer a residência sem precisar se deslocar até Assunção. Praticamente todos falam português fluentemente.
+
+### 3.B.1 EC Paraguay (EC Consultoría Empresarial)
+* **Foco:** Abertura de EAS, constituição societária, RUC na DNIT, domicílio fiscal e contabilidade mensal para brasileiros.
+* **Localização:** Km 9 Monday, Av. 2000, Ciudad del Este, Alto Paraná.
+* **WhatsApp Verificado:** `+595 981 898 742`
+* **E-mail:** `contacto@ecparaguay.com`
+* **👉 Disparar no WhatsApp (1 Clique):** [https://wa.me/595981898742?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F](https://wa.me/595981898742?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F)
+
+### 3.B.2 Buró Consultoría & Contabilidad
+* **Foco:** Assessoria contábil, tributária e societária de alto padrão para investidores e empreendedores estrangeiros.
+* **Localização:** Bernardino Caballero 754 c/ Yataity Corá, Ciudad del Este.
+* **WhatsApp Verificado:** `+595 981 963 150`
+* **E-mail:** `atencion@buro.com.py`
+* **👉 Disparar no WhatsApp (1 Clique):** [https://wa.me/595981963150?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F](https://wa.me/595981963150?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F)
+
+### 3.B.3 Navarro Asesoramiento Contable
+* **Foco:** Escritório contábil tradicional em CDE, especialização em abertura de EAS, emissão de RUC, escrituração de livros e obrigações tributárias (IRE, IVA, IRP).
+* **Localização:** Ciudad del Este, Alto Paraná.
+* **WhatsApp Verificado:** `+595 972 840 400`
+* **Web:** `navarro.com.py`
+* **👉 Disparar no WhatsApp (1 Clique):** [https://wa.me/595972840400?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F](https://wa.me/595972840400?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F)
+
+### 3.B.4 LH Prime Asesoría Jurídica y Documentos
+* **Foco:** Assessoria jurídica, radicação temporária e permanente pela nova Lei de Migração (6984/2022), Cédula de Identidade paraguaia e abertura de empresas na fronteira.
+* **Localização:** Av. Abdón Palacios, km 4,5 (ao lado da Uninter), Ciudad del Este.
+* **WhatsApp Verificado:** `+595 983 214 002` (Alternativo: `+595 982 274 564`)
+* **👉 Disparar no WhatsApp (1 Clique):** [https://wa.me/595983214002?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F](https://wa.me/595983214002?text=%C2%A1Hola!%20Buenos%20d%C3%ADas.%20Trabajo%20desde%20Brasil%20orientando%20a%20empresarios%20brasile%C3%B1os%20que%20buscan%20residencia%20y%20apertura%20de%20EAS%20en%20Paraguay.%20%C2%BFUstedes%20trabajan%20recibiendo%20clientes%20referidos%20con%20acuerdo%20de%20honorarios%2Fcomisi%C3%B3n%20para%20asesor%20externo%3F%20%C2%BFCon%20qui%C3%A9n%20del%20estudio%20podr%C3%ADa%20conversarlo%20brevemente%3F)
 
 ---
 
@@ -160,20 +195,29 @@ Se você manda um texto longo com links, a pessoa se assusta, acha que é robô/
 
 ---
 
-### 🔹 Para Contabilidade, EAS e Migração (Ex: Escalada, Ramos, VF Gestiones)
+### 🔹 Para Contabilidade, EAS e Migração (Assunção e Ciudad del Este)
 
 **Mensagem 1 (Primeiro contato - SEM links):**
-> *¡Hola! Buenos días, ¿cómo están? Les saluda Alex Fiuza desde Brasil. Quería hacerles una consulta sobre apertura de empresas EAS y radicación legal para empresarios brasileños. ¿Con quién del equipo podría conversar brevemente sobre una posible derivação de clientes?*
+> *¡Hola! Buenos días. Trabajo desde Brasil orientando a empresarios brasileños que buscan residencia y apertura de EAS en Paraguay. ¿Ustedes trabajan recibiendo clientes referidos con acuerdo de honorarios/comisión para asesor externo? ¿Con quién del estudio podría conversarlo brevemente?*
 
 *(Aguarde o atendente responder)*
 
-**Mensagem 2 (Após a resposta deles):**
-> *Muchas gracias. En Paraguay Prime recibimos consultas constantes de empresarios brasileños que necesitan constituir su EAS, abrir RUC y tramitar su residencia de forma 100% segura.*
+**Mensagem 2 (Após a resposta deles — Especial Ciudad del Este & Foz do Iguaçu com link do Portal):**
+> *Muchas gracias por la respuesta. Mi nombre es Alex Fiuza, dirijo el portal empresarial **Paraguay Prime** (https://paraguayprime.online) y la agencia Vértice Social Mídia en Brasil.*
 >
-> *Estamos cerrando acuerdos de derivación directa para recomendar un estudio contable y jurídico de primer nivel como partner oficial en nuestro portal.*
+> *Atendemos a empresarios brasileños que buscan reducir su carga tributaria a través de la constitución de EAS con RUC y residencia legal en Paraguay.*
 >
-> *Pueden conocer la propuesta aquí: https://paraguayprime.online/abertura-empresas (o la versión general B2B: https://paraguayprime.online/para-empresas-es.html)*
+> *Como varios de nuestros clientes ingresan por Foz do Iguaçu y prefieren Ciudad del Este para sus trámites presenciales, estamos seleccionando 1 o 2 estudios contables y jurídicos de máxima confianza en CDE para derivarles estos clientes de forma directa.*
 >
-> *¿Sería posible coordinar unos minutos o conversar sobre cómo coordinaríamos estas recomendaciones? Un saludo cordial.*
-> *Alexandre Fiuza — Paraguay Prime*
+> *Pueden conocer nuestro portal y la sección institucional de partners aquí:*
+> 👉 *https://paraguayprime.online/abertura-empresas*
+> 👉 *https://paraguayprime.online/para-empresas-es.html*
+>
+> *Habitualmente trabajamos con una comisión u honorario por cliente efectivamente cerrado (o un fee acordado por cada EAS o radicación).*
+>
+> *¿Tienen una tabla de aranceles estándar para apertura de EAS y radicación, y qué porcentaje o monto suelen reservar para el asesor externo que deriva el cliente?*
+>
+> *Quedo a su disposición para coordinar los detalles.*
+> *Alexandre Fiuza — Paraguay Prime & Vértice Social Mídia*
+> *WhatsApp: +55 (48) 99840-4830*
 
