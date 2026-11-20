@@ -3087,3 +3087,17 @@ body.menu-open {
 .modal-card.modal-dark label {
   color: #F8FAFC !important;
 }
+
+.topbar-social-link {
+  color: #94A3B8;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.topbar-social-link:hover {
+  color: #1877F2 !important;
+}

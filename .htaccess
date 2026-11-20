@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteBase /
+
+# Forçar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Suporte a URLs amigáveis sem .html (ex: /inmobiliarias -> /inmobiliarias.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L,QSA]
+
+# Redirecionamentos específicos amigáveis
+RewriteRule ^abertura-empresas/?$ abertura-empresas.html [L,QSA]
+RewriteRule ^inmobiliarias/?$ inmobiliarias.html [L,QSA]
+RewriteRule ^para-empresas-es/?$ para-empresas-es.html [L,QSA]
+RewriteRule ^para-empresas/?$ para-empresas.html [L,QSA]
+RewriteRule ^ebook/?$ ebook.html [L,QSA]
+RewriteRule ^diagnostico/?$ diagnostico.html [L,QSA]
+RewriteRule ^obrigado/?$ obrigado.html [L,QSA]
