@@ -102,10 +102,22 @@ Se você manda um texto longo com links, a pessoa se assusta, acha que é robô/
 * **WhatsApp:** `+595 995 628 862`
 * **Abrir no WhatsApp:** [https://wa.me/595995628862](https://wa.me/595995628862)
 
-### 3.4 VF Paraguay Gestiones (Assessoria migratória e cédula paraguaia) - [INTERESSADO / EM NEGOCIAÇÃO]
+### 3.4 VF Paraguay Gestiones (Viviana Falcón) — ✅ [PARCERIA FECHADA / ACORDO OFICIALIZADO]
 * **WhatsApp:** `+595 982 633 144`
 * **Abrir no WhatsApp:** [https://wa.me/595982633144](https://wa.me/595982633144)
-* **Status:** Viviana confirmou envio de documentação e tabelas de honorários.
+* **E-mail:** `vefz2201@gmail.com`
+* **Site:** `www.vfparaguaygestiones.com.py`
+* **Status:** Acordo 100% fechado em 23/11/2026.
+* **Modelo Financeiro de Parceria:**
+  * **Controle Total:** Alex Fiuza / Vértice Social Mídia fatura a totalidade do cliente no Brasil, retém a comissão à vista e repassa o custo operacional para a Viviana.
+  * **Comissões Acordadas:**
+    * **Fly Pass com RUC e Residência Fiscal (~110 dias ou expresso):** **USD 300** de comissão por cliente (~R$ 1.750).
+    * **Fly Pass sem RUC:** **USD 250** de comissão por cliente (~R$ 1.450).
+    * **Investor Pass (SUACE Permanente Direta 10 anos):** **USD 500** de comissão por cliente (~R$ 2.900).
+* **Tabela de Preços ao Cliente:**
+  * Fly Pass com RUC (~110 dias): Preço sugerido **USD 2.200 a USD 2.400** (Custo Viviana USD 1.900).
+  * Fly Pass com RUC (Expresso 60-75 dias): Preço sugerido **USD 2.400 a USD 2.600** (Custo Viviana USD 2.100).
+  * Investor Pass SUACE: Preço sugerido **USD 3.500** (Custo Viviana USD 3.000).
 
 ### 3.5 Paraguay Expert (gestoriaparaguay.com) - [INTERESSADO / EM NEGOCIAÇÃO]
 * **WhatsApp:** `+595 992 933 238`
